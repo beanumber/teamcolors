@@ -26,15 +26,14 @@
 #'     mutate(wpct = W / (W+L), exp_wpct = 1 / (1 + (RA/R)^2)) %>%
 #'     # St. Louis Cardinals do not match
 #'     left_join(teamcolors, by = "name")
-#'   with(pythag, plot(wpct, exp_wpct, bg = primary, col = secondary, pch = 21, cex = 3))
+#'   with(pythag, plot(exp_wpct, wpct, bg = primary, col = secondary, pch = 21, cex = 3))
 #' }
 #' if (require(ggplot2)) {
-#'   primary_cols <- pythag$primary
-#'   names(primary_cols) <- pythag$name
 #'   ggplot(data = pythag, aes(x = exp_wpct, y = wpct)) + 
-#'     geom_point(shape = 21, size = 5) + 
-#'     scale_color_manual(values = secondary) + 
-#'     scale_fill_manual(values = primary_cols)
+#'     geom_point(shape = 21, size = 5, fill = pythag$primary, color = pythag$secondary) + 
+#'     geom_text(aes(label = name), size = 3, nudge_y = -0.005) + 
+#'     geom_abline(slope = 1, intercept = 0, lty = 3) + 
+#'     coord_equal()
 #' }
 #' 
 "teamcolors"
