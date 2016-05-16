@@ -1,0 +1,39 @@
+---
+title: "teamcolors"
+output:
+  github_document:
+    html_preview: true
+---
+
+an R package providing color palettes for pro sports teams
+
+Courtesy of (http://teamcolors.arc90.com/)
+
+## Install
+
+```{r, eval=FALSE}
+devtools::install_github("beanumber/teamcolors")
+```
+
+## Load
+
+```{r}
+library(teamcolors)
+head(teamcolors)
+```
+
+## Plot
+
+```{r, message=FALSE}
+library(Lahman)
+library(dplyr)
+pythag <- Teams %>%
+  filter(yearID == 2014) %>%
+  select(name, W, L, R, RA) %>%
+  mutate(wpct = W / (W+L), exp_wpct = 1 / (1 + (RA/R)^2)) %>%
+  # St. Louis Cardinals do not match
+  left_join(teamcolors, by = "name")
+with(pythag, plot(wpct, exp_wpct, bg = primary, col = secondary, pch = 21, cex = 3))
+```
+
+
