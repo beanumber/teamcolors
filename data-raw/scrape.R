@@ -45,10 +45,21 @@ hex_from_list <- function(x) {
 teamcolors <- lapply(lgs, get_colors) %>%
   bind_rows()
 
-# manual fixes
+# manual fixes:
 # Tigers
 teamcolors <- teamcolors %>%
   mutate(secondary = ifelse(name == "Detroit Tigers", "#FF6600", secondary))
+# Yankees
+nyy <- which(teamcolors$name == "New York Yankees")
+teamcolors$tertiary[nyy] <- teamcolors$primary[nyy]
+teamcolors$primary[nyy] <- teamcolors$secondary[nyy]
+teamcolors$secondary[nyy] <- "#FFFFFF"
+# Dodgers
+lad <- which(teamcolors$name == "Los Angeles Dodgers")
+teamcolors$tertiary[lad] <- teamcolors$primary[lad]
+teamcolors$primary[lad] <- teamcolors$secondary[lad]
+teamcolors$secondary[nyy] <- "#FFFFFF"
+
 
 save(teamcolors, file = "data/teamcolors.rda", compress = "xz")
 
