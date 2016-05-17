@@ -45,6 +45,11 @@ hex_from_list <- function(x) {
 teamcolors <- lapply(lgs, get_colors) %>%
   bind_rows()
 
+# manual fixes
+# Tigers
+teamcolors <- teamcolors %>%
+  mutate(secondary = ifelse(name == "Detroit Tigers", "#FF6600", secondary))
+
 save(teamcolors, file = "data/teamcolors.rda", compress = "xz")
 
 
