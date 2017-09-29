@@ -42,7 +42,7 @@ pythag <- Teams %>%
 with(pythag, plot(wpct, exp_wpct, bg = primary, col = secondary, pch = 21, cex = 3))
 ```
 
-![](README_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-3-1.png)
+![](README_files/figure-markdown_github-ascii_identifiers/base-r-1.png)
 
 ``` r
 ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) + 
@@ -54,4 +54,4 @@ ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) +
   scale_y_continuous("Expected Winning Percentage")
 ```
 
-![](README_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-4-1.png)
+![](README_files/figure-markdown_github-ascii_identifiers/ggplot-1.png)

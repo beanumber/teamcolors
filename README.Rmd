@@ -24,7 +24,7 @@ head(teamcolors)
 
 ## Plot
 
-```{r, message=FALSE}
+```{r base-r, message=FALSE}
 library(Lahman)
 library(tidyverse)
 pythag <- Teams %>%
@@ -35,7 +35,7 @@ pythag <- Teams %>%
 with(pythag, plot(wpct, exp_wpct, bg = primary, col = secondary, pch = 21, cex = 3))
 ```
 
-```{r}
+```{r ggplot}
 ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) + 
   geom_point(shape = 21, size = 3) + 
   scale_fill_manual(values = pythag$primary, guide = FALSE) + 
