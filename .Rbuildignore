@@ -1,5 +1,8 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
+^.travis.yml$
+^README\.md$
 ^README\.Rmd$
 ^README_files$
+^cran-comments\.md$
