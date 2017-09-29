@@ -7,11 +7,11 @@
 \format{A data frame with one row for each professional team and five variables:
 \describe{
  \item{name}{the name of the team}
+ \item{league}{the league in which the team plays}
  \item{primary}{the team's primary color}
  \item{secondary}{the team's secondary color}
  \item{tertiary}{the team's tertiary color}
  \item{quaternary}{the team's quaternary color}
- \item{sport}{the league in which the team plays}
 }}
 \source{
 \url{https://github.com/teamcolors/teamcolors.github.io/tree/master/src/scripts/data/leagues}
@@ -48,4 +48,3 @@ if (require(ggplot2)) {
 
 }
 \keyword{datasets}
-

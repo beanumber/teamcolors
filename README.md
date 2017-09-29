@@ -1,9 +1,9 @@
 teamcolors
 ================
 
-an R package providing color palettes for pro sports teams
+[![Travis-CI Build Status](https://travis-ci.org/beanumber/teamcolors.svg?branch=master)](https://travis-ci.org/beanumber/teamcolors)
 
-Courtesy of (<http://teamcolors.arc90.com/>)
+An R package providing color palettes for pro sports teams. The palattes are provided by [Jim Neilsen's Team Colors website](http://jim-nielsen.com/teamcolors/).
 
 Install
 -------
@@ -20,27 +20,38 @@ library(teamcolors)
 head(teamcolors)
 ```
 
-    ##                   name primary secondary tertiary quaternary sport
-    ## 1 Arizona Diamondbacks #A71930   #000000  #E3D4AD       <NA>   mlb
-    ## 2       Atlanta Braves #CE1141   #13274F     <NA>       <NA>   mlb
-    ## 3    Baltimore Orioles #DF4601   #000000     <NA>       <NA>   mlb
-    ## 4       Boston Red Sox #BD3039   #0D2B56     <NA>       <NA>   mlb
-    ## 5         Chicago Cubs #CC3433   #0E3386     <NA>       <NA>   mlb
-    ## 6    Chicago White Sox #000000   #C4CED4     <NA>       <NA>   mlb
+    ##                   name league primary secondary tertiary quaternary
+    ## 1      AFC Bournemouth    epl #e62333   #000000     <NA>       <NA>
+    ## 2        Anaheim Ducks    nhl #010101   #a2aaad  #fc4c02    #85714d
+    ## 3    Arizona Cardinals    nfl #97233f   #000000  #ffb612    #a5acaf
+    ## 4      Arizona Coyotes    nhl #010101   #862633  #ddcba4       <NA>
+    ## 5 Arizona Diamondbacks    mlb #a71930   #000000  #e3d4ad       <NA>
+    ## 6              Arsenal    epl #ef0107   #023474  #9c824a       <NA>
 
 Plot
 ----
 
 ``` r
 library(Lahman)
-library(dplyr)
+library(tidyverse)
 pythag <- Teams %>%
   filter(yearID == 2014) %>%
   select(name, W, L, R, RA) %>%
-  mutate(wpct = W / (W+L), exp_wpct = 1 / (1 + (RA/R)^2)) %>%
-  # St. Louis Cardinals do not match
+  mutate(wpct = W / (W + L), exp_wpct = 1 / (1 + (RA/R)^2)) %>%
   left_join(teamcolors, by = "name")
 with(pythag, plot(wpct, exp_wpct, bg = primary, col = secondary, pch = 21, cex = 3))
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](README_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-3-1.png)
+
+``` r
+ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) + 
+  geom_point(shape = 21, size = 3) + 
+  scale_fill_manual(values = pythag$primary, guide = FALSE) + 
+  scale_color_manual(values = pythag$secondary, guide = FALSE) + 
+  ggrepel::geom_text_repel(aes(label = substr(name, 1, 3))) + 
+  scale_x_continuous("Winning Percentage") + 
+  scale_y_continuous("Expected Winning Percentage")
+```
+
+![](README_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-4-1.png)
