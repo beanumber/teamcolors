@@ -63,4 +63,4 @@ References
 
 For more examples see:
 
--   Lopez, M.J., Matthews, G.J., Baumer, B.S., "How often does the best team win? A unified approach to understanding randomness in North American sport", (<https://arxiv.org/abs/1701.05976>)
+-   Lopez, M.J., Matthews, G.J., Baumer, B.S., "How often does the best team win? A unified approach to understanding randomness in North American sport," (<https://arxiv.org/abs/1701.05976>)
