@@ -36,7 +36,7 @@ library(Lahman)
 library(tidyverse)
 pythag <- Teams %>%
   filter(yearID == 2016) %>%
-  select(name, W, L, R, RA) %>%
+  select(name, teamID, yearID, W, L, R, RA) %>%
   mutate(wpct = W / (W + L), exp_wpct = 1 / (1 + (RA/R)^2)) %>%
   left_join(teamcolors, by = "name")
 with(pythag, plot(wpct, exp_wpct, bg = primary, col = secondary, pch = 21, cex = 3))
@@ -50,9 +50,13 @@ ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) +
   geom_point(shape = 21, size = 3) + 
   scale_fill_manual(values = pythag$primary, guide = FALSE) + 
   scale_color_manual(values = pythag$secondary, guide = FALSE) + 
-  ggrepel::geom_text_repel(aes(label = substr(name, 1, 3))) + 
+  ggrepel::geom_text_repel(aes(label = teamID)) + 
   scale_x_continuous("Winning Percentage", limits = c(0.3, 0.7)) + 
   scale_y_continuous("Expected Winning Percentage", limits = c(0.3, 0.7)) + 
+  theme_light() +
+  labs(title = "Real and Pythagorean winning % by team",
+       subtitle = paste(pythag$yearID[1], "MLB Season", sep = " "),
+       caption = "Source: the Lahman baseball database. Using teamcolors R pckg") +
   coord_equal()
 ```
 
