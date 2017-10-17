@@ -59,6 +59,15 @@ df <- "https://raw.githubusercontent.com/jimniels/teamcolors/master/static/data/
   mutate(colors.hex = ifelse(colors.hex == "NULL", NA, colors.hex), 
          colors.rgb = ifelse(colors.rgb == "NULL", NA, colors.rgb))
 
+rgb_to_hex <- function(x) {
+  rgb_df <- strsplit(x, " ") %>%
+    do.call(rbind, .) %>%
+    as.data.frame()
+  rgb(red = as.character(rgb_df$V1), green = as.character(rgb_df$V2), 
+      blue = as.character(rgb_df$V3), maxColorValue = 255)
+}
+rgb_to_hex(NA)
+
 hex <- df %>%
   filter(!is.na(colors.hex)) %>%
   unnest(color_hex = colors.hex) %>%
@@ -70,14 +79,7 @@ rgb <- df %>%
   mutate(color_hex = rgb_to_hex(color_rgb))
   
 
-rgb_to_hex <- function(x) {
-  rgb_df <- strsplit(x, " ") %>%
-    do.call(rbind, .) %>%
-    as.data.frame()
-  rgb(red = as.character(rgb_df$V1), green = as.character(rgb_df$V2), 
-      blue = as.character(rgb_df$V3), maxColorValue = 255)
-}
-rgb_to_hex(NA)
+
 
 team_colors <- hex %>%
   bind_rows(select(rgb, -color_rgb)) %>%
@@ -123,6 +125,67 @@ teamcolors <- teamcolors %>%
   ungroup() %>%
   mutate(name = gsub("St L", "St. L", name))
 
+## Divisions
+
+library(rvest)
+library(tibble)
+x <- read_html("https://en.wikipedia.org/wiki/National_Basketball_Association") %>%
+  html_nodes("table") %>%
+  html_nodes(xpath = "/html/body/div[3]/div[3]/div[4]/div/table[4]") %>%
+  magrittr::extract2(1) %>%
+  html_table(fill = TRUE) %>%
+  filter(!grepl("Conference", Division))
+
+x <- read_html("https://en.wikipedia.org/wiki/Major_League_Baseball") %>%
+  html_nodes("table") %>%
+  html_nodes(xpath = "/html/body/div[3]/div[3]/div[4]/div/table[3]") %>%
+  magrittr::extract2(1) %>%
+  html_table(fill = TRUE) %>%
+  filter(!grepl("Conference", Division))
+
+scrape_teams <- function(data) {
+  x <- read_html(data$url) %>%
+    html_nodes("table") %>%
+    html_nodes(xpath = data$xpath) %>%
+    magrittr::extract2(1) %>%
+    html_table(fill = TRUE) %>%
+    as.tbl()
+  if (!"Team" %in% names(x)) {
+    x <- rename(x, Team = `Club[55]`)
+  }  
+  if (!"Division" %in% names(x)) {
+    x <- rename(x, Division = `Division[55]`)
+  }
+  x %>%
+    dplyr::select(Division, Team)
+}
+
+locs <- tibble::tribble(
+  ~url, ~xpath,
+  "https://en.wikipedia.org/wiki/National_Basketball_Association", "/html/body/div[3]/div[3]/div[4]/div/table[4]", 
+  "https://en.wikipedia.org/wiki/Major_League_Baseball", "/html/body/div[3]/div[3]/div[4]/div/table[3]", 
+  "https://en.wikipedia.org/wiki/National_Football_League", "/html/body/div[3]/div[3]/div[4]/div/table[3]",
+  "https://en.wikipedia.org/wiki/National_Hockey_League", "/html/body/div[3]/div[3]/div[4]/div/table[3]"
+)
+
+x <- locs %>%
+  group_by(url) %>%
+  do(scrape_teams(.)) %>%
+  bind_rows() %>%
+  filter(!grepl("League|Conference|denotes", x = Division)) %>%
+  ungroup() %>%
+  mutate(Team = gsub("\\*", "", x = Team), 
+         Team = gsub("†", "", x = Team), 
+         Division = ifelse(grepl("Baseball", url), paste("AL", Division), Division),
+         Division = ifelse(grepl("Football", url), paste("AFC", Division), Division))
+names(x) <- tolower(names(x))
+
+# manual hacks
+x$division[16:30] <- gsub("AL", "NL", x$division[16:30])
+x$division[77:92] <- gsub("AFC", "NFC", x$division[77:92])
+
+teamcolors <- teamcolors %>%
+  left_join(select(x, division, team), by = c("name" = "team"))
 
 save(teamcolors, file = "data/teamcolors.rda", compress = "xz")
 
