@@ -123,7 +123,10 @@ teamcolors$secondary[nyy] <- "#FFFFFF"
 # St. Louis
 teamcolors <- teamcolors %>%
   ungroup() %>%
-  mutate(name = gsub("St L", "St. L", name))
+  mutate(name = gsub("St L", "St. L", name),
+         # Angels
+         name = gsub("Angels of Anaheim", "Angels", name))
+
 
 ## Divisions
 
