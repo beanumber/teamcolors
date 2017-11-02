@@ -27,6 +27,13 @@ head(teamcolors)
     ## 4      Arizona Coyotes    nhl #010101   #862633  #ddcba4       <NA>
     ## 5 Arizona Diamondbacks    mlb #a71930   #000000  #e3d4ad       <NA>
     ## 6              Arsenal    epl #ef0107   #023474  #9c824a       <NA>
+    ##   division
+    ## 1     <NA>
+    ## 2  Pacific
+    ## 3 NFC West
+    ## 4  Pacific
+    ## 5  NL West
+    ## 6     <NA>
 
 Plot
 ----
@@ -60,7 +67,30 @@ ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) +
   coord_equal()
 ```
 
+    ## Warning: Removed 1 rows containing missing values (geom_point).
+
 ![](README_files/figure-markdown_github-ascii_identifiers/ggplot-1.png)
+
+Key
+---
+
+``` r
+teams <- teamcolors %>%
+  filter(league %in% c("mlb", "nba", "nfl", "nhl"))
+ggplot(teams, aes(x = name, color = name, fill = name)) + 
+  geom_bar() +
+  facet_wrap(~toupper(league), scales = "free_y") +
+  coord_flip() + 
+  scale_x_discrete(NULL) + 
+  scale_y_continuous(NULL) + 
+  scale_fill_manual(values = teams$primary) + 
+  scale_color_manual(values = teams$secondary) + 
+  guides(color = FALSE, fill = FALSE) + 
+  theme(axis.text.x = element_blank(), 
+        axis.ticks.x = element_blank())
+```
+
+![](README_files/figure-markdown_github-ascii_identifiers/teamcolors-1.png)
 
 References
 ----------

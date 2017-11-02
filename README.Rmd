@@ -51,6 +51,24 @@ ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) +
   coord_equal()
 ```
 
+## Key
+
+```{r teamcolors, fig.height=10}
+teams <- teamcolors %>%
+  filter(league %in% c("mlb", "nba", "nfl", "nhl"))
+ggplot(teams, aes(x = name, color = name, fill = name)) + 
+  geom_bar() +
+  facet_wrap(~toupper(league), scales = "free_y") +
+  coord_flip() + 
+  scale_x_discrete(NULL) + 
+  scale_y_continuous(NULL) + 
+  scale_fill_manual(values = teams$primary) + 
+  scale_color_manual(values = teams$secondary) + 
+  guides(color = FALSE, fill = FALSE) + 
+  theme(axis.text.x = element_blank(), 
+        axis.ticks.x = element_blank())
+```
+
 ## References
 
 For more examples see: 
