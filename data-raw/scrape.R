@@ -83,7 +83,7 @@ rgb <- df %>%
 
 team_colors <- hex %>%
   bind_rows(select(rgb, -color_rgb)) %>%
-  mutate(color_hex = tolower(color_hex))
+  mutate(color_hex = tolower(color_hex)) %>%
   distinct()
 
 team_colors %>%
@@ -190,6 +190,11 @@ x$division[77:92] <- gsub("AFC", "NFC", x$division[77:92])
 teamcolors <- teamcolors %>%
   left_join(select(x, division, team), by = c("name" = "team"))
 
+# Manual MLS Division hack
+teamcolors <- teamcolors %>%
+  mutate(division = ifelse(name %in% c('Atlanta United FC', 'Chicago Fire', 'Columbus Crew', 'DC United', 'Montreal Impact', 'New England Revolution', 'New York City FC', 'New York Red Bulls', 'Orlando City SC', 'Philadelphia Union', 'Toronto FC'), "Eastern Conference", division),
+         division = ifelse(name %in% c('Colorado Rapids', 'FC Dallas', 'Houston Dynamo', 'LA Galaxy', 'Los Angeles FC', 'Minnesota United FC', 'Portland Timbers', 'Real Salt Lake', 'San Jose Earthquakes', 'Seattle Sounders FC', 'Sporting Kansas City', 'Vancouver Whitecaps FC'), "Western Conference", division))
+ 
 save(teamcolors, file = "data/teamcolors.rda", compress = "xz")
 
 
