@@ -49,14 +49,17 @@ pythag <- Teams %>%
 with(pythag, plot(wpct, exp_wpct, bg = primary, col = secondary, pch = 21, cex = 3))
 ```
 
-![](README_files/figure-markdown_github-ascii_identifiers/base-r-1.png)
+![](README_files/figure-markdown_github/base-r-1.png)
 
 ``` r
+mlb_palette_1 <- league_palette("mlb", 1)
+mlb_palette_2 <- league_palette("mlb", 2)
+
 ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) + 
   geom_abline(slope = 1, intercept = 0, linetype = 3) + 
   geom_point(shape = 21, size = 3) + 
-  scale_fill_manual(values = pythag$primary, guide = FALSE) + 
-  scale_color_manual(values = pythag$secondary, guide = FALSE) + 
+  scale_fill_manual(values = mlb_palette_1, guide = FALSE) + 
+  scale_color_manual(values = mlb_palette_2, guide = FALSE) + 
   ggrepel::geom_text_repel(aes(label = teamID)) + 
   scale_x_continuous("Winning Percentage", limits = c(0.3, 0.7)) + 
   scale_y_continuous("Expected Winning Percentage", limits = c(0.3, 0.7)) + 
@@ -69,7 +72,7 @@ ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) +
 
     ## Warning: Removed 1 rows containing missing values (geom_point).
 
-![](README_files/figure-markdown_github-ascii_identifiers/ggplot-1.png)
+![](README_files/figure-markdown_github/ggplot-1.png)
 
 Key
 ---
@@ -90,7 +93,7 @@ ggplot(teams, aes(x = name, color = name, fill = name)) +
         axis.ticks.x = element_blank())
 ```
 
-![](README_files/figure-markdown_github-ascii_identifiers/teamcolors-1.png)
+![](README_files/figure-markdown_github/teamcolors-1.png)
 
 References
 ----------

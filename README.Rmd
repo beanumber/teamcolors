@@ -36,11 +36,14 @@ with(pythag, plot(wpct, exp_wpct, bg = primary, col = secondary, pch = 21, cex =
 ```
 
 ```{r ggplot}
+mlb_palette_1 <- league_palette("mlb", 1)
+mlb_palette_2 <- league_palette("mlb", 2)
+
 ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) + 
   geom_abline(slope = 1, intercept = 0, linetype = 3) + 
   geom_point(shape = 21, size = 3) + 
-  scale_fill_manual(values = pythag$primary, guide = FALSE) + 
-  scale_color_manual(values = pythag$secondary, guide = FALSE) + 
+  scale_fill_manual(values = mlb_palette_1, guide = FALSE) + 
+  scale_color_manual(values = mlb_palette_2, guide = FALSE) + 
   ggrepel::geom_text_repel(aes(label = teamID)) + 
   scale_x_continuous("Winning Percentage", limits = c(0.3, 0.7)) + 
   scale_y_continuous("Expected Winning Percentage", limits = c(0.3, 0.7)) + 
