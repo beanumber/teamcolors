@@ -10,7 +10,7 @@ Maintainer: Ben Baumer <ben.baumer@gmail.com>
 Description: Provides color palettes corresponding to professional sports teams. These
     can be useful in creating data graphics that are themed for particular teams. 
 Depends:
-    R (>= 3.0)
+    R (>= 3.5)
 Imports:
     dplyr
 Suggests:

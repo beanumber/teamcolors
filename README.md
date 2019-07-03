@@ -1,42 +1,37 @@
 teamcolors
 ================
 
-[![Travis-CI Build Status](https://travis-ci.org/beanumber/teamcolors.svg?branch=master)](https://travis-ci.org/beanumber/teamcolors)
+[![Travis-CI Build
+Status](https://travis-ci.org/beanumber/teamcolors.svg?branch=master)](https://travis-ci.org/beanumber/teamcolors)
 
-An R package providing color palettes for pro sports teams. The palattes are provided by [Jim Neilsen's Team Colors website](http://jim-nielsen.com/teamcolors/).
+An R package providing color palettes for pro sports teams. The palattes
+are provided by [Jim Neilsen’s Team Colors
+website](http://jim-nielsen.com/teamcolors/).
 
-Install
--------
+## Install
 
 ``` r
 devtools::install_github("beanumber/teamcolors")
 ```
 
-Load
-----
+## Load
 
 ``` r
 library(teamcolors)
 head(teamcolors)
 ```
 
-    ##                   name league primary secondary tertiary quaternary
-    ## 1      AFC Bournemouth    epl #e62333   #000000     <NA>       <NA>
-    ## 2        Anaheim Ducks    nhl #010101   #a2aaad  #fc4c02    #85714d
-    ## 3    Arizona Cardinals    nfl #97233f   #000000  #ffb612    #a5acaf
-    ## 4      Arizona Coyotes    nhl #010101   #862633  #ddcba4       <NA>
-    ## 5 Arizona Diamondbacks    mlb #a71930   #000000  #e3d4ad       <NA>
-    ## 6              Arsenal    epl #ef0107   #023474  #9c824a       <NA>
-    ##   division
-    ## 1     <NA>
-    ## 2  Pacific
-    ## 3 NFC West
-    ## 4  Pacific
-    ## 5  NL West
-    ## 6     <NA>
+    ## # A tibble: 6 x 7
+    ##   name                league primary secondary tertiary quaternary division
+    ##   <chr>               <chr>  <chr>   <chr>     <chr>    <chr>      <chr>   
+    ## 1 AFC Bournemouth     epl    #e62333 #000000   <NA>     <NA>       <NA>    
+    ## 2 Anaheim Ducks       nhl    #010101 #a2aaad   #fc4c02  #85714d    Pacific 
+    ## 3 Arizona Cardinals   nfl    #97233f #000000   #ffb612  #a5acaf    NFC West
+    ## 4 Arizona Coyotes     nhl    #010101 #862633   #ddcba4  <NA>       <NA>    
+    ## 5 Arizona Diamondbac… mlb    #a71930 #000000   #e3d4ad  <NA>       NL West 
+    ## 6 Arsenal             epl    #ef0107 #023474   #9c824a  <NA>       <NA>
 
-Plot
-----
+## Plot
 
 ``` r
 library(Lahman)
@@ -49,7 +44,7 @@ pythag <- Teams %>%
 with(pythag, plot(wpct, exp_wpct, bg = primary, col = secondary, pch = 21, cex = 3))
 ```
 
-![](README_files/figure-markdown_github/base-r-1.png)
+![](README_files/figure-gfm/base-r-1.png)<!-- -->
 
 ``` r
 mlb_palette_1 <- league_palette("mlb", 1)
@@ -72,10 +67,9 @@ ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) +
 
     ## Warning: Removed 1 rows containing missing values (geom_point).
 
-![](README_files/figure-markdown_github/ggplot-1.png)
+![](README_files/figure-gfm/ggplot-1.png)<!-- -->
 
-Key
----
+## Key
 
 ``` r
 teams <- teamcolors %>%
@@ -93,11 +87,14 @@ ggplot(teams, aes(x = name, color = name, fill = name)) +
         axis.ticks.x = element_blank())
 ```
 
-![](README_files/figure-markdown_github/teamcolors-1.png)
+![](README_files/figure-gfm/teamcolors-1.png)<!-- -->
 
-References
-----------
+## References
 
 For more examples see:
 
--   Lopez, M.J., Matthews, G.J., Baumer, B.S., "How often does the best team win? A unified approach to understanding randomness in North American sport," (<https://arxiv.org/abs/1701.05976>)
+  - Lopez, M.J., Matthews, G.J., Baumer, B.S., “How often does the best
+    team win? A unified approach to understanding randomness in North
+    American sport,” *The Annals of Applied Statistics*, vol. 12, no. 4,
+    2018, pp. 2483–2516. URL
+    (<https://projecteuclid.org/euclid.aoas/1542078053>)

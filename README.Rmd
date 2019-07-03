@@ -76,4 +76,4 @@ ggplot(teams, aes(x = name, color = name, fill = name)) +
 
 For more examples see: 
 
-- Lopez, M.J., Matthews, G.J., Baumer, B.S., "How often does the best team win? A unified approach to understanding randomness in North American sport," (https://arxiv.org/abs/1701.05976)
+- Lopez, M.J., Matthews, G.J., Baumer, B.S., "How often does the best team win? A unified approach to understanding randomness in North American sport," *The Annals of Applied Statistics*, vol. 12, no. 4, 2018, pp. 2483--2516. URL (https://projecteuclid.org/euclid.aoas/1542078053)
