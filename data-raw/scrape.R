@@ -52,7 +52,7 @@ library(tidyverse)
 
 ### New
 
-df <- "https://raw.githubusercontent.com/jimniels/teamcolors/master/static/data/teams.json" %>%
+df <- "https://raw.githubusercontent.com/jimniels/teamcolors/master/src/teams.json" %>%
   RCurl::getURL() %>%
   jsonlite::fromJSON(flatten = TRUE) %>%
   as.tbl() %>%
@@ -126,6 +126,12 @@ teamcolors <- teamcolors %>%
   mutate(name = gsub("St L", "St. L", name),
          # Angels
          name = gsub("Angels of Anaheim", "Angels", name))
+# NY Jets
+# https://teamcolorcodes.com/new-york-jets-color-codes/
+teamcolors <- teamcolors %>%
+  mutate(primary = ifelse(name == "New York Jets", "#125740", primary),
+         secondary = ifelse(name == "New York Jets", "#000000", secondary),
+         tertiary = ifelse(name == "New York Jets", "#FFFFFF", tertiary))
 
 
 ## Divisions
@@ -134,7 +140,7 @@ library(rvest)
 library(tibble)
 x <- read_html("https://en.wikipedia.org/wiki/National_Basketball_Association") %>%
   html_nodes("table") %>%
-  html_nodes(xpath = "/html/body/div[3]/div[3]/div[4]/div/table[4]") %>%
+  html_nodes(xpath = "/html/body/div[3]/div[3]/div[4]/div/table[3]") %>%
   magrittr::extract2(1) %>%
   html_table(fill = TRUE) %>%
   filter(!grepl("Conference", Division))
@@ -152,12 +158,12 @@ scrape_teams <- function(data) {
     html_nodes(xpath = data$xpath) %>%
     magrittr::extract2(1) %>%
     html_table(fill = TRUE) %>%
-    as.tbl()
+    as_tibble(.name_repair = "universal")
   if (!"Team" %in% names(x)) {
-    x <- rename(x, Team = `Club[55]`)
+    x <- rename(x, Team = `Club.57.`)
   }  
   if (!"Division" %in% names(x)) {
-    x <- rename(x, Division = `Division[55]`)
+    x <- rename(x, Division = `Division.57.`)
   }
   x %>%
     dplyr::select(Division, Team)
@@ -165,7 +171,7 @@ scrape_teams <- function(data) {
 
 locs <- tibble::tribble(
   ~url, ~xpath,
-  "https://en.wikipedia.org/wiki/National_Basketball_Association", "/html/body/div[3]/div[3]/div[4]/div/table[4]", 
+  "https://en.wikipedia.org/wiki/National_Basketball_Association", "/html/body/div[3]/div[3]/div[4]/div/table[3]", 
   "https://en.wikipedia.org/wiki/Major_League_Baseball", "/html/body/div[3]/div[3]/div[4]/div/table[3]", 
   "https://en.wikipedia.org/wiki/National_Football_League", "/html/body/div[3]/div[3]/div[4]/div/table[3]",
   "https://en.wikipedia.org/wiki/National_Hockey_League", "/html/body/div[3]/div[3]/div[4]/div/table[3]"

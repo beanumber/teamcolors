@@ -1,7 +1,7 @@
 Package: teamcolors
 Type: Package
 Title: Color Palettes for Pro Sports Teams
-Version: 0.0.1.9002
+Version: 0.0.1.9003
 Date: 2017-09-29
 Authors@R: c(
     person("Ben", "Baumer", email = "ben.baumer@gmail.com", role = c("aut", "cre")), 
@@ -12,8 +12,7 @@ Description: Provides color palettes corresponding to professional sports teams.
 Depends:
     R (>= 3.0)
 Imports:
-    dplyr,
-    magrittr
+    dplyr
 Suggests:
     Lahman,
     ggplot2
@@ -22,4 +21,4 @@ Encoding: UTF-8
 LazyData: true
 URL: http://github.com/beanumber/teamcolors
 BugReports: https://github.com/beanumber/teamcolors/issues
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1

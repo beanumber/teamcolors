@@ -3,7 +3,7 @@ globalVariables("league")
 #' ggplot2 palettes
 #' @param lg character vector for the league identifier
 #' @param which Which set of colors do you want? Default is 1 for "primary"
-#' @importFrom magrittr %>%
+#' @importFrom dplyr %>%
 #' @seealso teamcolors
 #' @export
 
