@@ -22,15 +22,15 @@ library(teamcolors)
 head(teamcolors)
 ```
 
-    ## # A tibble: 6 x 7
-    ##   name                league primary secondary tertiary quaternary division
-    ##   <chr>               <chr>  <chr>   <chr>     <chr>    <chr>      <chr>   
-    ## 1 AFC Bournemouth     epl    #e62333 #000000   <NA>     <NA>       <NA>    
-    ## 2 Anaheim Ducks       nhl    #010101 #a2aaad   #fc4c02  #85714d    Pacific 
-    ## 3 Arizona Cardinals   nfl    #97233f #000000   #ffb612  #a5acaf    NFC West
-    ## 4 Arizona Coyotes     nhl    #010101 #862633   #ddcba4  <NA>       <NA>    
-    ## 5 Arizona Diamondbac… mlb    #a71930 #000000   #e3d4ad  <NA>       NL West 
-    ## 6 Arsenal             epl    #ef0107 #023474   #9c824a  <NA>       <NA>
+    ## # A tibble: 6 x 8
+    ##   name    league primary secondary tertiary quaternary division logo       
+    ##   <chr>   <chr>  <chr>   <chr>     <chr>    <chr>      <chr>    <chr>      
+    ## 1 AFC Bo… epl    #e62333 #000000   <NA>     <NA>       <NA>     <NA>       
+    ## 2 Anahei… nhl    #010101 #a2aaad   #fc4c02  #85714d    Pacific  http://con…
+    ## 3 Arizon… nfl    #97233f #000000   #ffb612  #a5acaf    NFC West http://con…
+    ## 4 Arizon… nhl    #010101 #862633   #ddcba4  <NA>       <NA>     http://con…
+    ## 5 Arizon… mlb    #a71930 #000000   #e3d4ad  <NA>       NL West  http://con…
+    ## 6 Arsenal epl    #ef0107 #023474   #9c824a  <NA>       <NA>     <NA>
 
 ## Show palettes
 
@@ -130,6 +130,19 @@ show_team_col()
 ```
 
 ![](README_files/figure-gfm/teamcolors-1.png)<!-- -->
+
+## Logos
+
+Links to team logos are provided by (<http://www.sportslogos.net/>).
+
+``` r
+teamcolors %>%
+  filter(grepl("New York", name)) %>% 
+  pull(logo) %>%
+  knitr::include_graphics()
+```
+
+![](http://content.sportslogos.net/logos/9/5119/thumbs/511960002015.gif)<!-- -->![](http://content.sportslogos.net/logos/7/166/thumbs/919.gif)<!-- -->![](http://content.sportslogos.net/logos/1/19/thumbs/1939112018.gif)<!-- -->![](http://content.sportslogos.net/logos/7/152/thumbs/15291162019.gif)<!-- -->![](http://content.sportslogos.net/logos/6/216/thumbs/2nn48xofg0hms8k326cqdmuis.gif)<!-- -->![](http://content.sportslogos.net/logos/54/67/thumbs/m01gfgeorgvbfw15fy04alujm.gif)<!-- -->![](http://content.sportslogos.net/logos/1/20/thumbs/144.gif)<!-- -->![](http://content.sportslogos.net/logos/9/1876/thumbs/i9ni847kriagxdlb7xewa6dl8.gif)<!-- -->![](http://content.sportslogos.net/logos/53/68/thumbs/1256.gif)<!-- -->
 
 ## References
 

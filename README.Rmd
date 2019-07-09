@@ -86,6 +86,17 @@ So, instead, use `show_team_col()`.
 show_team_col()
 ```
 
+## Logos
+
+Links to team logos are provided by (http://www.sportslogos.net/).
+
+```{r logos}
+teamcolors %>%
+  filter(grepl("New York", name)) %>% 
+  pull(logo) %>%
+  knitr::include_graphics()
+```
+
 ## References
 
 For more examples see: 
