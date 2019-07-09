@@ -2,7 +2,7 @@ Package: teamcolors
 Type: Package
 Title: Color Palettes for Pro Sports Teams
 Date: 2019-07-09
-Version: 0.0.1.9004
+Version: 0.0.1.9005
 Authors@R: c(
     person("Benjamin S.", "Baumer", email = "ben.baumer@gmail.com", role = c("aut", "cre")), 
     person("Gregory", "Matthews", email = "gjm112@gmail.com", role = c("aut")))

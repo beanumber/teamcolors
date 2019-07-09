@@ -29,7 +29,7 @@ team_pal <- function(which = 1) {
 }
 
 #' @rdname league_pal
-#' @return For \code{scale_*()} functions, a wrapper to \code{\link[ggplot2]{scale_color_manual}}
+#' @return For \code{scale_*_teams()} functions, a wrapper to \code{\link[ggplot2]{scale_color_manual}}
 #' or  \code{\link[ggplot2]{scale_fill_manual}}
 #' @export
 

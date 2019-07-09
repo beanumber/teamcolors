@@ -10,12 +10,13 @@
 #'  \item{tertiary}{the team's tertiary color}
 #'  \item{quaternary}{the team's quaternary color}
 #'  \item{division}{the team's division}
+#'  \item{logo}{URL to the team's logo, hosted by \url{http://www.sportslogos.net}}
 #' }
 #' 
 #' @details The colors given are HTML hexidecimal values. See \code{\link[grDevices]{colors}}
 #' for more information. 
 #' 
-#' @source \url{http://jim-nielsen.com/teamcolors/}
+#' @source \url{http://jim-nielsen.com/teamcolors/}, \url{http://www.sportslogos.net}
 #' 
 #' @examples 
 #' data(teamcolors)

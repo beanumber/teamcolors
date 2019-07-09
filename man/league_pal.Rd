@@ -34,7 +34,7 @@ show_team_col(...)
 \value{
 For \code{*_pal()} functions, a named character vector of colors
 
-For \code{scale_*()} functions, a wrapper to \code{\link[ggplot2]{scale_color_manual}}
+For \code{scale_*_teams()} functions, a wrapper to \code{\link[ggplot2]{scale_color_manual}}
 or  \code{\link[ggplot2]{scale_fill_manual}}
 }
 \description{
