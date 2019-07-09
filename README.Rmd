@@ -7,7 +7,7 @@ output:
 
 [![Travis-CI Build Status](https://travis-ci.org/beanumber/teamcolors.svg?branch=master)](https://travis-ci.org/beanumber/teamcolors)
 
-An R package providing color palettes for pro sports teams. The palattes are provided by [Jim Neilsen's Team Colors website](http://jim-nielsen.com/teamcolors/). 
+An R package providing color palettes for pro sports teams. The palettes are provided by [Jim Neilsen's Team Colors website](http://jim-nielsen.com/teamcolors/) and offered with only minimal alterations. 
 
 ## Install
 
@@ -22,54 +22,68 @@ library(teamcolors)
 head(teamcolors)
 ```
 
+## Show palettes
+
+Sometimes you need to work with a named vector of colors. Other times you can use the built-in `scale_color_teams()` and `scale_color_fill()` functions. 
+
+```{r palettes}
+league_pal("mlb", 1)
+```
+
 ## Plot
 
-```{r base-r, message=FALSE}
+In baseball, [Pythagorean expectation](https://en.wikipedia.org/wiki/Pythagorean_expectation) relates expected winning percentage to runs allowed and runs scored. How well does it work? 
+
+```{r pythag, message=FALSE}
 library(Lahman)
 library(tidyverse)
 pythag <- Teams %>%
   filter(yearID == 2016) %>%
   select(name, teamID, yearID, W, L, R, RA) %>%
-  mutate(wpct = W / (W + L), exp_wpct = 1 / (1 + (RA/R)^2)) %>%
-  left_join(teamcolors, by = "name")
-with(pythag, plot(wpct, exp_wpct, bg = primary, col = secondary, pch = 21, cex = 3))
+  mutate(wpct = W / (W + L), exp_wpct = 1 / (1 + (RA/R)^2),
+         # note name discrepancy!
+         name = ifelse(name == "Los Angeles Angels of Anaheim", "Los Angeles Angels", name))
 ```
 
-```{r ggplot}
-mlb_palette_1 <- league_palette("mlb", 1)
-mlb_palette_2 <- league_palette("mlb", 2)
+### `ggplot2`
 
+```{r ggplot}
 ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) + 
   geom_abline(slope = 1, intercept = 0, linetype = 3) + 
   geom_point(shape = 21, size = 3) + 
-  scale_fill_manual(values = mlb_palette_1, guide = FALSE) + 
-  scale_color_manual(values = mlb_palette_2, guide = FALSE) + 
+  scale_fill_teams(guide = FALSE) + 
+  scale_color_teams(2, guide = FALSE) + 
   ggrepel::geom_text_repel(aes(label = teamID)) + 
   scale_x_continuous("Winning Percentage", limits = c(0.3, 0.7)) + 
   scale_y_continuous("Expected Winning Percentage", limits = c(0.3, 0.7)) + 
   theme_light() +
   labs(title = "Real and Pythagorean winning % by team",
-       subtitle = paste(pythag$yearID[1], "MLB Season", sep = " "),
-       caption = "Source: the Lahman baseball database. Using teamcolors R pckg") +
+       subtitle = paste(first(pull(pythag, yearID)), "MLB Season", sep = " "),
+       caption = "Source: the Lahman baseball database. Using teamcolors R pkg") +
   coord_equal()
 ```
 
+### Base R
+
+```{r base-r, message=FALSE}
+pythag <- pythag %>%
+  left_join(teamcolors, by = "name")
+with(pythag, plot(wpct, exp_wpct, bg = primary, col = secondary, pch = 21, cex = 3))
+```
+
+
 ## Key
 
-```{r teamcolors, fig.height=10}
-teams <- teamcolors %>%
-  filter(league %in% c("mlb", "nba", "nfl", "nhl"))
-ggplot(teams, aes(x = name, color = name, fill = name)) + 
-  geom_bar() +
-  facet_wrap(~toupper(league), scales = "free_y") +
-  coord_flip() + 
-  scale_x_discrete(NULL) + 
-  scale_y_continuous(NULL) + 
-  scale_fill_manual(values = teams$primary) + 
-  scale_color_manual(values = teams$secondary) + 
-  guides(color = FALSE, fill = FALSE) + 
-  theme(axis.text.x = element_blank(), 
-        axis.ticks.x = element_blank())
+You can see the color palettes using existing functionality from the [scales](https://github.com/r-lib/scales) package, but it won't show the names of the teams. 
+
+```{r show_col}
+scales::show_col(league_pal("mlb"), borders = league_pal("mlb", 2))
+```
+
+So, instead, use `show_team_col()`.
+
+```{r teamcolors, fig.height=10, fig.width=10}
+show_team_col()
 ```
 
 ## References

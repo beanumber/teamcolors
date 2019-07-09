@@ -1,10 +1,10 @@
 Package: teamcolors
 Type: Package
 Title: Color Palettes for Pro Sports Teams
-Version: 0.0.1.9003
-Date: 2017-09-29
+Date: 2019-07-09
+Version: 0.0.1.9004
 Authors@R: c(
-    person("Ben", "Baumer", email = "ben.baumer@gmail.com", role = c("aut", "cre")), 
+    person("Benjamin S.", "Baumer", email = "ben.baumer@gmail.com", role = c("aut", "cre")), 
     person("Gregory", "Matthews", email = "gjm112@gmail.com", role = c("aut")))
 Maintainer: Ben Baumer <ben.baumer@gmail.com>
 Description: Provides color palettes corresponding to professional sports teams. These
@@ -12,10 +12,10 @@ Description: Provides color palettes corresponding to professional sports teams.
 Depends:
     R (>= 3.5)
 Imports:
-    dplyr
-Suggests:
-    Lahman,
+    dplyr,
     ggplot2
+Suggests:
+    Lahman
 License: GPL
 Encoding: UTF-8
 LazyData: true
