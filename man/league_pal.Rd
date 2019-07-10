@@ -4,9 +4,7 @@
 \alias{league_pal}
 \alias{team_pal}
 \alias{scale_color_teams}
-\alias{scale_color_mlb}
 \alias{scale_fill_teams}
-\alias{scale_fill_mlb}
 \alias{show_team_col}
 \title{Color palettes}
 \usage{
@@ -16,11 +14,7 @@ team_pal(which = 1)
 
 scale_color_teams(which = 1, ...)
 
-scale_color_mlb(which = 1, ...)
-
 scale_fill_teams(which = 1, ...)
-
-scale_fill_mlb(which = 1, ...)
 
 show_team_col(...)
 }

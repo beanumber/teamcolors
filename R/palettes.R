@@ -39,13 +39,6 @@ scale_color_teams <- function(which = 1, ...) {
 
 #' @rdname league_pal
 #' @export
-
-scale_color_mlb <- function(which = 1, ...) {
-  ggplot2::scale_color_manual(..., values = league_pal("mlb", which = which))
-}
-
-#' @rdname league_pal
-#' @export
 #' @examples
 #' if (require(Lahman) && require(dplyr) && require(ggplot2)) {
 #'   pythag <- Teams %>%
@@ -71,13 +64,6 @@ scale_color_mlb <- function(which = 1, ...) {
 
 scale_fill_teams <- function(which = 1, ...) {
   ggplot2::scale_fill_manual(..., values = team_pal(which = which))
-}
-
-#' @rdname league_pal
-#' @export
-
-scale_fill_mlb <- function(which = 1, ...) {
-  ggplot2::scale_fill_manual(..., values = league_pal("mlb", which = which))
 }
 
 #' @rdname league_pal
