@@ -58,8 +58,8 @@ scale_color_teams <- function(which = 1, ...) {
 #'     coord_equal()
 #'     
 #'   p +
-#'     scale_fill_mlb(guide = FALSE) + 
-#'     scale_color_mlb(guide = FALSE)
+#'     scale_fill_teams(name = "Team") + 
+#'     scale_color_teams(name = "Team")
 #' }
 
 scale_fill_teams <- function(which = 1, ...) {
