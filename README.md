@@ -1,5 +1,5 @@
-teamcolors
-================
+
+# teamcolors <img src='man/figures/logo.png' align="right" height="139" />
 
 [![Travis-CI Build
 Status](https://travis-ci.org/beanumber/teamcolors.svg?branch=master)](https://travis-ci.org/beanumber/teamcolors)

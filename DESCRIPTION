@@ -2,10 +2,10 @@ Package: teamcolors
 Type: Package
 Title: Color Palettes for Pro Sports Teams
 Date: 2019-07-09
-Version: 0.0.1.9005
+Version: 0.0.1.9006
 Authors@R: c(
     person("Benjamin S.", "Baumer", email = "ben.baumer@gmail.com", role = c("aut", "cre")), 
-    person("Gregory", "Matthews", email = "gjm112@gmail.com", role = c("aut")))
+    person("Gregory J.", "Matthews", email = "gjm112@gmail.com", role = c("aut")))
 Maintainer: Ben Baumer <ben.baumer@gmail.com>
 Description: Provides color palettes corresponding to professional sports teams. These
     can be useful in creating data graphics that are themed for particular teams. 
