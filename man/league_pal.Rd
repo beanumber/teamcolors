@@ -6,6 +6,7 @@
 \alias{scale_color_teams}
 \alias{scale_fill_teams}
 \alias{show_team_col}
+\alias{show_ncaa_col}
 \title{Color palettes}
 \usage{
 league_pal(lg, which = 1)
@@ -17,11 +18,15 @@ scale_color_teams(which = 1, ...)
 scale_fill_teams(which = 1, ...)
 
 show_team_col(...)
+
+show_ncaa_col(...)
 }
 \arguments{
 \item{lg}{character vector for the league identifier}
 
 \item{which}{Which set of colors do you want? Default is 1 for "primary"}
+
+\item{...}{arguments passed to other functions}
 
 \item{...}{arguments passed to other functions}
 }
@@ -58,9 +63,12 @@ if (require(Lahman) && require(dplyr) && require(ggplot2)) {
     scale_color_teams(name = "Team")
 }
 show_team_col()
+show_ncaa_col()
 }
 \seealso{
 teamcolors
+
+\code{\link[scales]{show_col}}
 
 \code{\link[scales]{show_col}}
 }

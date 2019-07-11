@@ -7,7 +7,7 @@ output:
 
 [![Travis-CI Build Status](https://travis-ci.org/beanumber/teamcolors.svg?branch=master)](https://travis-ci.org/beanumber/teamcolors)
 
-An R package providing color palettes for pro sports teams. The palettes are provided by [Jim Neilsen's Team Colors website](http://jim-nielsen.com/teamcolors/) and offered with only minimal alterations. 
+An R package providing color palettes for pro sports teams. The palettes are provided by [Jim Neilsen's Team Colors website](http://jim-nielsen.com/teamcolors/) and offered with only minimal alterations. NCAA colors come [teamcolorcodes.com](https://teamcolorcodes.com/), via the [ncaahoopR R Package](https://github.com/lbenz730/ncaahoopR). Note that hexcodes are only available for 248 of 353 Division 1 teams.
 
 ## Install
 
@@ -80,11 +80,19 @@ You can see the color palettes using existing functionality from the [scales](ht
 scales::show_col(league_pal("mlb"), borders = league_pal("mlb", 2))
 ```
 
-So, instead, use `show_team_col()`.
+So, instead, use `show_team_col()`. Note that this only shows color palettes for non-NCAA teams.
 
 ```{r teamcolors, fig.height=10, fig.width=10}
 show_team_col()
 ```
+
+
+To view color palettes for college teams, simply call the `show_ncaa_col()` function.
+
+```{r ncaacolors, fig.height=10, fig.width=10}
+show_ncaa_col()
+```
+
 
 ## Logos
 

@@ -7,7 +7,10 @@ Status](https://travis-ci.org/beanumber/teamcolors.svg?branch=master)](https://t
 An R package providing color palettes for pro sports teams. The palettes
 are provided by [Jim Neilsen’s Team Colors
 website](http://jim-nielsen.com/teamcolors/) and offered with only
-minimal alterations.
+minimal alterations. NCAA colors come
+[teamcolorcodes.com](https://teamcolorcodes.com/), via the [ncaahoopR R
+Package](https://github.com/lbenz730/ncaahoopR). Note that hexcodes are
+only available for 248 of 353 Division 1 teams.
 
 ## Install
 
@@ -22,15 +25,20 @@ library(teamcolors)
 head(teamcolors)
 ```
 
-    ## # A tibble: 6 x 8
-    ##   name    league primary secondary tertiary quaternary division logo       
-    ##   <chr>   <chr>  <chr>   <chr>     <chr>    <chr>      <chr>    <chr>      
-    ## 1 AFC Bo… epl    #e62333 #000000   <NA>     <NA>       <NA>     <NA>       
-    ## 2 Anahei… nhl    #010101 #a2aaad   #fc4c02  #85714d    Pacific  http://con…
-    ## 3 Arizon… nfl    #97233f #000000   #ffb612  #a5acaf    NFC West http://con…
-    ## 4 Arizon… nhl    #010101 #862633   #ddcba4  <NA>       <NA>     http://con…
-    ## 5 Arizon… mlb    #a71930 #000000   #e3d4ad  <NA>       NL West  http://con…
-    ## 6 Arsenal epl    #ef0107 #023474   #9c824a  <NA>       <NA>     <NA>
+    ##              name league primary secondary tertiary quaternary division
+    ## 1 AFC Bournemouth    epl #e62333   #000000     <NA>       <NA>     <NA>
+    ## 2       Air Force   ncaa #003087   #8A8D8F  #B1B3B3    #FFC72C      MWC
+    ## 3           Akron   ncaa #041E42   #A89968     <NA>       <NA>      MAC
+    ## 4         Alabama   ncaa #9E1B32   #828A8F  #FFFFFF       <NA>      SEC
+    ## 5     Albany (NY)   ncaa #461660   #EEB211     <NA>       <NA> Am. East
+    ## 6   Anaheim Ducks    nhl #010101   #a2aaad  #fc4c02    #85714d  Pacific
+    ##                                                                  logo
+    ## 1                                                                <NA>
+    ## 2                                                                <NA>
+    ## 3                                                                <NA>
+    ## 4                                                                <NA>
+    ## 5                                                                <NA>
+    ## 6 http://content.sportslogos.net/logos/1/1736/thumbs/173616512014.gif
 
 ## Show palettes
 
@@ -123,13 +131,23 @@ scales::show_col(league_pal("mlb"), borders = league_pal("mlb", 2))
 
 ![](README_files/figure-gfm/show_col-1.png)<!-- -->
 
-So, instead, use `show_team_col()`.
+So, instead, use `show_team_col()`. Note that this only shows color
+palettes for non-NCAA teams.
 
 ``` r
 show_team_col()
 ```
 
 ![](README_files/figure-gfm/teamcolors-1.png)<!-- -->
+
+To view color palettes for college teams, simply call the
+`show_ncaa_col()` function.
+
+``` r
+show_ncaa_col()
+```
+
+![](README_files/figure-gfm/ncaacolors-1.png)<!-- -->
 
 ## Logos
 
