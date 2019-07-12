@@ -97,11 +97,7 @@ show_team_col <- function(...) {
 }
 
 #' @rdname league_pal
-#' @import ggplot2
-#' @importFrom dplyr filter
-#' @param ... arguments passed to other functions
 #' @export
-#' @seealso \code{\link[scales]{show_col}}
 #' @examples 
 #' show_ncaa_col()
 

@@ -27,8 +27,6 @@ show_ncaa_col(...)
 \item{which}{Which set of colors do you want? Default is 1 for "primary"}
 
 \item{...}{arguments passed to other functions}
-
-\item{...}{arguments passed to other functions}
 }
 \value{
 For \code{*_pal()} functions, a named character vector of colors
@@ -67,8 +65,6 @@ show_ncaa_col()
 }
 \seealso{
 teamcolors
-
-\code{\link[scales]{show_col}}
 
 \code{\link[scales]{show_col}}
 }

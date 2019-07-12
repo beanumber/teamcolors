@@ -6,6 +6,7 @@
 * Added `ggplot2` functionality for `scale_color/fill_teams()`
 * Added color palette functionality through named vectors
 * Added links to logos
+* Added NCAA colors (thanks `lbenz`!) (https://github.com/beanumber/teamcolors/pull/11)
 
 # teamcolors 0.0.1
 
