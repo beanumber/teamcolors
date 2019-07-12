@@ -5,11 +5,23 @@ output:
 ---
 # teamcolors <img src='man/figures/logo.png' align="right" height="139" />
 
+<!-- badges: start -->
 [![Travis-CI Build Status](https://travis-ci.org/beanumber/teamcolors.svg?branch=master)](https://travis-ci.org/beanumber/teamcolors)
+[![CRAN status](https://www.r-pkg.org/badges/version/teamcolors)](https://cran.r-project.org/package=teamcolors)
+<!-- badges: end -->
 
-An R package providing color palettes for pro sports teams. The palettes are provided by [Jim Neilsen's Team Colors website](http://jim-nielsen.com/teamcolors/) and offered with only minimal alterations. 
+
+An R package providing color palettes for pro and amateur sports teams. The palettes are provided by [Jim Neilsen's Team Colors website](http://jim-nielsen.com/teamcolors/) and offered with only minimal alterations. NCAA colors come from [teamcolorcodes.com](https://teamcolorcodes.com/), via the [ncaahoopR](https://github.com/lbenz730/ncaahoopR) package.
 
 ## Install
+
+To install the CRAN version, use:
+
+```{r, eval=FALSE}
+install.packages(teamcolors)
+```
+
+To install the development version from GitHub, use:
 
 ```{r, eval=FALSE}
 devtools::install_github("beanumber/teamcolors")
@@ -27,7 +39,7 @@ head(teamcolors)
 Sometimes you need to work with a named vector of colors. Other times you can use the built-in `scale_color_teams()` and `scale_color_fill()` functions. 
 
 ```{r palettes}
-league_pal("mlb", 1)
+league_pal("nba")
 ```
 
 ## Plot
@@ -59,7 +71,7 @@ ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) +
   theme_light() +
   labs(title = "Real and Pythagorean winning % by team",
        subtitle = paste(first(pull(pythag, yearID)), "MLB Season", sep = " "),
-       caption = "Source: the Lahman baseball database. Using teamcolors R pkg") +
+       caption = "Source: Lahman baseball database. Using teamcolors R pkg") +
   coord_equal()
 ```
 
@@ -80,11 +92,21 @@ You can see the color palettes using existing functionality from the [scales](ht
 scales::show_col(league_pal("mlb"), borders = league_pal("mlb", 2))
 ```
 
-So, instead, use `show_team_col()`.
+So, instead, use `show_team_col()`. Note that this only shows color palettes for non-NCAA teams.
 
 ```{r teamcolors, fig.height=10, fig.width=10}
 show_team_col()
 ```
+
+
+To view color palettes for college teams, use the `show_ncaa_col()` function [^ncaa]. 
+
+[^ncaa]: Note that hexcodes are only available for 248 of 353 Division I teams.
+
+```{r ncaacolors, fig.height=10, fig.width=10}
+show_ncaa_col()
+```
+
 
 ## Logos
 
@@ -102,3 +124,11 @@ teamcolors %>%
 For more examples see: 
 
 - Lopez, M.J., Matthews, G.J., Baumer, B.S., "How often does the best team win? A unified approach to understanding randomness in North American sport," *The Annals of Applied Statistics*, vol. 12, no. 4, 2018, pp. 2483--2516. URL (https://projecteuclid.org/euclid.aoas/1542078053)
+
+To cite this package in your work, see:
+
+```{r, eval=FALSE}
+citation("teamcolors")
+```
+
+## Notes

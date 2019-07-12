@@ -1,15 +1,30 @@
 
 # teamcolors <img src='man/figures/logo.png' align="right" height="139" />
 
+<!-- badges: start -->
+
 [![Travis-CI Build
 Status](https://travis-ci.org/beanumber/teamcolors.svg?branch=master)](https://travis-ci.org/beanumber/teamcolors)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/teamcolors)](https://cran.r-project.org/package=teamcolors)
+<!-- badges: end -->
 
-An R package providing color palettes for pro sports teams. The palettes
-are provided by [Jim Neilsen’s Team Colors
+An R package providing color palettes for pro and amateur sports teams.
+The palettes are provided by [Jim Neilsen’s Team Colors
 website](http://jim-nielsen.com/teamcolors/) and offered with only
-minimal alterations.
+minimal alterations. NCAA colors come from
+[teamcolorcodes.com](https://teamcolorcodes.com/), via the
+[ncaahoopR](https://github.com/lbenz730/ncaahoopR) package.
 
 ## Install
+
+To install the CRAN version, use:
+
+``` r
+install.packages(teamcolors)
+```
+
+To install the development version from GitHub, use:
 
 ``` r
 devtools::install_github("beanumber/teamcolors")
@@ -26,11 +41,11 @@ head(teamcolors)
     ##   name    league primary secondary tertiary quaternary division logo       
     ##   <chr>   <chr>  <chr>   <chr>     <chr>    <chr>      <chr>    <chr>      
     ## 1 AFC Bo… epl    #e62333 #000000   <NA>     <NA>       <NA>     <NA>       
-    ## 2 Anahei… nhl    #010101 #a2aaad   #fc4c02  #85714d    Pacific  http://con…
-    ## 3 Arizon… nfl    #97233f #000000   #ffb612  #a5acaf    NFC West http://con…
-    ## 4 Arizon… nhl    #010101 #862633   #ddcba4  <NA>       <NA>     http://con…
-    ## 5 Arizon… mlb    #a71930 #000000   #e3d4ad  <NA>       NL West  http://con…
-    ## 6 Arsenal epl    #ef0107 #023474   #9c824a  <NA>       <NA>     <NA>
+    ## 2 Air Fo… ncaa   #003087 #8A8D8F   #B1B3B3  #FFC72C    MWC      <NA>       
+    ## 3 Akron   ncaa   #041E42 #A89968   <NA>     <NA>       MAC      <NA>       
+    ## 4 Alabama ncaa   #9E1B32 #828A8F   #FFFFFF  <NA>       SEC      <NA>       
+    ## 5 Albany… ncaa   #461660 #EEB211   <NA>     <NA>       Am. East <NA>       
+    ## 6 Anahei… nhl    #010101 #a2aaad   #fc4c02  #85714d    Pacific  http://con…
 
 ## Show palettes
 
@@ -39,29 +54,29 @@ you can use the built-in `scale_color_teams()` and `scale_color_fill()`
 functions.
 
 ``` r
-league_pal("mlb", 1)
+league_pal("nba")
 ```
 
-    ##  Arizona Diamondbacks        Atlanta Braves     Baltimore Orioles 
-    ##             "#a71930"             "#ce1141"             "#df4601" 
-    ##        Boston Red Sox          Chicago Cubs     Chicago White Sox 
-    ##             "#bd3039"             "#cc3433"             "#000000" 
-    ##       Cincinnati Reds     Cleveland Indians      Colorado Rockies 
-    ##             "#c6011f"             "#e31937"             "#333366" 
-    ##        Detroit Tigers        Houston Astros    Kansas City Royals 
-    ##             "#0c2c56"             "#002d62"             "#004687" 
-    ##    Los Angeles Angels   Los Angeles Dodgers         Miami Marlins 
-    ##             "#ba0021"             "#005a9c"             "#ff6600" 
-    ##     Milwaukee Brewers       Minnesota Twins         New York Mets 
-    ##             "#0a2351"             "#002b5c"             "#ff5910" 
-    ##      New York Yankees     Oakland Athletics Philadelphia Phillies 
-    ##             "#003087"             "#003831"             "#284898" 
-    ##    Pittsburgh Pirates      San Diego Padres  San Francisco Giants 
-    ##             "#fdb827"             "#002d62"             "#fd5a1e" 
-    ##      Seattle Mariners   St. Louis Cardinals        Tampa Bay Rays 
-    ##             "#0c2c56"             "#c41e3a"             "#092c5c" 
-    ##         Texas Rangers     Toronto Blue Jays  Washington Nationals 
-    ##             "#c0111f"             "#134a8e"             "#ab0003"
+    ##          Atlanta Hawks         Boston Celtics          Brooklyn Nets 
+    ##              "#e13a3e"              "#008348"              "#061922" 
+    ##      Charlotte Hornets          Chicago Bulls    Cleveland Cavaliers 
+    ##              "#1d1160"              "#ce1141"              "#860038" 
+    ##       Dallas Mavericks         Denver Nuggets        Detroit Pistons 
+    ##              "#007dc5"              "#4d90cd"              "#ed174c" 
+    ##  Golden State Warriors        Houston Rockets         Indiana Pacers 
+    ##              "#fdb927"              "#ce1141"              "#ffc633" 
+    ##   Los Angeles Clippers     Los Angeles Lakers      Memphis Grizzlies 
+    ##              "#ed174c"              "#fdb927"              "#0f586c" 
+    ##             Miami Heat        Milwaukee Bucks Minnesota Timberwolves 
+    ##              "#98002e"              "#00471b"              "#005083" 
+    ##   New Orleans Pelicans        New York Knicks  Oklahoma City Thunder 
+    ##              "#002b5c"              "#006bb6"              "#007dc3" 
+    ##          Orlando Magic     Philadelphia 76ers           Phoenix Suns 
+    ##              "#007dc5"              "#ed174c"              "#e56020" 
+    ## Portland Trail Blazers       Sacramento Kings      San Antonio Spurs 
+    ##              "#e03a3e"              "#724c9f"              "#bac3c9" 
+    ##        Toronto Raptors              Utah Jazz     Washington Wizards 
+    ##              "#ce1141"              "#002b5c"              "#002b5c"
 
 ## Plot
 
@@ -95,7 +110,7 @@ ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) +
   theme_light() +
   labs(title = "Real and Pythagorean winning % by team",
        subtitle = paste(first(pull(pythag, yearID)), "MLB Season", sep = " "),
-       caption = "Source: the Lahman baseball database. Using teamcolors R pkg") +
+       caption = "Source: Lahman baseball database. Using teamcolors R pkg") +
   coord_equal()
 ```
 
@@ -123,13 +138,23 @@ scales::show_col(league_pal("mlb"), borders = league_pal("mlb", 2))
 
 ![](README_files/figure-gfm/show_col-1.png)<!-- -->
 
-So, instead, use `show_team_col()`.
+So, instead, use `show_team_col()`. Note that this only shows color
+palettes for non-NCAA teams.
 
 ``` r
 show_team_col()
 ```
 
 ![](README_files/figure-gfm/teamcolors-1.png)<!-- -->
+
+To view color palettes for college teams, use the `show_ncaa_col()`
+function \[1\].
+
+``` r
+show_ncaa_col()
+```
+
+![](README_files/figure-gfm/ncaacolors-1.png)<!-- -->
 
 ## Logos
 
@@ -153,3 +178,14 @@ For more examples see:
     American sport,” *The Annals of Applied Statistics*, vol. 12, no. 4,
     2018, pp. 2483–2516. URL
     (<https://projecteuclid.org/euclid.aoas/1542078053>)
+
+To cite this package in your work, see:
+
+``` r
+citation("teamcolors")
+```
+
+## Notes
+
+1.  Note that hexcodes are only available for 248 of 353 Division I
+    teams.

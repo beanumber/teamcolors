@@ -76,7 +76,8 @@ scale_fill_teams <- function(which = 1, ...) {
 #' show_team_col()
 
 show_team_col <- function(...) {
-  x <- teamcolors::teamcolors
+  x <- teamcolors::teamcolors %>%
+    dplyr::filter(league != "ncaa") 
   if (length(list(...)) > 0) {
     x <- teamcolors::teamcolors %>%
       dplyr::filter(...)
@@ -94,3 +95,30 @@ show_team_col <- function(...) {
     theme(axis.text.x = element_blank(), 
           axis.ticks.x = element_blank())
 }
+
+#' @rdname league_pal
+#' @export
+#' @examples 
+#' show_ncaa_col()
+
+show_ncaa_col <- function(...) {
+  x <- teamcolors::teamcolors %>%
+    dplyr::filter(league == "ncaa") 
+  if (length(list(...)) > 0) {
+    x <- teamcolors::teamcolors %>%
+      dplyr::filter(...)
+  }
+  
+  ggplot(x, aes(x = name, color = name, fill = name)) + 
+    geom_bar() +
+    facet_wrap(~division, scales = "free_y") +
+    coord_flip() + 
+    scale_x_discrete(NULL) + 
+    scale_y_continuous(NULL) + 
+    scale_fill_teams() + 
+    scale_color_teams(2) + 
+    guides(color = FALSE, fill = FALSE) + 
+    theme(axis.text.x = element_blank(), 
+          axis.ticks.x = element_blank())
+}
+
