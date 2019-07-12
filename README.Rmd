@@ -103,7 +103,7 @@ To view color palettes for college teams, use the `show_ncaa_col()` function [^n
 
 [^ncaa]: Note that hexcodes are only available for 248 of 353 Division I teams.
 
-```{r ncaacolors, fig.height=10, fig.width=10}
+```{r ncaacolors, fig.height=10, fig.width=20}
 show_ncaa_col()
 ```
 
@@ -114,7 +114,7 @@ Links to team logos are provided by (http://www.sportslogos.net/).
 
 ```{r logos}
 teamcolors %>%
-  filter(grepl("New York", name)) %>% 
+  filter(grepl("New ", name)) %>% 
   pull(logo) %>%
   knitr::include_graphics()
 ```

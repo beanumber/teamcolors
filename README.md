@@ -162,12 +162,12 @@ Links to team logos are provided by (<http://www.sportslogos.net/>).
 
 ``` r
 teamcolors %>%
-  filter(grepl("New York", name)) %>% 
+  filter(grepl("New ", name)) %>% 
   pull(logo) %>%
   knitr::include_graphics()
 ```
 
-![](http://content.sportslogos.net/logos/9/5119/thumbs/511960002015.gif)<!-- -->![](http://content.sportslogos.net/logos/7/166/thumbs/919.gif)<!-- -->![](http://content.sportslogos.net/logos/1/19/thumbs/1939112018.gif)<!-- -->![](http://content.sportslogos.net/logos/7/152/thumbs/15291162019.gif)<!-- -->![](http://content.sportslogos.net/logos/6/216/thumbs/2nn48xofg0hms8k326cqdmuis.gif)<!-- -->![](http://content.sportslogos.net/logos/54/67/thumbs/m01gfgeorgvbfw15fy04alujm.gif)<!-- -->![](http://content.sportslogos.net/logos/1/20/thumbs/144.gif)<!-- -->![](http://content.sportslogos.net/logos/9/1876/thumbs/i9ni847kriagxdlb7xewa6dl8.gif)<!-- -->![](http://content.sportslogos.net/logos/53/68/thumbs/1256.gif)<!-- -->
+![](http://content.sportslogos.net/logos/7/151/thumbs/y71myf8mlwlk8lbgagh3fd5e0.gif)<!-- -->![](http://content.sportslogos.net/logos/9/327/thumbs/qtfoxrlfgs3gjvif4ao608tia.gif)<!-- -->![](http://content.sportslogos.net/logos/33/768/thumbs/2864.gif)<!-- -->![](http://content.sportslogos.net/logos/1/18/thumbs/32tfs723a3bes0p0hb4hgcy1u.gif)<!-- -->![](http://content.sportslogos.net/logos/33/769/thumbs/ghyb25tvzhogmpe3beytq4wtg.gif)<!-- -->![](http://content.sportslogos.net/logos/33/770/thumbs/77055192007.gif)<!-- -->![](http://content.sportslogos.net/logos/6/4962/thumbs/496226812014.gif)<!-- -->![](http://content.sportslogos.net/logos/7/175/thumbs/907.gif)<!-- -->![](http://content.sportslogos.net/logos/9/5119/thumbs/511960002015.gif)<!-- -->![](http://content.sportslogos.net/logos/7/166/thumbs/919.gif)<!-- -->![](http://content.sportslogos.net/logos/1/19/thumbs/1939112018.gif)<!-- -->![](http://content.sportslogos.net/logos/7/152/thumbs/15291162019.gif)<!-- -->![](http://content.sportslogos.net/logos/6/216/thumbs/2nn48xofg0hms8k326cqdmuis.gif)<!-- -->![](http://content.sportslogos.net/logos/54/67/thumbs/m01gfgeorgvbfw15fy04alujm.gif)<!-- -->![](http://content.sportslogos.net/logos/1/20/thumbs/144.gif)<!-- -->![](http://content.sportslogos.net/logos/9/1876/thumbs/i9ni847kriagxdlb7xewa6dl8.gif)<!-- -->![](http://content.sportslogos.net/logos/53/68/thumbs/1256.gif)<!-- -->
 
 Note that we don’t have complete coverage for the NCAA (see
 <https://github.com/beanumber/teamcolors/issues/13>)), or any coverage
