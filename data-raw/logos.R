@@ -11,6 +11,12 @@ leagues <- tribble(
   "http://www.sportslogos.net/teams/list_by_league/7/National_Football_League/NFL/logos/", "//*[@id='team']",
   "http://www.sportslogos.net/teams/list_by_league/6/National_Basketball_Association/NBA/logos/", "//*[@id='team']",
   "http://www.sportslogos.net/teams/list_by_league/9/Major_League_Soccer/MLS/logos/", "//*[@id='team']",
+  "http://www.sportslogos.net/teams/list_by_league/30/NCAA_Division_I_a-c/NCAA_a-c/logos/", "//*[@id='team']",
+  "http://www.sportslogos.net/teams/list_by_league/31/NCAA_Division_I_d-h/NCAA_d-h/logos/", "//*[@id='team']",
+  "http://www.sportslogos.net/teams/list_by_league/32/NCAA_Division_I_i-m/NCAA_i-m/logos/", "//*[@id='team']",
+  "http://www.sportslogos.net/teams/list_by_league/33/NCAA_Division_I_n-r/NCAA_n-r/logos/", "//*[@id='team']",
+  "http://www.sportslogos.net/teams/list_by_league/34/NCAA_Division_I_s-t/NCAA_s-t/logos/", "//*[@id='team']",
+  "http://www.sportslogos.net/teams/list_by_league/35/NCAA_Division_I_u-z/NCAA_u-z/logos/", "//*[@id='team']",
 )
 
 
