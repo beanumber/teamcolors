@@ -42,8 +42,8 @@ head(teamcolors)
     ##   <chr>   <chr>  <chr>   <chr>     <chr>    <chr>      <chr>    <chr>      
     ## 1 AFC Bo… epl    #e62333 #000000   <NA>     <NA>       <NA>     <NA>       
     ## 2 Air Fo… ncaa   #003087 #8A8D8F   #B1B3B3  #FFC72C    MWC      <NA>       
-    ## 3 Akron   ncaa   #041E42 #A89968   <NA>     <NA>       MAC      <NA>       
-    ## 4 Alabama ncaa   #9E1B32 #828A8F   #FFFFFF  <NA>       SEC      <NA>       
+    ## 3 Akron … ncaa   #041E42 #A89968   <NA>     <NA>       MAC      http://con…
+    ## 4 Alabam… ncaa   #9E1B32 #828A8F   #FFFFFF  <NA>       SEC      http://con…
     ## 5 Albany… ncaa   #461660 #EEB211   <NA>     <NA>       Am. East <NA>       
     ## 6 Anahei… nhl    #010101 #a2aaad   #fc4c02  #85714d    Pacific  http://con…
 
@@ -168,6 +168,28 @@ teamcolors %>%
 ```
 
 ![](http://content.sportslogos.net/logos/9/5119/thumbs/511960002015.gif)<!-- -->![](http://content.sportslogos.net/logos/7/166/thumbs/919.gif)<!-- -->![](http://content.sportslogos.net/logos/1/19/thumbs/1939112018.gif)<!-- -->![](http://content.sportslogos.net/logos/7/152/thumbs/15291162019.gif)<!-- -->![](http://content.sportslogos.net/logos/6/216/thumbs/2nn48xofg0hms8k326cqdmuis.gif)<!-- -->![](http://content.sportslogos.net/logos/54/67/thumbs/m01gfgeorgvbfw15fy04alujm.gif)<!-- -->![](http://content.sportslogos.net/logos/1/20/thumbs/144.gif)<!-- -->![](http://content.sportslogos.net/logos/9/1876/thumbs/i9ni847kriagxdlb7xewa6dl8.gif)<!-- -->![](http://content.sportslogos.net/logos/53/68/thumbs/1256.gif)<!-- -->
+
+Note that we don’t have complete coverage for the NCAA (see
+<https://github.com/beanumber/teamcolors/issues/13>)), or any coverage
+for EPL.
+
+``` r
+teamcolors %>%
+  group_by(league) %>%
+  summarize(num_teams = n(), 
+            num_logos = sum(!is.na(logo)))
+```
+
+    ## # A tibble: 7 x 3
+    ##   league num_teams num_logos
+    ##   <chr>      <int>     <int>
+    ## 1 epl           20         0
+    ## 2 mlb           30        30
+    ## 3 mls           22        22
+    ## 4 nba           30        30
+    ## 5 ncaa         248       163
+    ## 6 nfl           32        32
+    ## 7 nhl           31        31
 
 ## References
 

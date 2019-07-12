@@ -45,5 +45,19 @@ logos <- leagues %>%
          team = ifelse(team == "D.C. United", "DC United", team), 
          team = ifelse(team == "Columbus Crew SC", "Columbus Crew", team))
 
-save(logos, file = "data/logos.rda", compress = "xz")
-            
+
+
+
+# add logos
+teamcolors <- teamcolors %>%
+  select(-logo) %>%
+  left_join(select(logos, name = team, logo = img), by = "name")
+
+
+teamcolors %>%
+  group_by(league) %>%
+  summarize(num_teams = n(), num_logos = sum(!is.na(logo)))
+
+save(teamcolors, file = "data/teamcolors.rda", compress = "xz")
+
+

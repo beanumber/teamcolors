@@ -119,6 +119,15 @@ teamcolors %>%
   knitr::include_graphics()
 ```
 
+Note that we don't have complete coverage for the NCAA (see https://github.com/beanumber/teamcolors/issues/13)), or any coverage for EPL.
+
+```{r}
+teamcolors %>%
+  group_by(league) %>%
+  summarize(num_teams = n(), 
+            num_logos = sum(!is.na(logo)))
+```
+
 ## References
 
 For more examples see: 

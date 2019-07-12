@@ -197,12 +197,6 @@ teamcolors <- teamcolors %>%
   left_join(select(x, division, team), by = c("name" = "team"))
 
 
-# add logos
-load("data/logos.rda")
-teamcolors <- teamcolors %>%
-  left_join(select(logos, name = team, logo = img), by = "name")
-
-save(teamcolors, file = "data/teamcolors.rda", compress = "xz")
 
 
 
