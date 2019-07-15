@@ -6,7 +6,14 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 note
+0 errors | 0 warnings | 1 note
+
+❯ checking DESCRIPTION meta-information ... NOTE
+  Maintainer field differs from that derived from Authors@R
+    Maintainer: 'Ben Baumer <ben.baumer@gmail.com>'
+    Authors@R:  'Benjamin S. Baumer <ben.baumer@gmail.com>'
+
+* Trying to maintain consistency and specificity with my name
 
 ## Reverse dependencies
 
