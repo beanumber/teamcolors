@@ -1,8 +1,8 @@
 Package: teamcolors
 Type: Package
 Title: Color Palettes for Pro Sports Teams
-Date: 2019-07-12
-Version: 0.0.1.9008
+Date: 2019-07-15
+Version: 0.0.2
 Authors@R: c(
     person("Benjamin S.", "Baumer", email = "ben.baumer@gmail.com", role = c("aut", "cre")), 
     person("Gregory J.", "Matthews", email = "gjm112@gmail.com", role = c("aut")),
@@ -17,7 +17,8 @@ Imports:
     dplyr,
     ggplot2
 Suggests:
-    Lahman
+    Lahman,
+    testthat (>= 2.1.0)
 License: GPL
 Encoding: UTF-8
 LazyData: true

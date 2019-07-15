@@ -7,6 +7,7 @@
 * Added color palette functionality through named vectors
 * Added links to logos
 * Added NCAA colors (thanks `lbenz`!) (https://github.com/beanumber/teamcolors/pull/11)
+* Added tests
 
 # teamcolors 0.0.1
 
