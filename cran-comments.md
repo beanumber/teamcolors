@@ -8,10 +8,13 @@
 
 0 errors | 0 warnings | 1 note
 
-❯ checking DESCRIPTION meta-information ... NOTE
-  Maintainer field differs from that derived from Authors@R
-    Maintainer: 'Ben Baumer <ben.baumer@gmail.com>'
-    Authors@R:  'Benjamin S. Baumer <ben.baumer@gmail.com>'
+* checking CRAN incoming feasibility ... NOTE
+Maintainer: ‘Benjamin S. Baumer <ben.baumer@gmail.com>’
+
+New maintainer:
+  Benjamin S. Baumer <ben.baumer@gmail.com>
+Old maintainer(s):
+  Ben Baumer <ben.baumer@gmail.com>
 
 * Trying to maintain consistency and specificity with my name
 
