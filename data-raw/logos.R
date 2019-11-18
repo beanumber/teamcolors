@@ -62,4 +62,3 @@ teamcolors %>%
 
 save(teamcolors, file = "data/teamcolors.rda", compress = "xz")
 
-

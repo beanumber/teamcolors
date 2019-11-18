@@ -15,8 +15,6 @@ nwsl_data <- data.frame(name = c("North Carolina Courage", "Utah Royals FC", "Ho
                         quaternary = c("#C8C9C7", NA, NA, NA, NA, NA, NA, NA , NA))
 
 teamcolors <- teamcolors %>%
-  select(-division.x, -division.y, -url, -team) %>%
-  filter(league != "nwsl") %>%
   bind_rows(nwsl_data) %>%
   arrange(name) %>%
   as_tibble()

@@ -83,7 +83,7 @@ rgb <- df %>%
 
 team_colors <- hex %>%
   bind_rows(select(rgb, -color_rgb)) %>%
-  mutate(color_hex = tolower(color_hex))
+  mutate(color_hex = tolower(color_hex)) %>%
   distinct()
 
 team_colors %>%
