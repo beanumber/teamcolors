@@ -16,7 +16,7 @@
 #' @details The colors given are HTML hexidecimal values. See \code{\link[grDevices]{colors}}
 #' for more information. 
 #' 
-#' @source \url{http://jim-nielsen.com/teamcolors/}, \url{http://www.sportslogos.net}
+#' @source \url{http://jim-nielsen.com/teamcolors/}, \url{http://www.sportslogos.net}, \url{https://teamcolorcodes.com/}
 #' 
 #' @examples 
 #' data(teamcolors)
