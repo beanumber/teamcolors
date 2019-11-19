@@ -6,7 +6,8 @@ Version: 0.0.2
 Authors@R: c(
     person("Benjamin S.", "Baumer", email = "ben.baumer@gmail.com", role = c("aut", "cre")), 
     person("Gregory J.", "Matthews", email = "gjm112@gmail.com", role = c("aut")),
-    person("Luke", "Benz", role = c("ctb")))
+    person("Luke", "Benz", role = c("ctb")),
+    person("Arielle", "Dror", role = c("ctb")))
 Description: Provides color palettes corresponding to professional and amateur, 
     sports teams. These can be useful in creating data graphics that are themed 
     for particular teams. 

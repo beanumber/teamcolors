@@ -125,6 +125,7 @@ show_ncaa_col <- function(...) {
 #' Displays palettes for all teams for a specified sport
 #' @import ggplot2
 #' @importFrom dplyr filter
+#' @importFrom dplyr case_when
 #' @param sport character vector (basketball, soccer, football, hockey)
 #' @param ... arguments passed to other functions
 #' @export
@@ -132,15 +133,17 @@ show_ncaa_col <- function(...) {
 #' @examples 
 #' show_sport_col(sport = "soccer")
 show_sport_col <- function(sport, ...){
- sport <- tolower(sport)
-  
+
+  sport <- tolower(sport)
+
+
   if(sport == "basketball"){
     select_league <- c("nba", "wnba")
   } else if(sport == "soccer") {
     select_league <- c("epl", "mls", "nwsl")
   } else if(sport == "football"){
     select_league <- c("nfl")
-  } else if(sport == "nhl"){
+  } else if(sport == "hockey"){
     select_league <- c("nhl")
   } else {
     stop("Invalid Sport")

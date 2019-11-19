@@ -2,6 +2,7 @@
 
 library(tidyverse)
 library(rvest)
+library(usethis)
 
 leagues <- tribble(
   ~url, ~xpath, 
@@ -60,5 +61,4 @@ teamcolors %>%
   group_by(league) %>%
   summarize(num_teams = n(), num_logos = sum(!is.na(logo)))
 
-save(teamcolors, file = "data/teamcolors.rda", compress = "xz")
-
+use_data(teamcolors, internal = FALSE, compress = "xz", overwrite = TRUE)
