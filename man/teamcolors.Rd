@@ -16,7 +16,7 @@
  \item{logo}{URL to the team's logo, hosted by \url{http://www.sportslogos.net}}
 }}
 \source{
-\url{http://jim-nielsen.com/teamcolors/}, \url{http://www.sportslogos.net}
+\url{http://jim-nielsen.com/teamcolors/}, \url{http://www.sportslogos.net}, \url{https://teamcolorcodes.com/}
 }
 \usage{
 teamcolors

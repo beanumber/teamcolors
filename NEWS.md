@@ -2,6 +2,7 @@
 
 * Added NWSL colors (thanks `adror1`!)
 * Added `show_sport_col()` function
+* Added WNBA colors and logos (thanks `clarajrosenberg`!)
 
 # teamcolors 0.0.2
 
