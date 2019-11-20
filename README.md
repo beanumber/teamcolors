@@ -180,16 +180,17 @@ teamcolors %>%
             num_logos = sum(!is.na(logo)))
 ```
 
-    ## # A tibble: 7 x 3
+    ## # A tibble: 8 x 3
     ##   league num_teams num_logos
     ##   <chr>      <int>     <int>
     ## 1 epl           20         0
     ## 2 mlb           30        30
     ## 3 mls           22        22
     ## 4 nba           30        30
-    ## 5 ncaa         248       163
+    ## 5 ncaa         248       162
     ## 6 nfl           32        32
     ## 7 nhl           31        31
+    ## 8 nwsl           9         9
 
 ## References
 

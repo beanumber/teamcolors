@@ -1,3 +1,8 @@
+# teamcolors 0.0.3
+
+* Added NWSL colors (thanks `adror1`!)
+* Added `show_sport_col()` function
+
 # teamcolors 0.0.2
 
 * Fixed Los Angeles of Anaheim division
@@ -8,8 +13,6 @@
 * Added links to logos
 * Added NCAA colors (thanks `lbenz`!) (https://github.com/beanumber/teamcolors/pull/11)
 * Added tests
-* Added NWSL colors
-* Added `show_sport_col()` function
 
 # teamcolors 0.0.1
 
