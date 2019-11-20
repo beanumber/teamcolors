@@ -8,6 +8,8 @@
 * Added links to logos
 * Added NCAA colors (thanks `lbenz`!) (https://github.com/beanumber/teamcolors/pull/11)
 * Added tests
+* Added NWSL colors
+* Added `show_sport_col()` function
 
 # teamcolors 0.0.1
 
