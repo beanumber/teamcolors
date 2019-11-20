@@ -122,3 +122,51 @@ show_ncaa_col <- function(...) {
           axis.ticks.x = element_blank())
 }
 
+#' Displays palettes for all teams for a specified sport
+#' @import ggplot2
+#' @importFrom dplyr filter
+#' @importFrom dplyr case_when
+#' @param sport character vector (basketball, soccer, football, hockey)
+#' @param ... arguments passed to other functions
+#' @export
+#' @seealso \code{\link[scales]{show_col}}
+#' @examples 
+#' show_sport_col(sport = "soccer")
+show_sport_col <- function(sport, ...){
+
+  sport <- tolower(sport)
+
+
+  if(sport == "basketball"){
+    select_league <- c("nba", "wnba")
+  } else if(sport == "soccer") {
+    select_league <- c("epl", "mls", "nwsl")
+  } else if(sport == "football"){
+    select_league <- c("nfl")
+  } else if(sport == "hockey"){
+    select_league <- c("nhl")
+  } else {
+    stop("Invalid Sport")
+  }
+  
+  x <- teamcolors::teamcolors %>%
+    dplyr::filter(league %in% select_league) 
+  if (length(list(...)) > 0) {
+    x <- teamcolors::teamcolors %>%
+      dplyr::filter(...)
+  }
+  
+  ggplot(x, aes(x = name, color = name, fill = name)) + 
+    geom_bar() +
+    facet_wrap(~league, scales = "free_y") +
+    coord_flip() + 
+    scale_x_discrete(NULL) + 
+    scale_y_continuous(NULL) + 
+    scale_fill_teams() + 
+    scale_color_teams(2) + 
+    guides(color = FALSE, fill = FALSE) + 
+    theme(axis.text.x = element_blank(), 
+          axis.ticks.x = element_blank())
+  
+}
+

@@ -1,6 +1,7 @@
 ### Code to update teamcolors from the ncaa_colors dataset in ncaahoopR
 library(tidyverse)
 library(teamcolors)
+library(usethis)
 
 ncaa_colors <- ncaahoopR::ncaa_colors %>%
   mutate(league = "ncaa",
@@ -65,6 +66,4 @@ teamcolors <- teamcolors %>%
   arrange(name) %>%
   as_tibble()
 
-save("teamcolors", file = "data/teamcolors.rda")
-
-
+use_data(teamcolors, internal = FALSE, overwrite = TRUE)

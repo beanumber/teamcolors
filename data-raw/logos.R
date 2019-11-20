@@ -2,6 +2,7 @@
 
 library(tidyverse)
 library(rvest)
+library(usethis)
 
 leagues <- tribble(
   ~url, ~xpath, 
@@ -17,6 +18,7 @@ leagues <- tribble(
   "http://www.sportslogos.net/teams/list_by_league/33/NCAA_Division_I_n-r/NCAA_n-r/logos/", "//*[@id='team']",
   "http://www.sportslogos.net/teams/list_by_league/34/NCAA_Division_I_s-t/NCAA_s-t/logos/", "//*[@id='team']",
   "http://www.sportslogos.net/teams/list_by_league/35/NCAA_Division_I_u-z/NCAA_u-z/logos/", "//*[@id='team']",
+  "http://www.sportslogos.net/teams/list_by_league/202/National_Womens_Soccer_League/NWSL/logos/", "//*[@id='team']"
 )
 
 
@@ -43,7 +45,8 @@ logos <- leagues %>%
   unnest() %>%
   mutate(team = gsub("  ", " ", team),
          team = ifelse(team == "D.C. United", "DC United", team), 
-         team = ifelse(team == "Columbus Crew SC", "Columbus Crew", team))
+         team = ifelse(team == "Columbus Crew SC", "Columbus Crew", team),
+         team  = ifelse(team == "Seattle Reign FC", "Reign FC", team))
 
 
 
@@ -58,6 +61,4 @@ teamcolors %>%
   group_by(league) %>%
   summarize(num_teams = n(), num_logos = sum(!is.na(logo)))
 
-save(teamcolors, file = "data/teamcolors.rda", compress = "xz")
-
-
+use_data(teamcolors, internal = FALSE, compress = "xz", overwrite = TRUE)
