@@ -226,3 +226,8 @@ teamcolors_updated <- teamcolors %>%
 ## didn't want to write over the original
 
 save(teamcolors_updated, file = "data/teamcolors_updated.rda", compress = "xz")
+
+## attempt to run R CMD check
+
+
+
