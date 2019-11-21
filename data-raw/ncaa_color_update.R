@@ -8,7 +8,7 @@ ncaa_colors <- ncaahoopR::ncaa_colors %>%
          name = gsub(" St\\.", " State", ncaa_name),
          name = gsub("St\\. ", "Saint", name),
          name = gsub("Ariz\\.$", "Arizona", name),
-         name = gsub("Ala\\.$", "Arizona", name),
+         name = gsub("Ala\\.$", "Alabama", name),
          name = gsub("Colo\\.$", "Colorado", name),
          name = gsub("Ill\\.$", "Illinois", name),
          name = gsub("Fla\\.", "Florida", name),
