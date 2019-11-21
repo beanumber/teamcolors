@@ -146,12 +146,6 @@ teamcolors <- teamcolors %>%
   select(-logo) %>%
   left_join(select(logos, name = team, logo = img), by = "name")
 
-# Creating seperate datasets for each league, to later extract locations and mascots
-
-# teamcolors_without_epl_mls <- teamcolors %>%
-#   filter(league == "mlb" | league == "nba" | 
-#          league == "nfl" | league == "nhl" |
-#          league == "ncaa")
 
 teamcolors %>%
   group_by(league) %>%
