@@ -155,12 +155,10 @@ teamcolors %>%
 
 # joining teamcolors with the unmatched team names dataset, in order to get the names to match up
 
-teamcolors_test <- teamcolors %>%
-  left_join(unmatched_team_names, by = "name")
-
-## BELOW IS WHAT NEEDS TO BE FIXED
-teamcolors_test2 <- teamcolors_test %>%
-  mutate(name = ifelse(name == sportslogos_name, replace(name, sportslogos_name, sportslogos_name), name))
+teamcolors <- teamcolors %>%
+  left_join(unmatched_team_names, by = "name") %>%
+   mutate(sportslogos_name = replace_na(sportslogos_name, "unk"),
+          name = ifelse(sportslogos_name == "unk", name, sportslogos_name))
 
 # saving teamcolors to the data file
 

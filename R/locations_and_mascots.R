@@ -88,46 +88,24 @@ nasty_gsub_function <- function(df){
   new_gsub_test <<- data.frame(df)
   
   return(df)
-  
 }
 
 
 name_location_mascot_function <- function(df){
   
-  ## the first assignment sends dataframe to the nasty gsub function, in order to keep this main function clean
   
   df <- nasty_gsub_function(df)
+
   
-  ## the next assignment a new column, location_mascots, that splits the name of each team into two elements
-  ## first element is the location of team, which doesn't contain any spaces in order to split the name into only two elements
-  ## second element is the rest of the words (regardless of the number of spaces) from the name, and contains the mascot
-  
-  df <- mutate(df, locations_mascots = str_split(name, " ", 2))
-  
-  ## the next two assignments are pluck from the rvest package, NOT FROM PURR
-  ## the first line plucks the first element from the location_mascot list, which contains the location of the team
-  ## the second line plucks the second element from the location_mascot list, which contains the mascot of the team
-  
-  df <- mutate(df, location = pluck(locations_mascots, 1))
-  df <- mutate(df, mascot = pluck(locations_mascots, 2))
-  
-  ## the next two assignments change the location and mascot from single element lists, back to characters, for readability and consistency
-  
-  df <- mutate(df, mascot = as.character(mascot))
-  df <- mutate(df, location = as.character(location))
-  
-  ## the next assignment removes the underscores that the nasty gsub function provided, since they are no longer needed
-  
-  df <- mutate(df, name = gsub("_", " ", name),
-               location = gsub("_", " ", location))
-  
-  ## the next assignment selects only the variables of interest
-  ## variables of interest include: the original name provided, the newly created location, and newly created mascot 
-  
+  df <- mutate(df, locations_mascots = str_split(name, " ", 2),
+                   location = pluck(locations_mascots, 1),
+                   location = as.character(location),
+                   mascot = pluck(locations_mascots, 2),
+                   mascot = as.character(mascot),
+                   name = gsub("_", " ", name),
+                   location = gsub("_", " ", location))
+
   df <- select(df, name, location, mascot)
-  
-  ## the last assignment takes the dataframe within this function and assigns it to a dataframe that exists in the global environment
-  ## the name_location_mascot dataframe is what will be used to add the location and mascot to the original teamcolors dataset 
   
   name_location_mascot <<- data.frame(df)
   
@@ -149,4 +127,3 @@ teamcolors_updated <- teamcolors %>%
 
 save(teamcolors_updated, file = "data/teamcolors_updated.rda", compress = "xz")
 
-## attempt to run R CMD check
