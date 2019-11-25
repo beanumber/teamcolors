@@ -157,8 +157,10 @@ teamcolors %>%
 
 teamcolors <- teamcolors %>%
   left_join(unmatched_team_names, by = "name") %>%
-   mutate(sportslogos_name = replace_na(sportslogos_name, "unk"),
-          name = ifelse(sportslogos_name == "unk", name, sportslogos_name))
+   mutate(teamcolors_name = name,
+          sportslogos_name = replace_na(sportslogos_name, "unk"),
+          name = ifelse(sportslogos_name == "unk", name, sportslogos_name),
+          sportslogos_name = ifelse(sportslogos_name == "unk", teamcolors_name, sportslogos_name))
 
 # saving teamcolors to the data file
 
