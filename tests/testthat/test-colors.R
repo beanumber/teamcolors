@@ -1,5 +1,5 @@
 test_that("colors work", {
-  expect_equal(ncol(teamcolors), 8)
+  expect_equal(ncol(teamcolors), 9)
   expect_is(teamcolors, "tbl_df")
   
   expect_is(team_pal(), "character")
