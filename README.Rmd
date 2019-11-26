@@ -119,7 +119,7 @@ teamcolors %>%
   knitr::include_graphics()
 ```
 
-Note that we don't have complete coverage for the NCAA (see https://github.com/beanumber/teamcolors/issues/13)), or any coverage for EPL.
+Note that we don't have any coverage for the EPL.
 
 ```{r}
 teamcolors %>%
