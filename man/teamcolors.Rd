@@ -8,12 +8,16 @@
 \describe{
  \item{name}{the name of the team}
  \item{league}{the league in which the team plays}
+ \item{division}{the team's division}
+ \item{location}{the team's location, not standardized}
+ \item{mascot}{the team's mascot}
  \item{primary}{the team's primary color}
  \item{secondary}{the team's secondary color}
  \item{tertiary}{the team's tertiary color}
  \item{quaternary}{the team's quaternary color}
- \item{division}{the team's division}
  \item{logo}{URL to the team's logo, hosted by \url{http://www.sportslogos.net}}
+ \item{sportslogos_name}{the name of the team as they are presented on the sportslogos website}
+ \item{teamcolors_name}{the name of the team as they are presented in the teamcolors dataset}
 }}
 \source{
 \url{http://jim-nielsen.com/teamcolors/}, \url{http://www.sportslogos.net}

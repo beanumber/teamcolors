@@ -116,14 +116,15 @@ name_location_mascot_function(teamcolors_without_epl_mls)
 
 ## this full join adds the locations and mascots to the teamcolors dataset and reorganizes the columns
 
-teamcolors_updated <- teamcolors %>%
+teamcolors <- teamcolors %>%
   full_join(name_location_mascot, by = "name") %>%
   select("name", "league", "division", "location", "mascot", 
-         "primary", "secondary", "tertiary", "quaternary", "logo")
+         "primary", "secondary", "tertiary", "quaternary", 
+         "logo", "sportslogos_name","teamcolors_name")
 
 
 ## this saves the newly added columns to a new file
 ## didn't want to write over the original
 
-save(teamcolors_updated, file = "data/teamcolors_updated.rda", compress = "xz")
+save(teamcolors, file = "data/teamcolors.rda", compress = "xz")
 
