@@ -197,6 +197,6 @@ teamcolors <- teamcolors %>%
   left_join(select(x, division, team), by = c("name" = "team"))
 
 
-
+usethis::use_data(teamcolors, overwrite = TRUE)
 
 

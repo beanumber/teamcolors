@@ -1,15 +1,13 @@
 ### Code to update teamcolors from the ncaa_colors dataset in ncaahoopR
 library(tidyverse)
 library(teamcolors)
-library(usethis)
 
 ncaa_colors <- ncaahoopR::ncaa_colors %>%
   mutate(league = "ncaa",
-         logo = NA, 
          name = gsub(" St\\.", " State", ncaa_name),
          name = gsub("St\\. ", "Saint", name),
          name = gsub("Ariz\\.$", "Arizona", name),
-         name = gsub("Ala\\.$", "Arizona", name),
+         name = gsub("Ala\\.$", "Alabama", name),
          name = gsub("Colo\\.$", "Colorado", name),
          name = gsub("Ill\\.$", "Illinois", name),
          name = gsub("Fla\\.", "Florida", name),
@@ -26,7 +24,7 @@ ncaa_colors <- ncaahoopR::ncaa_colors %>%
          secondary = secondary_color,
          tertiary = tertiary_color, 
          quaternary = color_4, 
-         division = conference, logo) %>%
+         division = conference) %>%
   as_tibble()
 
 ncaa_colors %>%
@@ -50,6 +48,10 @@ divI <- divI %>%
          nickname = map_chr(stringr::str_split(Team, " and"), 1)
   )
 
+# ?!?!?
+divI$Team <- gsub("\\[[A-Z] [0-9]+\\]$", "", divI$Team) 
+
+
 x <- ncaa_colors %>%
   left_join(select(divI, name, nickname), by = c("name")) %>%
   mutate(name = ifelse(is.na(nickname), name, paste(name, nickname))) %>%
@@ -66,4 +68,4 @@ teamcolors <- teamcolors %>%
   arrange(name) %>%
   as_tibble()
 
-use_data(teamcolors, internal = FALSE, overwrite = TRUE)
+usethis::use_data(teamcolors, overwrite = TRUE)

@@ -6,11 +6,11 @@ library(tidyverse)
 library(teamcolors)
 
 wnba_colors <- read_csv("data-raw/wnba_colors.csv") %>%
-  select(name, league, primary, secondary,tertiary, quaternary, division, logo)
+  select(name, league, primary, secondary,tertiary, quaternary, division)
 
 teamcolors <- teamcolors %>%
   bind_rows(wnba_colors) %>%
   arrange(name) %>%
   as_tibble()
 
-save("teamcolors", file = "data/teamcolors.rda")
+usethis::use_data(teamcolors, overwrite = TRUE)
