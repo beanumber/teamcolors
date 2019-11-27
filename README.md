@@ -187,7 +187,7 @@ teamcolors %>%
     ## 2 mlb           30        30
     ## 3 mls           22        22
     ## 4 nba           30        30
-    ## 5 ncaa         248       247
+    ## 5 ncaa         248       248
     ## 6 nfl           32        32
     ## 7 nhl           31        31
     ## 8 nwsl           9         9
