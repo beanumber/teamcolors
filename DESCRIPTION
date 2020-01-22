@@ -1,7 +1,7 @@
 Package: teamcolors
 Type: Package
 Title: Color Palettes for Pro Sports Teams
-Version: 0.0.3
+Version: 0.0.3.9000
 Authors@R: c(
     person("Benjamin S.", "Baumer", email = "ben.baumer@gmail.com", role = c("aut", "cre")), 
     person("Gregory J.", "Matthews", email = "gjm112@gmail.com", role = c("aut")),
@@ -16,13 +16,16 @@ Depends:
     R (>= 3.5)
 Imports:
     dplyr,
-    ggplot2
+    ggplot2,
+    htmltools
 Suggests:
     Lahman,
-    testthat (>= 2.1.0)
+    testthat (>= 2.1.0),
+    xaringanthemer
+Remotes: gadenbuie/xaringanthemer
 License: GPL
 Encoding: UTF-8
 LazyData: true
 URL: http://github.com/beanumber/teamcolors
 BugReports: https://github.com/beanumber/teamcolors/issues
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2

@@ -54,8 +54,8 @@ Color palettes for sports teams
 Use \code{league_pal} to return a vector of colors for a spcefic
 league.
 
-Use \code{team_pal} to return a palette of multiple colors for a
-specific team.
+Use \code{team_pal} to return a palette (named vector) of 
+multiple colors for a specific team.
 }
 \examples{
 league_pal("mlb", 2)
