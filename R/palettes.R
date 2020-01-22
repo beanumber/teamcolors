@@ -51,7 +51,7 @@ team_vec <- function(pattern = ".", which = 1) {
 #' @details Use \code{team_pal} to return a palette (named vector) of 
 #' multiple colors for a specific team. 
 #' @export
-#' @importFrom dplyr select
+#' @importFrom dplyr select contains
 #' @examples 
 #' team_pal("Celtics")
 #' team_pal("Lakers", 1:4)
@@ -60,8 +60,8 @@ team_vec <- function(pattern = ".", which = 1) {
 team_pal <- function(pattern, colors = c(1, 2)) {
   pal <- pattern %>%
     team_filter() %>%
-    head(1) %>%
-    select(primary, secondary, tertiary, quaternary) %>%
+    utils::head(1) %>%
+    select(contains("ary")) %>%
     tidyr::gather(key = "type", value = "color") %>%
     tibble::deframe()
   pal[colors]

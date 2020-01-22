@@ -9,6 +9,12 @@ img_team_logo(pattern, ...)
 
 img_teamcolors_hex(...)
 }
+\arguments{
+\item{pattern}{regular expression matching names passed to 
+\code{\link[dplyr]{filter}}}
+
+\item{...}{arguments passed to \code{\link[htmltools]{img}}}
+}
 \description{
 Embed logos
 }

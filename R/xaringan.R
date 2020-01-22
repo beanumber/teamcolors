@@ -1,3 +1,5 @@
+globalVariables(c("logo"))
+
 #' Xaringan themes
 #' @param pattern regular expression matched to \code{name} 
 #' variable from \code{teamcolors}
@@ -120,6 +122,9 @@ duo_accent_inverse_team <- function(pattern, colors = c(1, 2), ...) {
 #' Embed logos
 #' @export
 #' @importFrom dplyr pull first
+#' @param pattern regular expression matching names passed to 
+#' \code{\link[dplyr]{filter}}
+#' @param ... arguments passed to \code{\link[htmltools]{img}}
 #' @examples 
 #' img_team_logo("New York Mets", width = 64)
 
