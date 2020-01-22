@@ -1,3 +1,8 @@
+# teamcolors 0.0.4
+
+* Added `xaringan` themes for teams
+* Fixed `tidyselect` update error
+
 # teamcolors 0.0.3
 
 * Added NWSL colors (thanks `adror1`!)
