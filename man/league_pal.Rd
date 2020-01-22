@@ -85,8 +85,12 @@ if (require(Lahman) && require(dplyr) && require(ggplot2)) {
     scale_fill_teams(name = "Team") + 
     scale_color_teams(name = "Team")
 }
+\dontrun{
 show_team_col()
+}
+\dontrun{
 show_ncaa_col()
+}
 }
 \seealso{
 teamcolors
