@@ -113,7 +113,9 @@ scale_fill_teams <- function(which = 1, ...) {
 #' @export
 #' @seealso \code{\link[scales]{show_col}}
 #' @examples 
+#' \dontrun{
 #' show_team_col()
+#' }
 
 show_team_col <- function(...) {
   x <- teamcolors::teamcolors %>%
@@ -139,7 +141,9 @@ show_team_col <- function(...) {
 #' @rdname league_pal
 #' @export
 #' @examples 
+#' \dontrun{
 #' show_ncaa_col()
+#' }
 
 show_ncaa_col <- function(...) {
   x <- teamcolors::teamcolors %>%
