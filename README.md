@@ -38,16 +38,15 @@ head(teamcolors)
 ```
 
     ## # A tibble: 6 x 11
-    ##   name  league primary secondary tertiary quaternary division location
-    ##   <chr> <chr>  <chr>   <chr>     <chr>    <chr>      <chr>    <chr>   
-    ## 1 AFC … epl    #e62333 #000000   <NA>     <NA>       <NA>     AFC     
-    ## 2 Air … ncaa   #003087 #8A8D8F   #B1B3B3  #FFC72C    MWC      Air For…
-    ## 3 Akro… ncaa   #041E42 #A89968   <NA>     <NA>       MAC      Akron   
-    ## 4 Alab… ncaa   #9E1B32 #828A8F   #FFFFFF  <NA>       SEC      Alabama 
-    ## 5 Alba… ncaa   #461660 #EEB211   <NA>     <NA>       Am. East Albany  
-    ## 6 Anah… nhl    #010101 #a2aaad   #fc4c02  #85714d    Pacific  Anaheim 
-    ## # … with 3 more variables: mascot <chr>, sportslogos_name <chr>,
-    ## #   logo <chr>
+    ##   name  league primary secondary tertiary quaternary division location mascot
+    ##   <chr> <chr>  <chr>   <chr>     <chr>    <chr>      <chr>    <chr>    <chr> 
+    ## 1 AFC … epl    #e62333 #000000   <NA>     <NA>       <NA>     AFC      Bourn…
+    ## 2 Air … ncaa   #003087 #8A8D8F   #B1B3B3  #FFC72C    MWC      Air For… <NA>  
+    ## 3 Akro… ncaa   #041E42 #A89968   <NA>     <NA>       MAC      Akron    Zips  
+    ## 4 Alab… ncaa   #9E1B32 #828A8F   #FFFFFF  <NA>       SEC      Alabama  Crims…
+    ## 5 Alba… ncaa   #461660 #EEB211   <NA>     <NA>       Am. East Albany   (NY)  
+    ## 6 Anah… nhl    #010101 #a2aaad   #fc4c02  #85714d    Pacific  Anaheim  Ducks 
+    ## # … with 2 more variables: sportslogos_name <chr>, logo <chr>
 
 ## Show palettes
 

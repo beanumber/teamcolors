@@ -2,16 +2,22 @@
 % Please edit documentation in R/palettes.R
 \name{league_pal}
 \alias{league_pal}
+\alias{team_filter}
+\alias{team_vec}
 \alias{team_pal}
 \alias{scale_color_teams}
 \alias{scale_fill_teams}
 \alias{show_team_col}
 \alias{show_ncaa_col}
-\title{Color palettes}
+\title{Color palettes for sports teams}
 \usage{
 league_pal(lg, which = 1)
 
-team_pal(which = 1)
+team_filter(pattern = ".")
+
+team_vec(pattern = ".", which = 1)
+
+team_pal(pattern, colors = c(1, 2))
 
 scale_color_teams(which = 1, ...)
 
@@ -26,19 +32,38 @@ show_ncaa_col(...)
 
 \item{which}{Which set of colors do you want? Default is 1 for "primary"}
 
+\item{pattern}{regular expression matching team names passed to 
+\code{\link[dplyr]{filter}}}
+
+\item{colors}{A numeric vector of colors to return. Possible values are 
+\code{1:4}}
+
 \item{...}{arguments passed to other functions}
 }
 \value{
 For \code{*_pal()} functions, a named character vector of colors
 
-For \code{scale_*_teams()} functions, a wrapper to \code{\link[ggplot2]{scale_color_manual}}
-or  \code{\link[ggplot2]{scale_fill_manual}}
+For \code{scale_*_teams()} functions, a wrapper to 
+\code{\link[ggplot2]{scale_color_manual}}
+or \code{\link[ggplot2]{scale_fill_manual}}
 }
 \description{
-Color palettes
+Color palettes for sports teams
+}
+\details{
+Use \code{league_pal} to return a vector of colors for a spcefic
+league.
+
+Use \code{team_pal} to return a palette of multiple colors for a
+specific team.
 }
 \examples{
 league_pal("mlb", 2)
+team_filter("New York")
+team_vec("New York")
+team_pal("Celtics")
+team_pal("Lakers", 1:4)
+team_pal("New York", 1:4)
 if (require(Lahman) && require(dplyr) && require(ggplot2)) {
   pythag <- Teams \%>\%
     filter(yearID == 2016) \%>\%

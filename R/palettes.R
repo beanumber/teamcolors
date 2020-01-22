@@ -1,9 +1,11 @@
 globalVariables(c("league", "name"))
 
-#' Color palettes
+#' Color palettes for sports teams
 #' @param lg character vector for the league identifier
 #' @param which Which set of colors do you want? Default is 1 for "primary"
 #' @importFrom dplyr %>%
+#' @details Use \code{league_pal} to return a vector of colors for a spcefic
+#' league.
 #' @seealso teamcolors
 #' @export
 #' @examples 
@@ -17,24 +19,62 @@ league_pal <- function(lg, which = 1) {
   out
 }
 
-#' @rdname league_pal
-#' @return For \code{*_pal()} functions, a named character vector of colors
-#' @export
 
-team_pal <- function(which = 1) {
-  teams <- teamcolors::teamcolors
-  out <- dplyr::pull(teams, which + 2)
-  names(out) <- teams$name
-  out
+#' @rdname league_pal
+#' @param pattern regular expression matching team names passed to 
+#' \code{\link[dplyr]{filter}}
+#' @export
+#' @examples 
+#' team_filter("New York")
+
+team_filter <- function(pattern = ".") {
+  teamcolors::teamcolors %>%
+    filter(grepl(pattern, name))
 }
 
 #' @rdname league_pal
-#' @return For \code{scale_*_teams()} functions, a wrapper to \code{\link[ggplot2]{scale_color_manual}}
-#' or  \code{\link[ggplot2]{scale_fill_manual}}
+#' @export
+#' @examples 
+#' team_vec("New York")
+
+team_vec <- function(pattern = ".", which = 1) {
+  team_filter(pattern) %>%
+    select(name, which + 2) %>%
+    tibble::deframe()
+}
+
+
+#' @rdname league_pal
+#' @param colors A numeric vector of colors to return. Possible values are 
+#' \code{1:4}
+#' @return For \code{*_pal()} functions, a named character vector of colors
+#' @details Use \code{team_pal} to return a palette (named vector) of 
+#' multiple colors for a specific team. 
+#' @export
+#' @importFrom dplyr select
+#' @examples 
+#' team_pal("Celtics")
+#' team_pal("Lakers", 1:4)
+#' team_pal("New York", 1:4)
+
+team_pal <- function(pattern, colors = c(1, 2)) {
+  pal <- pattern %>%
+    team_filter() %>%
+    head(1) %>%
+    select(primary, secondary, tertiary, quaternary) %>%
+    tidyr::gather(key = "type", value = "color") %>%
+    tibble::deframe()
+  pal[colors]
+}
+
+#' @rdname league_pal
+#' @return For \code{scale_*_teams()} functions, a wrapper to 
+#' \code{\link[ggplot2]{scale_color_manual}}
+#' or \code{\link[ggplot2]{scale_fill_manual}}
 #' @export
 
 scale_color_teams <- function(which = 1, ...) {
-  ggplot2::scale_color_manual(..., values = team_pal(which = which))
+  ggplot2::scale_color_manual(..., values = team_vec(which = which))
 }
 
 #' @rdname league_pal
@@ -63,7 +103,7 @@ scale_color_teams <- function(which = 1, ...) {
 #' }
 
 scale_fill_teams <- function(which = 1, ...) {
-  ggplot2::scale_fill_manual(..., values = team_pal(which = which))
+  ggplot2::scale_fill_manual(..., values = team_vec(which = which))
 }
 
 #' @rdname league_pal
@@ -137,13 +177,13 @@ show_sport_col <- function(sport, ...){
   sport <- tolower(sport)
 
 
-  if(sport == "basketball"){
+  if (sport == "basketball") {
     select_league <- c("nba", "wnba")
-  } else if(sport == "soccer") {
+  } else if (sport == "soccer") {
     select_league <- c("epl", "mls", "nwsl")
-  } else if(sport == "football"){
+  } else if (sport == "football") {
     select_league <- c("nfl")
-  } else if(sport == "hockey"){
+  } else if (sport == "hockey") {
     select_league <- c("nhl")
   } else {
     stop("Invalid Sport")
