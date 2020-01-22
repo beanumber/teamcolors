@@ -1,7 +1,7 @@
 Package: teamcolors
 Type: Package
 Title: Color Palettes for Pro Sports Teams
-Version: 0.0.3.9001
+Version: 0.0.4
 Authors@R: c(
     person("Benjamin S.", "Baumer", email = "ben.baumer@gmail.com", role = c("aut", "cre")), 
     person("Gregory J.", "Matthews", email = "gjm112@gmail.com", role = c("aut")),
@@ -17,14 +17,11 @@ Depends:
 Imports:
     dplyr,
     ggplot2,
-    htmltools,
     tibble,
     tidyr
 Suggests:
     Lahman,
-    testthat (>= 2.1.0),
-    xaringanthemer
-Remotes: gadenbuie/xaringanthemer
+    testthat (>= 2.1.0)
 License: GPL
 Encoding: UTF-8
 LazyData: true

@@ -1,3 +1,7 @@
+# teamcolors 0.0.4
+
+* Fixed `tidyselect` update error
+
 # teamcolors 0.0.3
 
 * Added NWSL colors (thanks `adror1`!)
