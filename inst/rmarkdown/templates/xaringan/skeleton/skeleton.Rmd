@@ -1,0 +1,56 @@
+---
+title: "Teamcolors"
+subtitle: "xaringan style"
+author: |
+  You<br/>
+date: |
+  `r Sys.Date()`<br/>
+  `r teamcolors::img_teamcolors_hex(width = 128)`
+output:
+  sds::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+# teamcolors::mono_dark_team("Mets")
+# teamcolors::mono_light_team("UCLA", colors = c(2, 1))
+# teamcolors::duo_team("Mets")
+teamcolors::duo_accent_team("UCLA")
+```
+
+
+class: center, middle, inverse
+# Your team name
+```{r}
+teamcolors::img_team_logo("UCLA", width = 128)
+```
+---
+## Available themes
+
+- `duo_accent_inverse_team()`
+
+- `duo_accent_team()`
+
+- `duo_team()`
+
+- `mono_dark_team()`
+
+- `mono_light_team()`
+
+---
+## Disclaimer
+
+- Don't [impersonate](https://www.merriam-webster.com/dictionary/impersonate) team officials
+
+```{r, warning=FALSE}
+citation("teamcolors")
+```
+
+.footnote[https://www.github.com/beanumber/teamcolors]
+

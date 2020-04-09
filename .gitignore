@@ -18,3 +18,8 @@ vignettes/*.pdf
 # OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
 .httr-oauth
 .Rproj.user
+
+# derived files
+inst/rmarkdown/templates/xaringan/skeleton/libs
+inst/rmarkdown/templates/xaringan/skeleton/*.html
+inst/rmarkdown/templates/xaringan/skeleton/*.css

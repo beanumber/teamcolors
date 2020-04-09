@@ -6,3 +6,6 @@
 ^README\.Rmd$
 ^README_files.*$
 ^cran-comments\.md$
+^CRAN-RELEASE$
+^xaringan-themer\.css$
+^inst/rmarkdown/templates/xaringan/skeleton/libs/*
