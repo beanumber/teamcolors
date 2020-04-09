@@ -1,7 +1,6 @@
 #code to create dataframe with NWSL data. 
 
 library(dplyr)
-library(usethis)
 
 nwsl_data <- data.frame(
   name = c("North Carolina Courage", "Utah Royals FC", "Houston Dash",
@@ -22,5 +21,5 @@ teamcolors <- teamcolors %>%
   arrange(name) %>%
   as_tibble()
 
-use_data(teamcolors, internal = FALSE, overwrite = TRUE)
+usethis::use_data(teamcolors, overwrite = TRUE)
 

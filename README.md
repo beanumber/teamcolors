@@ -37,15 +37,16 @@ library(teamcolors)
 head(teamcolors)
 ```
 
-    ## # A tibble: 6 x 8
-    ##   name    league primary secondary tertiary quaternary division logo       
-    ##   <chr>   <chr>  <chr>   <chr>     <chr>    <chr>      <chr>    <chr>      
-    ## 1 AFC Bo… epl    #e62333 #000000   <NA>     <NA>       <NA>     <NA>       
-    ## 2 Air Fo… ncaa   #003087 #8A8D8F   #B1B3B3  #FFC72C    MWC      <NA>       
-    ## 3 Akron … ncaa   #041E42 #A89968   <NA>     <NA>       MAC      http://con…
-    ## 4 Alabam… ncaa   #9E1B32 #828A8F   #FFFFFF  <NA>       SEC      http://con…
-    ## 5 Albany… ncaa   #461660 #EEB211   <NA>     <NA>       Am. East <NA>       
-    ## 6 Anahei… nhl    #010101 #a2aaad   #fc4c02  #85714d    Pacific  http://con…
+    ## # A tibble: 6 x 11
+    ##   name  league primary secondary tertiary quaternary division location mascot
+    ##   <chr> <chr>  <chr>   <chr>     <chr>    <chr>      <chr>    <chr>    <chr> 
+    ## 1 AFC … epl    #e62333 #000000   <NA>     <NA>       <NA>     AFC      Bourn…
+    ## 2 Air … ncaa   #003087 #8A8D8F   #B1B3B3  #FFC72C    MWC      Air For… <NA>  
+    ## 3 Akro… ncaa   #041E42 #A89968   <NA>     <NA>       MAC      Akron    Zips  
+    ## 4 Alab… ncaa   #9E1B32 #828A8F   #FFFFFF  <NA>       SEC      Alabama  Crims…
+    ## 5 Alba… ncaa   #461660 #EEB211   <NA>     <NA>       Am. East Albany   (NY)  
+    ## 6 Anah… nhl    #010101 #a2aaad   #fc4c02  #85714d    Pacific  Anaheim  Ducks 
+    ## # … with 2 more variables: sportslogos_name <chr>, logo <chr>
 
 ## Show palettes
 
@@ -167,11 +168,9 @@ teamcolors %>%
   knitr::include_graphics()
 ```
 
-![](http://content.sportslogos.net/logos/7/151/thumbs/y71myf8mlwlk8lbgagh3fd5e0.gif)<!-- -->![](http://content.sportslogos.net/logos/9/327/thumbs/qtfoxrlfgs3gjvif4ao608tia.gif)<!-- -->![](http://content.sportslogos.net/logos/33/768/thumbs/2864.gif)<!-- -->![](http://content.sportslogos.net/logos/1/18/thumbs/32tfs723a3bes0p0hb4hgcy1u.gif)<!-- -->![](http://content.sportslogos.net/logos/33/769/thumbs/ghyb25tvzhogmpe3beytq4wtg.gif)<!-- -->![](http://content.sportslogos.net/logos/33/770/thumbs/77055192007.gif)<!-- -->![](http://content.sportslogos.net/logos/6/4962/thumbs/496226812014.gif)<!-- -->![](http://content.sportslogos.net/logos/7/175/thumbs/907.gif)<!-- -->![](http://content.sportslogos.net/logos/9/5119/thumbs/511960002015.gif)<!-- -->![](http://content.sportslogos.net/logos/7/166/thumbs/919.gif)<!-- -->![](http://content.sportslogos.net/logos/1/19/thumbs/1939112018.gif)<!-- -->![](http://content.sportslogos.net/logos/7/152/thumbs/15291162019.gif)<!-- -->![](http://content.sportslogos.net/logos/6/216/thumbs/2nn48xofg0hms8k326cqdmuis.gif)<!-- -->![](http://content.sportslogos.net/logos/54/67/thumbs/m01gfgeorgvbfw15fy04alujm.gif)<!-- -->![](http://content.sportslogos.net/logos/1/20/thumbs/144.gif)<!-- -->![](http://content.sportslogos.net/logos/9/1876/thumbs/i9ni847kriagxdlb7xewa6dl8.gif)<!-- -->![](http://content.sportslogos.net/logos/53/68/thumbs/1256.gif)<!-- -->
+![](http://content.sportslogos.net/logos/7/151/thumbs/y71myf8mlwlk8lbgagh3fd5e0.gif)<!-- -->![](http://content.sportslogos.net/logos/9/327/thumbs/qtfoxrlfgs3gjvif4ao608tia.gif)<!-- -->![](http://content.sportslogos.net/logos/33/768/thumbs/2864.gif)<!-- -->![](http://content.sportslogos.net/logos/1/18/thumbs/32tfs723a3bes0p0hb4hgcy1u.gif)<!-- -->![](http://content.sportslogos.net/logos/33/769/thumbs/ghyb25tvzhogmpe3beytq4wtg.gif)<!-- -->![](http://content.sportslogos.net/logos/33/770/thumbs/77055192007.gif)<!-- -->![](http://content.sportslogos.net/logos/6/4962/thumbs/496226812014.gif)<!-- -->![](http://content.sportslogos.net/logos/7/175/thumbs/907.gif)<!-- -->![](http://content.sportslogos.net/logos/9/5119/thumbs/511960002015.gif)<!-- -->![](http://content.sportslogos.net/logos/7/166/thumbs/919.gif)<!-- -->![](http://content.sportslogos.net/logos/1/19/thumbs/1939112018.gif)<!-- -->![](http://content.sportslogos.net/logos/7/152/thumbs/15291162019.gif)<!-- -->![](http://content.sportslogos.net/logos/6/216/thumbs/2nn48xofg0hms8k326cqdmuis.gif)<!-- -->![](http://content.sportslogos.net/logos/16/309/thumbs/87s4dbwkieyw95ushfw6b3hz6.gif)<!-- -->![](http://content.sportslogos.net/logos/54/67/thumbs/m01gfgeorgvbfw15fy04alujm.gif)<!-- -->![](http://content.sportslogos.net/logos/1/20/thumbs/144.gif)<!-- -->![](http://content.sportslogos.net/logos/9/1876/thumbs/i9ni847kriagxdlb7xewa6dl8.gif)<!-- -->![](http://content.sportslogos.net/logos/53/68/thumbs/1256.gif)<!-- -->
 
-Note that we don’t have complete coverage for the NCAA (see
-<https://github.com/beanumber/teamcolors/issues/13>)), or any coverage
-for EPL.
+Note that we don’t have any coverage for the EPL.
 
 ``` r
 teamcolors %>%
@@ -180,16 +179,18 @@ teamcolors %>%
             num_logos = sum(!is.na(logo)))
 ```
 
-    ## # A tibble: 7 x 3
+    ## # A tibble: 9 x 3
     ##   league num_teams num_logos
     ##   <chr>      <int>     <int>
     ## 1 epl           20         0
     ## 2 mlb           30        30
     ## 3 mls           22        22
     ## 4 nba           30        30
-    ## 5 ncaa         248       163
+    ## 5 ncaa         248       248
     ## 6 nfl           32        32
     ## 7 nhl           31        31
+    ## 8 nwsl           9         9
+    ## 9 wnba          12        12
 
 ## References
 
