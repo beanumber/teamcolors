@@ -1,23 +1,31 @@
 Package: teamcolors
 Type: Package
 Title: Color Palettes for Pro Sports Teams
-Version: 0.0.1.9001
-Date: 2017-09-29
+Version: 0.0.4
 Authors@R: c(
-    person("Ben", "Baumer", email = "ben.baumer@gmail.com", role = c("aut", "cre")), 
-    person("Gregory", "Matthews", email = "gjm112@gmail.com", role = c("aut")))
-Maintainer: Ben Baumer <ben.baumer@gmail.com>
-Description: Provides color palettes corresponding to professional sports teams. These
-    can be useful in creating data graphics that are themed for particular teams. 
+    person("Benjamin S.", "Baumer", email = "ben.baumer@gmail.com", role = c("aut", "cre")), 
+    person("Gregory J.", "Matthews", email = "gjm112@gmail.com", role = c("aut")),
+    person("Luke", "Benz", role = c("ctb")),
+    person("Arielle", "Dror", role = c("ctb")),
+    person("Clara", "Rosenberg", role = c("ctb")),
+    person("Paige", "Patrick", role = c("ctb"))),
+    person("Allan", "Butler", role = c("ctb"))
+Description: Provides color palettes corresponding to professional and amateur, 
+    sports teams. These can be useful in creating data graphics that are themed 
+    for particular teams. 
 Depends:
-    R (>= 3.0)
+    R (>= 3.5)
+Imports:
+    dplyr,
+    ggplot2,
+    tibble,
+    tidyr
 Suggests:
     Lahman,
-    dplyr,
-    ggplot2
+    testthat (>= 2.1.0)
 License: GPL
 Encoding: UTF-8
 LazyData: true
 URL: http://github.com/beanumber/teamcolors
 BugReports: https://github.com/beanumber/teamcolors/issues
-RoxygenNote: 6.0.1
+RoxygenNote: 7.0.2
