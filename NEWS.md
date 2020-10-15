@@ -1,3 +1,7 @@
+# teamcolors 0.0.5
+
+* Added division for MLS (thanks `aldee153`)
+
 # teamcolors 0.0.4
 
 * Fixed `tidyselect` update error
