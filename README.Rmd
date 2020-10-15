@@ -52,26 +52,30 @@ library(tidyverse)
 pythag <- Teams %>%
   filter(yearID == 2016) %>%
   select(name, teamID, yearID, W, L, R, RA) %>%
-  mutate(wpct = W / (W + L), exp_wpct = 1 / (1 + (RA/R)^2),
-         # note name discrepancy!
-         name = ifelse(name == "Los Angeles Angels of Anaheim", "Los Angeles Angels", name))
+  mutate(
+    wpct = W / (W + L), exp_wpct = 1 / (1 + (RA / R)^2),
+    # note name discrepancy!
+    name = ifelse(name == "Los Angeles Angels of Anaheim", "Los Angeles Angels", name)
+  )
 ```
 
 ### `ggplot2`
 
 ```{r ggplot}
-ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) + 
-  geom_abline(slope = 1, intercept = 0, linetype = 3) + 
-  geom_point(shape = 21, size = 3) + 
-  scale_fill_teams(guide = FALSE) + 
-  scale_color_teams(2, guide = FALSE) + 
-  ggrepel::geom_text_repel(aes(label = teamID)) + 
-  scale_x_continuous("Winning Percentage", limits = c(0.3, 0.7)) + 
-  scale_y_continuous("Expected Winning Percentage", limits = c(0.3, 0.7)) + 
+ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) +
+  geom_abline(slope = 1, intercept = 0, linetype = 3) +
+  geom_point(shape = 21, size = 3) +
+  scale_fill_teams(guide = FALSE) +
+  scale_color_teams(2, guide = FALSE) +
+  ggrepel::geom_text_repel(aes(label = teamID)) +
+  scale_x_continuous("Winning Percentage", limits = c(0.3, 0.7)) +
+  scale_y_continuous("Expected Winning Percentage", limits = c(0.3, 0.7)) +
   theme_light() +
-  labs(title = "Real and Pythagorean winning % by team",
-       subtitle = paste(first(pull(pythag, yearID)), "MLB Season", sep = " "),
-       caption = "Source: Lahman baseball database. Using teamcolors R pkg") +
+  labs(
+    title = "Real and Pythagorean winning % by team",
+    subtitle = paste(first(pull(pythag, yearID)), "MLB Season", sep = " "),
+    caption = "Source: Lahman baseball database. Using teamcolors R pkg"
+  ) +
   coord_equal()
 ```
 
@@ -99,9 +103,7 @@ show_team_col()
 ```
 
 
-To view color palettes for college teams, use the `show_ncaa_col()` function [^ncaa]. 
-
-[^ncaa]: Note that hexcodes are only available for 248 of 353 Division I teams.
+To view color palettes for college teams, use the `show_ncaa_col()` function.
 
 ```{r ncaacolors, fig.height=10, fig.width=20}
 show_ncaa_col()
@@ -114,7 +116,7 @@ Links to team logos are provided by (http://www.sportslogos.net/).
 
 ```{r logos}
 teamcolors %>%
-  filter(grepl("New ", name)) %>% 
+  filter(grepl("New ", name)) %>%
   pull(logo) %>%
   knitr::include_graphics()
 ```
@@ -124,8 +126,10 @@ Note that we don't have any coverage for the EPL.
 ```{r}
 teamcolors %>%
   group_by(league) %>%
-  summarize(num_teams = n(), 
-            num_logos = sum(!is.na(logo)))
+  summarize(
+    num_teams = n(),
+    num_logos = sum(!is.na(logo))
+  )
 ```
 
 ## References

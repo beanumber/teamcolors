@@ -40,12 +40,12 @@ head(teamcolors)
     ## # A tibble: 6 x 11
     ##   name  league primary secondary tertiary quaternary division location mascot
     ##   <chr> <chr>  <chr>   <chr>     <chr>    <chr>      <chr>    <chr>    <chr> 
-    ## 1 AFC … epl    #e62333 #000000   <NA>     <NA>       <NA>     AFC      Bourn…
-    ## 2 Air … ncaa   #003087 #8A8D8F   #B1B3B3  #FFC72C    MWC      Air For… <NA>  
-    ## 3 Akro… ncaa   #041E42 #A89968   <NA>     <NA>       MAC      Akron    Zips  
-    ## 4 Alab… ncaa   #9E1B32 #828A8F   #FFFFFF  <NA>       SEC      Alabama  Crims…
-    ## 5 Alba… ncaa   #461660 #EEB211   <NA>     <NA>       Am. East Albany   (NY)  
-    ## 6 Anah… nhl    #010101 #a2aaad   #fc4c02  #85714d    Pacific  Anaheim  Ducks 
+    ## 1 A&M-… ncaa   #0067C5 #007F3E   <NA>     <NA>       Southla… A&M-Cor… Chris…
+    ## 2 Abil… ncaa   #461D7C #FFFFFF   <NA>     <NA>       Southla… Abilene  Chris…
+    ## 3 AFC … epl    #e62333 #000000   <NA>     <NA>       <NA>     AFC      Bourn…
+    ## 4 Air … ncaa   #003087 #8A8D8F   #B1B3B3  #FFC72C    MWC      Air For… <NA>  
+    ## 5 Akro… ncaa   #041E42 #A89968   <NA>     <NA>       MAC      Akron    Zips  
+    ## 6 Alab… ncaa   #660000 #FFFFFF   <NA>     <NA>       SWAC     Alabama  A&M   
     ## # … with 2 more variables: sportslogos_name <chr>, logo <chr>
 
 ## Show palettes
@@ -92,26 +92,30 @@ library(tidyverse)
 pythag <- Teams %>%
   filter(yearID == 2016) %>%
   select(name, teamID, yearID, W, L, R, RA) %>%
-  mutate(wpct = W / (W + L), exp_wpct = 1 / (1 + (RA/R)^2),
-         # note name discrepancy!
-         name = ifelse(name == "Los Angeles Angels of Anaheim", "Los Angeles Angels", name))
+  mutate(
+    wpct = W / (W + L), exp_wpct = 1 / (1 + (RA / R)^2),
+    # note name discrepancy!
+    name = ifelse(name == "Los Angeles Angels of Anaheim", "Los Angeles Angels", name)
+  )
 ```
 
 ### `ggplot2`
 
 ``` r
-ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) + 
-  geom_abline(slope = 1, intercept = 0, linetype = 3) + 
-  geom_point(shape = 21, size = 3) + 
-  scale_fill_teams(guide = FALSE) + 
-  scale_color_teams(2, guide = FALSE) + 
-  ggrepel::geom_text_repel(aes(label = teamID)) + 
-  scale_x_continuous("Winning Percentage", limits = c(0.3, 0.7)) + 
-  scale_y_continuous("Expected Winning Percentage", limits = c(0.3, 0.7)) + 
+ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) +
+  geom_abline(slope = 1, intercept = 0, linetype = 3) +
+  geom_point(shape = 21, size = 3) +
+  scale_fill_teams(guide = FALSE) +
+  scale_color_teams(2, guide = FALSE) +
+  ggrepel::geom_text_repel(aes(label = teamID)) +
+  scale_x_continuous("Winning Percentage", limits = c(0.3, 0.7)) +
+  scale_y_continuous("Expected Winning Percentage", limits = c(0.3, 0.7)) +
   theme_light() +
-  labs(title = "Real and Pythagorean winning % by team",
-       subtitle = paste(first(pull(pythag, yearID)), "MLB Season", sep = " "),
-       caption = "Source: Lahman baseball database. Using teamcolors R pkg") +
+  labs(
+    title = "Real and Pythagorean winning % by team",
+    subtitle = paste(first(pull(pythag, yearID)), "MLB Season", sep = " "),
+    caption = "Source: Lahman baseball database. Using teamcolors R pkg"
+  ) +
   coord_equal()
 ```
 
@@ -149,7 +153,7 @@ show_team_col()
 ![](README_files/figure-gfm/teamcolors-1.png)<!-- -->
 
 To view color palettes for college teams, use the `show_ncaa_col()`
-function \[1\].
+function.
 
 ``` r
 show_ncaa_col()
@@ -163,21 +167,25 @@ Links to team logos are provided by (<http://www.sportslogos.net/>).
 
 ``` r
 teamcolors %>%
-  filter(grepl("New ", name)) %>% 
+  filter(grepl("New ", name)) %>%
   pull(logo) %>%
   knitr::include_graphics()
 ```
 
-![](http://content.sportslogos.net/logos/7/151/thumbs/y71myf8mlwlk8lbgagh3fd5e0.gif)<!-- -->![](http://content.sportslogos.net/logos/9/327/thumbs/qtfoxrlfgs3gjvif4ao608tia.gif)<!-- -->![](http://content.sportslogos.net/logos/33/768/thumbs/2864.gif)<!-- -->![](http://content.sportslogos.net/logos/1/18/thumbs/32tfs723a3bes0p0hb4hgcy1u.gif)<!-- -->![](http://content.sportslogos.net/logos/33/769/thumbs/ghyb25tvzhogmpe3beytq4wtg.gif)<!-- -->![](http://content.sportslogos.net/logos/33/770/thumbs/77055192007.gif)<!-- -->![](http://content.sportslogos.net/logos/6/4962/thumbs/496226812014.gif)<!-- -->![](http://content.sportslogos.net/logos/7/175/thumbs/907.gif)<!-- -->![](http://content.sportslogos.net/logos/9/5119/thumbs/511960002015.gif)<!-- -->![](http://content.sportslogos.net/logos/7/166/thumbs/919.gif)<!-- -->![](http://content.sportslogos.net/logos/1/19/thumbs/1939112018.gif)<!-- -->![](http://content.sportslogos.net/logos/7/152/thumbs/15291162019.gif)<!-- -->![](http://content.sportslogos.net/logos/6/216/thumbs/2nn48xofg0hms8k326cqdmuis.gif)<!-- -->![](http://content.sportslogos.net/logos/16/309/thumbs/87s4dbwkieyw95ushfw6b3hz6.gif)<!-- -->![](http://content.sportslogos.net/logos/54/67/thumbs/m01gfgeorgvbfw15fy04alujm.gif)<!-- -->![](http://content.sportslogos.net/logos/1/20/thumbs/144.gif)<!-- -->![](http://content.sportslogos.net/logos/9/1876/thumbs/i9ni847kriagxdlb7xewa6dl8.gif)<!-- -->![](http://content.sportslogos.net/logos/53/68/thumbs/1256.gif)<!-- -->
+![](https://content.sportslogos.net/logos/7/151/thumbs/y71myf8mlwlk8lbgagh3fd5e0.gif)<!-- -->![](https://content.sportslogos.net/logos/9/327/thumbs/32748292009.gif)<!-- -->![](https://content.sportslogos.net/logos/33/768/thumbs/2864.gif)<!-- -->![](https://content.sportslogos.net/logos/1/18/thumbs/32tfs723a3bes0p0hb4hgcy1u.gif)<!-- -->![](https://content.sportslogos.net/logos/33/769/thumbs/ghyb25tvzhogmpe3beytq4wtg.gif)<!-- -->![](https://content.sportslogos.net/logos/33/770/thumbs/77055192007.gif)<!-- -->![](https://content.sportslogos.net/logos/6/4962/thumbs/496226812014.gif)<!-- -->![](https://content.sportslogos.net/logos/33/771/thumbs/77148682013.gif)<!-- -->![](https://content.sportslogos.net/logos/7/175/thumbs/907.gif)<!-- -->![](https://content.sportslogos.net/logos/9/5119/thumbs/511960002015.gif)<!-- -->![](https://content.sportslogos.net/logos/7/166/thumbs/919.gif)<!-- -->![](https://content.sportslogos.net/logos/1/19/thumbs/1939112018.gif)<!-- -->![](https://content.sportslogos.net/logos/7/152/thumbs/15291162019.gif)<!-- -->![](https://content.sportslogos.net/logos/6/216/thumbs/2nn48xofg0hms8k326cqdmuis.gif)<!-- -->![](https://content.sportslogos.net/logos/16/309/thumbs/30978362020.gif)<!-- -->![](https://content.sportslogos.net/logos/54/67/thumbs/m01gfgeorgvbfw15fy04alujm.gif)<!-- -->![](https://content.sportslogos.net/logos/1/20/thumbs/144.gif)<!-- -->![](https://content.sportslogos.net/logos/9/1876/thumbs/i9ni847kriagxdlb7xewa6dl8.gif)<!-- -->![](https://content.sportslogos.net/logos/53/68/thumbs/1256.gif)<!-- -->
 
 Note that we don’t have any coverage for the EPL.
 
 ``` r
 teamcolors %>%
   group_by(league) %>%
-  summarize(num_teams = n(), 
-            num_logos = sum(!is.na(logo)))
+  summarize(
+    num_teams = n(),
+    num_logos = sum(!is.na(logo))
+  )
 ```
+
+    ## `summarise()` ungrouping output (override with `.groups` argument)
 
     ## # A tibble: 9 x 3
     ##   league num_teams num_logos
@@ -186,10 +194,10 @@ teamcolors %>%
     ## 2 mlb           30        30
     ## 3 mls           22        22
     ## 4 nba           30        30
-    ## 5 ncaa         248       248
-    ## 6 nfl           32        32
+    ## 5 ncaa         353       301
+    ## 6 nfl           32        31
     ## 7 nhl           31        31
-    ## 8 nwsl           9         9
+    ## 8 nwsl           9         8
     ## 9 wnba          12        12
 
 ## References
@@ -209,6 +217,3 @@ citation("teamcolors")
 ```
 
 ## Notes
-
-1.  Note that hexcodes are only available for 248 of 353 Division I
-    teams.
