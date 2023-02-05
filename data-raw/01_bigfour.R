@@ -62,6 +62,10 @@ teamcolors <- team_colors %>%
 
 ##### manual fixes:
 
+# Guardians
+teamcolors <- teamcolors %>%
+  mutate(name = if_else(name == "Cleveland Indians", "Cleveland Guardians", name))
+
 # Tigers
 teamcolors <- teamcolors %>%
   mutate(secondary = ifelse(name == "Detroit Tigers", "#FF6600", secondary))
@@ -123,10 +127,10 @@ scrape_teams <- function(url) {
     janitor::clean_names() %>%
     tibble::as_tibble()
   if (!"team" %in% names(x)) {
-    x <- rename(x, team = club_61)
+    x <- rename(x, team = club_66)
   }
   if (!"division" %in% names(x)) {
-    x <- rename(x, division = division_61)
+    x <- rename(x, division = division_66)
   }
   x %>%
     dplyr::select(division, team) %>%
