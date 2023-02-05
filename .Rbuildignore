@@ -9,3 +9,4 @@
 ^CRAN-RELEASE$
 ^xaringan-themer\.css$
 ^inst/rmarkdown/templates/xaringan/skeleton/libs/*
+^\.github$

@@ -8,6 +8,7 @@ output:
 <!-- badges: start -->
 [![Travis-CI Build Status](https://travis-ci.org/beanumber/teamcolors.svg?branch=master)](https://travis-ci.org/beanumber/teamcolors)
 [![CRAN status](https://www.r-pkg.org/badges/version/teamcolors)](https://cran.r-project.org/package=teamcolors)
+[![R-CMD-check](https://github.com/beanumber/teamcolors/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/beanumber/teamcolors/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 
