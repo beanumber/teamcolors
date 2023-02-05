@@ -93,6 +93,11 @@ teamcolors <- teamcolors %>%
 teamcolors <- teamcolors %>%
   mutate(name = ifelse(name == "Washington Redskins", "Washington Football Team", name))
 
+write_csv(
+  teamcolors, 
+  here::here("data-csv", "teamcolors_bigfour.csv")
+)
+
 
 ## Divisions
 
