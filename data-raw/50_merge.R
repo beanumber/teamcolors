@@ -46,7 +46,12 @@ teamcolors <- teamcolors %>%
   arrange(name) %>%
   as_tibble()
 
-
+## Manual fix (#29)
+teamcolors <- teamcolors |>
+  mutate(
+    primary = if_else(str_detect(name, "Louisiana Tech"), "#E31B23", primary),
+    secondary = if_else(str_detect(name, "Louisiana Tech"), "#A2AAAD", secondary),
+  )
 
 
 usethis::use_data(teamcolors, overwrite = TRUE)
