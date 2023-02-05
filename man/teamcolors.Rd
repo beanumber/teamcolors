@@ -4,7 +4,8 @@
 \name{teamcolors}
 \alias{teamcolors}
 \title{Color palettes for professional sports teams}
-\format{A data frame with one row for each professional team and five variables:
+\format{
+A data frame with one row for each professional team and five variables:
 \describe{
  \item{name}{the name of the team as they are presented in the teamcolors dataset}
  \item{league}{the league in which the team plays}
@@ -17,7 +18,8 @@
  \item{mascot}{the team's mascot}
  \item{sportslogos_name}{the name of the team as they are presented on the sportslogos website}
  \item{logo}{URL to the team's logo, hosted by \url{http://www.sportslogos.net}}
-}}
+}
+}
 \source{
 \url{http://jim-nielsen.com/teamcolors/}, \url{http://www.sportslogos.net}, \url{https://teamcolorcodes.com/}
 }

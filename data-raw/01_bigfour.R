@@ -62,6 +62,10 @@ teamcolors <- team_colors %>%
 
 ##### manual fixes:
 
+# Raiders
+teamcolors <- teamcolors %>%
+  mutate(name = if_else(name == "Oakland Raiders", "Las Vegas Raiders", name))
+
 # Guardians
 teamcolors <- teamcolors %>%
   mutate(name = if_else(name == "Cleveland Indians", "Cleveland Guardians", name))
