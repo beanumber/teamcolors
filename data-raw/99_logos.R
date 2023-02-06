@@ -18,7 +18,8 @@ leagues <- tribble(
   "http://www.sportslogos.net/teams/list_by_league/34/NCAA_Division_I_s-t/NCAA_s-t/logos/", "//*[@id='team']",
   "http://www.sportslogos.net/teams/list_by_league/35/NCAA_Division_I_u-z/NCAA_u-z/logos/", "//*[@id='team']",
   "http://www.sportslogos.net/teams/list_by_league/202/National_Womens_Soccer_League/NWSL/logos/", "//*[@id='team']",
-  "http://www.sportslogos.net/teams/list_by_league/16/Womens_National_Basketball_Association/WNBA/logos/", "//*[@id='team']",
+  "http://www.sportslogos.net/teams/list_by_league/16/Womens_National_Basketball_Association/WNBA/logos/", "//*[@id='team']",  
+  "http://www.sportslogos.net/teams/list_by_league/8/Canadian_Football_League/CFL/logos/", "//*[@id='team']",
 )
 
 
