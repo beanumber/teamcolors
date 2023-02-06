@@ -6,13 +6,13 @@ output:
 # teamcolors <img src='man/figures/logo.png' align="right" height="139" />
 
 <!-- badges: start -->
-[![Travis-CI Build Status](https://travis-ci.org/beanumber/teamcolors.svg?branch=master)](https://travis-ci.org/beanumber/teamcolors)
-[![CRAN status](https://www.r-pkg.org/badges/version/teamcolors)](https://cran.r-project.org/package=teamcolors)
 [![R-CMD-check](https://github.com/beanumber/teamcolors/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/beanumber/teamcolors/actions/workflows/R-CMD-check.yaml)
+[![CRAN status](https://www.r-pkg.org/badges/version/teamcolors)](https://cran.r-project.org/package=teamcolors)
 <!-- badges: end -->
 
 
 An R package providing color palettes for pro and amateur sports teams. The palettes are provided by [Jim Neilsen's Team Colors website](http://jim-nielsen.com/teamcolors/) and offered with only minimal alterations. NCAA colors come from [teamcolorcodes.com](https://teamcolorcodes.com/), via the [ncaahoopR](https://github.com/lbenz730/ncaahoopR) package.
+Other sports include the [Women's National Basketball Association](https://wnba.com), [National Women's Soccer League](https://nwsl.com), and the [Canadian Football League](https://cfl.com).
 
 ## Install
 
@@ -117,7 +117,7 @@ Links to team logos are provided by (http://www.sportslogos.net/).
 
 ```{r logos}
 teamcolors %>%
-  filter(grepl("New ", name)) %>%
+  filter(grepl("New Y", name)) %>%
   pull(logo) %>%
   knitr::include_graphics()
 ```
@@ -137,7 +137,7 @@ teamcolors %>%
 
 For more examples see: 
 
-- Lopez, M.J., Matthews, G.J., Baumer, B.S., "How often does the best team win? A unified approach to understanding randomness in North American sport," *The Annals of Applied Statistics*, vol. 12, no. 4, 2018, pp. 2483--2516. URL (https://projecteuclid.org/euclid.aoas/1542078053)
+- Lopez, M.J., Matthews, G.J., Baumer, B.S., "How often does the best team win? A unified approach to understanding randomness in North American sport," *The Annals of Applied Statistics*, vol. 12, no. 4, 2018, pp. 2483--2516. URL (https://doi.org/10.1214/18-AOAS1165)
 
 To cite this package in your work, see:
 

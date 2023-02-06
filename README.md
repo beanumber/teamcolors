@@ -3,8 +3,7 @@
 
 <!-- badges: start -->
 
-[![Travis-CI Build
-Status](https://travis-ci.org/beanumber/teamcolors.svg?branch=master)](https://travis-ci.org/beanumber/teamcolors)
+[![R-CMD-check](https://github.com/beanumber/teamcolors/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/beanumber/teamcolors/actions/workflows/R-CMD-check.yaml)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/teamcolors)](https://cran.r-project.org/package=teamcolors)
 <!-- badges: end -->
@@ -14,7 +13,10 @@ The palettes are provided by [Jim Neilsen’s Team Colors
 website](http://jim-nielsen.com/teamcolors/) and offered with only
 minimal alterations. NCAA colors come from
 [teamcolorcodes.com](https://teamcolorcodes.com/), via the
-[ncaahoopR](https://github.com/lbenz730/ncaahoopR) package.
+[ncaahoopR](https://github.com/lbenz730/ncaahoopR) package. Other sports
+include the [Women’s National Basketball Association](https://wnba.com),
+[National Women’s Soccer League](https://nwsl.com), and the [Canadian
+Football League](https://cfl.com).
 
 ## Install
 
@@ -37,16 +39,17 @@ library(teamcolors)
 head(teamcolors)
 ```
 
-    ## # A tibble: 6 x 11
-    ##   name  league primary secondary tertiary quaternary division location mascot
-    ##   <chr> <chr>  <chr>   <chr>     <chr>    <chr>      <chr>    <chr>    <chr> 
-    ## 1 A&M-… ncaa   #0067C5 #007F3E   <NA>     <NA>       Southla… A&M-Cor… Chris…
-    ## 2 Abil… ncaa   #461D7C #FFFFFF   <NA>     <NA>       Southla… Abilene  Chris…
-    ## 3 AFC … epl    #e62333 #000000   <NA>     <NA>       <NA>     AFC      Bourn…
-    ## 4 Air … ncaa   #003087 #8A8D8F   #B1B3B3  #FFC72C    MWC      Air For… <NA>  
-    ## 5 Akro… ncaa   #041E42 #A89968   <NA>     <NA>       MAC      Akron    Zips  
-    ## 6 Alab… ncaa   #660000 #FFFFFF   <NA>     <NA>       SWAC     Alabama  A&M   
-    ## # … with 2 more variables: sportslogos_name <chr>, logo <chr>
+    ## # A tibble: 6 × 11
+    ##   name     league primary secon…¹ terti…² quate…³ divis…⁴ locat…⁵ mascot sport…⁶
+    ##   <chr>    <chr>  <chr>   <chr>   <chr>   <chr>   <chr>   <chr>   <chr>  <chr>  
+    ## 1 A&M-Cor… ncaa   #0067C5 #007F3E <NA>    <NA>    Southl… A&M-Co… Chris… A&M-Co…
+    ## 2 AFC Bou… epl    #e62333 #000000 <NA>    <NA>    <NA>    AFC     Bourn… AFC Bo…
+    ## 3 Abilene… ncaa   #461D7C #FFFFFF <NA>    <NA>    WAC     Abilene Chris… Abilen…
+    ## 4 Air For… ncaa   #003087 #8A8D8F #B1B3B3 #FFC72C MWC     Air Fo… <NA>   Air Fo…
+    ## 5 Akron    ncaa   #041E42 #A89968 <NA>    <NA>    MAC     Akron   <NA>   Akron  
+    ## 6 Alabama  ncaa   #9E1B32 #828A8F #FFFFFF <NA>    SEC     Alabama <NA>   Alabama
+    ## # … with 1 more variable: logo <chr>, and abbreviated variable names
+    ## #   ¹​secondary, ²​tertiary, ³​quaternary, ⁴​division, ⁵​location, ⁶​sportslogos_name
 
 ## Show palettes
 
@@ -119,6 +122,13 @@ ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) +
   coord_equal()
 ```
 
+    ## Warning: The `guide` argument in `scale_*()` cannot be `FALSE`. This was deprecated in
+    ## ggplot2 3.3.4.
+    ## ℹ Please use "none" instead.
+
+    ## Warning: ggrepel: 4 unlabeled data points (too many overlaps). Consider
+    ## increasing max.overlaps
+
 ![](README_files/figure-gfm/ggplot-1.png)<!-- -->
 
 ### Base R
@@ -150,6 +160,11 @@ palettes for non-NCAA teams.
 show_team_col()
 ```
 
+    ## Warning: The `<scale>` argument of `guides()` cannot be `FALSE`. Use "none" instead as
+    ## of ggplot2 3.3.4.
+    ## ℹ The deprecated feature was likely used in the teamcolors package.
+    ##   Please report the issue at <]8;;https://github.com/beanumber/teamcolors/issueshttps://github.com/beanumber/teamcolors/issues]8;;>.
+
 ![](README_files/figure-gfm/teamcolors-1.png)<!-- -->
 
 To view color palettes for college teams, use the `show_ncaa_col()`
@@ -167,12 +182,12 @@ Links to team logos are provided by (<http://www.sportslogos.net/>).
 
 ``` r
 teamcolors %>%
-  filter(grepl("New ", name)) %>%
+  filter(grepl("New Y", name)) %>%
   pull(logo) %>%
   knitr::include_graphics()
 ```
 
-![](https://content.sportslogos.net/logos/7/151/thumbs/y71myf8mlwlk8lbgagh3fd5e0.gif)<!-- -->![](https://content.sportslogos.net/logos/9/327/thumbs/32748292009.gif)<!-- -->![](https://content.sportslogos.net/logos/33/768/thumbs/2864.gif)<!-- -->![](https://content.sportslogos.net/logos/1/18/thumbs/32tfs723a3bes0p0hb4hgcy1u.gif)<!-- -->![](https://content.sportslogos.net/logos/33/769/thumbs/ghyb25tvzhogmpe3beytq4wtg.gif)<!-- -->![](https://content.sportslogos.net/logos/33/770/thumbs/77055192007.gif)<!-- -->![](https://content.sportslogos.net/logos/6/4962/thumbs/496226812014.gif)<!-- -->![](https://content.sportslogos.net/logos/33/771/thumbs/77148682013.gif)<!-- -->![](https://content.sportslogos.net/logos/7/175/thumbs/907.gif)<!-- -->![](https://content.sportslogos.net/logos/9/5119/thumbs/511960002015.gif)<!-- -->![](https://content.sportslogos.net/logos/7/166/thumbs/919.gif)<!-- -->![](https://content.sportslogos.net/logos/1/19/thumbs/1939112018.gif)<!-- -->![](https://content.sportslogos.net/logos/7/152/thumbs/15291162019.gif)<!-- -->![](https://content.sportslogos.net/logos/6/216/thumbs/2nn48xofg0hms8k326cqdmuis.gif)<!-- -->![](https://content.sportslogos.net/logos/16/309/thumbs/30978362020.gif)<!-- -->![](https://content.sportslogos.net/logos/54/67/thumbs/m01gfgeorgvbfw15fy04alujm.gif)<!-- -->![](https://content.sportslogos.net/logos/1/20/thumbs/144.gif)<!-- -->![](https://content.sportslogos.net/logos/9/1876/thumbs/i9ni847kriagxdlb7xewa6dl8.gif)<!-- -->![](https://content.sportslogos.net/logos/53/68/thumbs/1256.gif)<!-- -->
+![](https://content.sportslogos.net/logos/9/5119/thumbs/511960002015.gif)<!-- -->![](https://content.sportslogos.net/logos/7/166/thumbs/919.gif)<!-- -->![](https://content.sportslogos.net/logos/1/19/thumbs/1939112018.gif)<!-- -->![](https://content.sportslogos.net/logos/7/152/thumbs/15291162019.gif)<!-- -->![](https://content.sportslogos.net/logos/6/216/thumbs/2nn48xofg0hms8k326cqdmuis.gif)<!-- -->![](https://content.sportslogos.net/logos/16/309/thumbs/30978362020.gif)<!-- -->![](https://content.sportslogos.net/logos/54/67/thumbs/m01gfgeorgvbfw15fy04alujm.gif)<!-- -->![](https://content.sportslogos.net/logos/1/20/thumbs/144.gif)<!-- -->![](https://content.sportslogos.net/logos/9/1876/thumbs/i9ni847kriagxdlb7xewa6dl8.gif)<!-- -->![](https://content.sportslogos.net/logos/53/68/thumbs/1256.gif)<!-- -->
 
 Note that we don’t have any coverage for the EPL.
 
@@ -185,30 +200,28 @@ teamcolors %>%
   )
 ```
 
-    ## `summarise()` ungrouping output (override with `.groups` argument)
-
-    ## # A tibble: 9 x 3
-    ##   league num_teams num_logos
-    ##   <chr>      <int>     <int>
-    ## 1 epl           20         0
-    ## 2 mlb           30        30
-    ## 3 mls           22        22
-    ## 4 nba           30        30
-    ## 5 ncaa         353       301
-    ## 6 nfl           32        31
-    ## 7 nhl           31        31
-    ## 8 nwsl           9         8
-    ## 9 wnba          12        12
+    ## # A tibble: 10 × 3
+    ##    league num_teams num_logos
+    ##    <chr>      <int>     <int>
+    ##  1 cfl            9         8
+    ##  2 epl           20         0
+    ##  3 mlb           30        30
+    ##  4 mls           22        21
+    ##  5 nba           30        30
+    ##  6 ncaa         363       235
+    ##  7 nfl           32        31
+    ##  8 nhl           31        31
+    ##  9 nwsl           9         7
+    ## 10 wnba          12        12
 
 ## References
 
 For more examples see:
 
-  - Lopez, M.J., Matthews, G.J., Baumer, B.S., “How often does the best
-    team win? A unified approach to understanding randomness in North
-    American sport,” *The Annals of Applied Statistics*, vol. 12, no. 4,
-    2018, pp. 2483–2516. URL
-    (<https://projecteuclid.org/euclid.aoas/1542078053>)
+- Lopez, M.J., Matthews, G.J., Baumer, B.S., “How often does the best
+  team win? A unified approach to understanding randomness in North
+  American sport,” *The Annals of Applied Statistics*, vol. 12, no. 4,
+  2018, pp. 2483–2516. URL (<https://doi.org/10.1214/18-AOAS1165>)
 
 To cite this package in your work, see:
 

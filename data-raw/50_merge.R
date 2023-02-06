@@ -21,17 +21,21 @@ teamcolors <- teamcolors %>%
     division = ifelse(name %in% c('Colorado Rapids', 'FC Dallas', 'Houston Dynamo', 'LA Galaxy', 'Los Angeles FC', 'Minnesota United FC', 'Portland Timbers', 'Real Salt Lake', 'San Jose Earthquakes', 'Seattle Sounders FC', 'Sporting Kansas City', 'Vancouver Whitecaps FC'), "Western Conference", division)
   )
 
-## WNBA
+## WNBA, NWSL, and CFL
 
 teamcolors_wnba <- read_csv("data-csv/teamcolors_wnba.csv") %>%
   select(name, league, primary, secondary,tertiary, quaternary, division)
 
 teamcolors_nwsl <- read_csv(here::here("data-csv", "teamcolors_nwsl.csv"))
 
+teamcolors_cfl <- read_csv(here::here("data-csv", "teamcolors_cfl.csv")) |>
+  select(name, league, primary, secondary,tertiary, quaternary, division)
+
 teamcolors <- teamcolors %>%
   bind_rows(
     teamcolors_wnba, 
-    teamcolors_nwsl
+    teamcolors_nwsl,
+    teamcolors_cfl
   ) %>%
   arrange(name) %>%
   as_tibble()
