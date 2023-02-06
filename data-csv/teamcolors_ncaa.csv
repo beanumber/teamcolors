@@ -1,0 +1,364 @@
+name,league,primary,secondary,tertiary,quaternary,division
+A&M-Corpus Christi,ncaa,#0067C5,#007F3E,NA,NA,Southland
+Abilene Christian,ncaa,#461D7C,#FFFFFF,NA,NA,WAC
+Air Force,ncaa,#003087,#8A8D8F,#B1B3B3,#FFC72C,MWC
+Akron,ncaa,#041E42,#A89968,NA,NA,MAC
+Alabama,ncaa,#9E1B32,#828A8F,#FFFFFF,NA,SEC
+Alabama A&M,ncaa,#660000,#FFFFFF,NA,NA,SWAC
+Alabama State Hornets[i],ncaa,#C99700,#000000,NA,NA,SWAC
+UAlbany,ncaa,#461660,#EEB211,NA,NA,Am. East
+Alcorn,ncaa,#46166A,#E9A713,NA,NA,SWAC
+American Eagles,ncaa,#C4122E,#005099,NA,NA,Patriot
+App State,ncaa,#222222,#FFCC00,NA,NA,Sunbelt
+Arizona Wildcats,ncaa,#CC0033,#003366,NA,NA,Pac 12
+Arizona State Sun Devils,ncaa,#8C1D40,#FFC627,NA,NA,Pac 12
+Ark.-Pine Bluff,ncaa,#000000,#EEB310,NA,NA,SWAC
+Arkansas Razorbacks,ncaa,#9D2235,#FFFFFF,NA,NA,SEC
+Arkansas State Red Wolves,ncaa,#CC092F,#000000,NA,NA,Sunbelt
+Army West Point,ncaa,#D4BF91,#000000,#B2B4B3,NA,Patriot
+Auburn Tigers,ncaa,#0C2340,#E87722,NA,NA,SEC
+Austin Peay,ncaa,#BA0C2F,#000000,NA,NA,A-Sun
+Ball State Cardinals,ncaa,#BA0C2F,#000000,NA,NA,MAC
+Baylor Bears,ncaa,#003015,#FECB00,NA,NA,Big 12
+Bellarmine,ncaa,#752936,#4d4d4d,NA,NA,A-Sun
+Belmont Bruins,ncaa,#002469,#C9262D,NA,NA,MVC
+Bethune-Cookman,ncaa,#6F263D,#F2A900,NA,NA,SWAC
+Binghamton,ncaa,#005A43,#169B62,#BF0D3E,#B1B3B3,Am. East
+Boise State Broncos,ncaa,#D64309,#0033A0,NA,NA,MWC
+Boston College Eagles,ncaa,#98002E,#BC9B6A,NA,NA,ACC
+Boston U.,ncaa,#CC0000,#FFFFFF,NA,NA,Patriot
+Bowling Green,ncaa,#FE5000,#4F2C1D,#CDA077,#000000,MAC
+Bradley Braves,ncaa,#A50000,#999999,NA,NA,MVC
+Brown Bears,ncaa,#4E3629,#FFFFFF,#7C2529,#E4002B,Ivy
+Bryant Bulldogs,ncaa,#231F20,#B09863,NA,NA,Am. East
+Bucknell Bison,ncaa,#EF5B0C,#003865,NA,NA,Patriot
+Buffalo,ncaa,#005BBB,#FFFFFF,NA,NA,MAC
+Butler Bulldogs,ncaa,#13294B,#747678,#D1E0D7,#000000,Big East
+BYU,ncaa,#002255,#C5AF7D,NA,NA,WCC
+Cal Poly,ncaa,#003831,#FFE395,#B38F4F,#000000,Big West
+Cal State Fullerton,ncaa,#00274C,#DC8218,NA,NA,Big West
+California,ncaa,#003262,#FDB515,#3B7EA1,#C4820E,Pac 12
+California Baptist Lancers,ncaa,#002554,#A37400,#AC451E,NA,WAC
+Campbell Fighting Camels[l],ncaa,#E87722,#000000,NA,NA,Big South
+Canisius,ncaa,#0C2340,#FFBA00,NA,NA,MAAC
+Central Ark.,ncaa,#4F2D7F,#818A8F,NA,NA,A-Sun
+Central Conn. State,ncaa,#1A4784,#FFFFFF,NA,NA,NEC
+Central Michigan Chippewas,ncaa,#6A0032,#FFC82E,NA,NA,MAC
+Charleston So.,ncaa,#002855,#A89968,NA,NA,Big South
+Charlotte,ncaa,#046A38,#B9975B,#27251F,NA,C-USA
+Chattanooga,ncaa,#00386B,#E0AA0F,NA,NA,Southern
+Chicago State Cougars,ncaa,#006666,#000000,NA,NA,Independent
+Cincinnati Bearcats,ncaa,#E00122,#000000,NA,NA,AAC
+Clemson Tigers,ncaa,#F56600,#522D80,NA,NA,ACC
+Cleveland State Vikings,ncaa,#006747,#000000,NA,NA,Horizon
+Coastal Carolina Chanticleers,ncaa,#006F71,#A27752,#111111,NA,Sunbelt
+Col. of Charleston,ncaa,#76232F,#FFFFFF,NA,NA,CAA
+Colgate Raiders,ncaa,#862633,#C8C7C7,NA,NA,Patriot
+Colorado,ncaa,#CFB87C,#000000,#565A5C,#A2A4A3,Pac 12
+Colorado State Rams,ncaa,#1E4D2B,#C8C372,NA,NA,MWC
+Columbia,ncaa,#9BCBEB,#003865,NA,NA,Ivy
+Coppin State Eagles,ncaa,#003056,#FFC915,NA,NA,MEAC
+Cornell Big Red,ncaa,#B31B1B,#5E3920,#89572E,#000000,Ivy
+Creighton Bluejays,ncaa,#005CA9,#00235D,#6CADDE,#828282,Big East
+CSU Bakersfield,ncaa,#005DAA,#FFD200,NA,NA,Big West
+CSUN,ncaa,#CE1126,#D1CEC6,#000000,NA,Big West
+Dartmouth,ncaa,#046A38,#000000,NA,NA,Ivy
+Davidson,ncaa,#AC1A2F,#000000,NA,NA,A-10
+Dayton Flyers,ncaa,#CE1141,#004B8D,#F80228,#0200D1,A-10
+Delaware Fightin' Blue Hens,ncaa,#00539F,#FFD200,NA,NA,CAA
+Delaware State Hornets[i],ncaa,#EE3124,#0099CC,NA,NA,MEAC
+Denver Pioneers,ncaa,#8B2332,#8B6F4B,NA,NA,Summit
+DePaul Blue Demons,ncaa,#005EB8,#E4002B,NA,NA,Big East
+Detroit Mercy Titans,ncaa,#A6093D,#002D72,#D7D2CB,NA,Horizon
+Utah Tech,ncaa,#BA1C21,#ADA1A2,#NA,NA,WAC
+Drake Bulldogs,ncaa,#004477,#999999,NA,NA,MVC
+Drexel Dragons,ncaa,#07294D,#FFC600,NA,NA,CAA
+Duke Blue Devils,ncaa,#001A57,#FFFFFF,#003366,#0736A4,ACC
+Duquesne,ncaa,#041E42,#BA0C2F,#000000,NA,A-10
+East Carolina Pirates[q],ncaa,#592A8A,#FDC82F,NA,NA,AAC
+Eastern Illinois Panthers,ncaa,#003399,#B2B2B2,NA,NA,OVC
+Eastern Kentucky Colonels,ncaa,#4C151E,#FFFFFF,NA,NA,A-Sun
+Eastern Michigan Eagles,ncaa,#006633,#000000,NA,NA,MAC
+Eastern Washington Eagles,ncaa,#A10022,#FFFFFF,#6D6E71,NA,Big Sky
+Elon Phoenix,ncaa,#73000A,#B59A57,NA,NA,CAA
+ETSU,ncaa,#041E42,#FFC72C,NA,NA,Southern
+Evansville Purple Aces,ncaa,#52237F,#F36F21,NA,NA,MVC
+Fairfield Stags,ncaa,#C8102E,#A2AAAD,#000000,NA,MAAC
+Fairleigh Dickinson Knights,ncaa,#A32638,#003F87,NA,NA,NEC
+FGCU,ncaa,#002D72,#007749,#B9975B,NA,A-Sun
+FIU,ncaa,#081E3F,#B6862C,NA,NA,C-USA
+Florida Atlantic Owls,ncaa,#003366,#CC0000,#8A8D8F,#CCCCCC,C-USA
+Florida Gators,ncaa,#0021A5,#FA4616,NA,NA,SEC
+Florida A&M,ncaa,#F4811F,#008344,NA,NA,SWAC
+Florida State Seminoles,ncaa,#782F40,#CEB888,#FFFFFF,#000000,ACC
+Fordham Rams,ncaa,#860038,#FFFFFF,NA,NA,A-10
+Fresno State,ncaa,#DB0032,#002E6D,#007934,NA,MWC
+Furman Paladins[t],ncaa,#582C83,#FFFFFF,NA,NA,Southern
+Georgia Southern Eagles[u],ncaa,#011E41,#A3AAAE,#87714D,NA,Sunbelt
+Gardner-Webb,ncaa,#A6192E,#000000,NA,NA,Big South
+George Mason Patriots,ncaa,#006633,#FFCC33,#000000,NA,A-10
+George Washington,ncaa,#E2CB92,#002654,NA,NA,A-10
+Georgetown Hoyas,ncaa,#041E42,#8D817B,NA,NA,Big East
+Georgia Bulldogs[h],ncaa,#BA0C2F,#000000,#FFFFFF,NA,SEC
+Georgia State Panthers,ncaa,#0039A6,#C60C30,#000000,NA,Sunbelt
+Georgia Tech,ncaa,#B3A369,#003057,#A28D5B,NA,ACC
+Gonzaga Bulldogs[k],ncaa,#041E42,#C8102E,#C1C6C8,NA,WCC
+Grambling,ncaa,#000000,#ECAA00,NA,NA,SWAC
+Grand Canyon Antelopes,ncaa,#522398,#000000,NA,NA,WAC
+Green Bay,ncaa,#006747,#9D2235,#8A8D8F,NA,Horizon
+Hampton Pirates[q],ncaa,#265198,#FFFFFF,NA,NA,CAA
+Hartford Hawks,ncaa,#C02427,#0F0708,NA,NA,Independent
+Harvard Crimson,ncaa,#A41034,#000000,#808285,#B6B6B6,Ivy
+Hawaii,ncaa,#024731,#C8C8C8,#000000,NA,Big West
+High Point Panthers,ncaa,#330072,#FFFFFF,NA,NA,Big South
+Hofstra Pride,ncaa,#FDC82F,#003591,NA,NA,CAA
+Holy Cross,ncaa,#602D89,#FFFFFF,NA,NA,Patriot
+Houston Cougars,ncaa,#C8102E,#76232F,#B2B4B2,NA,AAC
+Houston Christian Huskies,ncaa,#00529C,#F85512,NA,NA,Southland
+Howard Bison[x],ncaa,#003A63,#FFFFFF,NA,NA,MEAC
+Idaho Vandals,ncaa,#EAAB00,#86754D,#808080,#000000,Big Sky
+Idaho State Bengals,ncaa,#000000,#F9A81A,NA,NA,Big Sky
+Illinois,ncaa,#13294B,#E84A27,NA,NA,Big 10
+Illinois State Redbirds,ncaa,#CE1126,#F9DD16,#000000,NA,MVC
+Indiana,ncaa,#990000,#EEEDEB,NA,NA,Big 10
+Indiana State Sycamores,ncaa,#0142BC,#FFFFFF,NA,NA,MVC
+Iona Gaels,ncaa,#6F2C3F,#F2A900,NA,NA,MAAC
+Iowa,ncaa,#FFCD00,#000000,NA,NA,Big 10
+Iowa State,ncaa,#C8102E,#F1BE48,NA,NA,Big 12
+IUPUI,ncaa,#9D2235,#DFD1A7,#000000,NA,Horizon
+Jackson State Tigers[v],ncaa,#002147,#FFFFFF,NA,NA,SWAC
+Jacksonville Dolphins,ncaa,#084E44,#FFFFFF,NA,NA,A-Sun
+Jacksonville State Gamecocks,ncaa,#004E44,#898A8D,#BBBBBB,#000000,A-Sun
+James Madison Dukes,ncaa,#450084,#CBB677,NA,NA,Sunbelt
+Kansas Jayhawks,ncaa,#0051BA,#E8000D,#FFC82D,#85898A,Big 12
+Kansas City,ncaa,#005293,#FECB00,#000000,#DCDDDE,Summit
+Kansas State Wildcats,ncaa,#512888,#D1D1D1,#A7A7A7,#FFFFFF,Big 12
+Kennesaw State Owls,ncaa,#FDBB30,#0B1315,#C5C6C8,NA,A-Sun
+Kent State Golden Flashes,ncaa,#002664,#EAAB00,NA,NA,MAC
+Kentucky Wildcats,ncaa,#0033A0,#FFFFFF,#000000,NA,SEC
+La Salle Explorers,ncaa,#FFCC00,#003366,NA,NA,A-10
+Lafayette,ncaa,#910029,#A8996E,NA,NA,Patriot
+Lamar University,ncaa,#E31937,#000000,NA,NA,Southland
+Lehigh Mountain Hawks,ncaa,#4B2913,#FFFFFF,NA,NA,Patriot
+Liberty Flames[ac],ncaa,#990000,#0A254E,NA,NA,A-Sun
+Lipscomb Bisons[ad],ncaa,#331E54,#F4AA00,#000000,NA,A-Sun
+Little Rock,ncaa,#6E2639,#A7A9AC,NA,NA,OVC
+LIU,ncaa,#231F20,#8A8D8F,NA,NA,NEC
+LMU (CA),ncaa,#B62B3A,#00447C,#617080,#231F20,WCC
+Long Beach State,ncaa,#FFC72A,#000000,NA,NA,Big West
+Longwood Lancers,ncaa,#041E42,#FFFFFF,NA,NA,Big South
+Louisiana,ncaa,#CE181E,#0A0203,#C1C5C9,#F18C21,Sunbelt
+Louisiana Tech Bulldogs[ae],ncaa,#E31B23,#A2AAAD,#111111,NA,C-USA
+Louisville Cardinals,ncaa,#AD0000,#000000,#FDB913,#CCCCCC,ACC
+Loyola Chicago Ramblers,ncaa,#922247,#FEBD18,NA,NA,A-10
+Loyola Maryland Greyhounds,ncaa,#00694E,#CACAC8,NA,NA,Patriot
+LSU,ncaa,#461D7C,#FDD023,NA,NA,SEC
+Maine Black Bears,ncaa,#003263,#B0D7FF,#AB0634,#908C89,Am. East
+Manhattan,ncaa,#00703C,#FFFFFF,NA,NA,MAAC
+Marist,ncaa,#C8102E,#B2B2B2,#000000,NA,MAAC
+Marquette Golden Eagles,ncaa,#003366,#FFCC00,NA,NA,Big East
+Marshall Thundering Herd,ncaa,#00B140,#A2AAAD,#693F23,#AD7C59,MVC
+Maryland,ncaa,#E03A3E,#FFD520,#FFFFFF,#000000,Big 10
+Massachusetts,ncaa,#971B2F,#572932,#B1B3B3,#000000,A-10
+McNeese,ncaa,#00529B,#FFD204,NA,NA,Southland
+Memphis Tigers,ncaa,#003087,#898D8D,NA,NA,AAC
+Mercer Bears,ncaa,#CB5307,#000000,NA,NA,Southern
+Merrimack,ncaa,#003768,#ffde00,#8c8a88,NA,NEC
+Miami (FL),ncaa,#F47321,#005030,#FFFFFF,NA,ACC
+Miami (OH),ncaa,#B61E2E,#000000,NA,NA,MAC
+Michigan Wolverines,ncaa,#00274C,#FFCB05,NA,NA,Big 10
+Michigan State Spartans,ncaa,#18453B,#FFFFFF,NA,NA,Big 10
+Middle Tennessee,ncaa,#0066CC,#69B3E7,NA,NA,C-USA
+Milwaukee,ncaa,#FFBD00,#CCCCCC,NA,NA,Horizon
+Minnesota Golden Gophers,ncaa,#7A0019,#FFCC33,NA,NA,Big 10
+Mississippi State,ncaa,#660000,#FFFFFF,#CCCCCC,#75787B,SEC
+Mississippi Val.,ncaa,#046A38,#FFFFFF,NA,NA,SWAC
+Missouri,ncaa,#000000,#F1B82D,NA,NA,SEC
+Missouri State Bears[aj],ncaa,#5E0009,#000000,NA,NA,MVC
+Monmouth Hawks,ncaa,#041E42,#53565A,NA,NA,CAA
+Montana Grizzlies[ak],ncaa,#999999,#999999,NA,NA,Big Sky
+Montana State Bobcats,ncaa,#B9975B,#B9975B,NA,NA,Big Sky
+Morehead State Eagles,ncaa,#005EB8,#FFCF00,NA,NA,OVC
+Morgan State Bears[aj],ncaa,#002D74,#FF4E00,NA,NA,MEAC
+Mount State Mary's,ncaa,#002F6C,#FFFFFF,NA,NA,MAAC
+Murray State Racers,ncaa,#002144,#ECAC00,NA,NA,MVC
+N.C. A&T,ncaa,#004684,#FDB927,NA,NA,Big South
+N.C. Central,ncaa,#862633,#898D8D,NA,NA,MEAC
+Navy,ncaa,#00205B,#C5B783,NA,NA,Patriot
+NC State,ncaa,#CC0000,#000000,#FFFFFF,NA,ACC
+Nebraska,ncaa,#E41C38,#5F6A72,#000000,NA,Big 10
+Nevada,ncaa,#003366,#807F84,NA,NA,MWC
+New Hampshire Wildcats,ncaa,#041E42,#BBBCBC,NA,NA,Am. East
+New Mexico,ncaa,#BA0C2F,#A7A8AA,#63666A,#007A86,MWC
+New Mexico State Aggies,ncaa,#861F41,#97999B,#000000,NA,WAC
+New Orleans Privateers,ncaa,#005CA6,#A3A9AD,NA,NA,Southland
+Niagara Purple Eagles,ncaa,#582C83,#FFFFFF,NA,NA,MAAC
+Nicholls,ncaa,#C41230,#B2B2B2,NA,NA,Southland
+NJIT,ncaa,#D22630,#071D49,#C1C6C8,NA,Am. East
+Norfolk State Spartans,ncaa,#007A53,#F2A900,NA,NA,MEAC
+North Alabama Lions,ncaa,#46166B,#DB9F11,#5F6062,NA,A-Sun
+North Carolina,ncaa,#7BAFD4,#FFFFFF,#13294B,#000000,ACC
+North Dakota Fighting Hawks,ncaa,#009A44,#FFFFFF,NA,NA,Summit
+North Dakota State,ncaa,#0A5640,#FFC72A,NA,NA,Summit
+North Florida Ospreys,ncaa,#00246B,#D9D9D9,NA,NA,A-Sun
+North Texas Mean Green,ncaa,#00853E,#000000,NA,NA,C-USA
+Northeastern Huskies,ncaa,#E50000,#000000,NA,NA,CAA
+Northern Arizona Lumberjacks,ncaa,#FFD200,#FBB040,NA,NA,Big Sky
+Northern Colorado Bears,ncaa,#F6B000,#F6B000,NA,NA,Big Sky
+NIU,ncaa,#BA0C2F,#8A8D8F,#000000,NA,MAC
+Northern Kentucky Norse,ncaa,#FFC72C,#000000,NA,NA,Horizon
+Northwestern Wildcats,ncaa,#4E2A84,#FFFFFF,NA,NA,Big 10
+Northwestern State,ncaa,#492F92,#F78426,NA,NA,Southland
+Notre Dame,ncaa,#0C2340,#C99700,#AE9142,#00843D,ACC
+Oakland Golden Grizzlies,ncaa,#B59A57,#000000,NA,NA,Horizon
+Ohio,ncaa,#00694E,#CDA077,NA,NA,MAC
+Ohio State,ncaa,#BB0000,#666666,NA,NA,Big 10
+Oklahoma Sooners,ncaa,#841617,#FDF9D8,NA,NA,Big 12
+Oklahoma State,ncaa,#FF7300,#000000,#FF9900,#BEBEBE,Big 12
+Old Dominion Monarchs[am],ncaa,#003057,#92C1E9,NA,NA,Sunbelt
+Ole Miss,ncaa,#CE1126,#14213D,#FFFFFF,NA,SEC
+Omaha,ncaa,#000000,#D71920,#636568,NA,Summit
+Oral Roberts Golden Eagles,ncaa,#002F60,#C5B783,#A28E2A,NA,Summit
+Oregon Ducks,ncaa,#154733,#FEE123,NA,NA,Pac 12
+Oregon State Beavers,ncaa,#DC4405,#000000,#FFFFFF,NA,Pac 12
+Pacific,ncaa,#E35205,#231F20,#D86018,#949A90,WCC
+Penn,ncaa,#990000,#011F5B,NA,NA,Ivy
+Penn State,ncaa,#093162,#FFFFFF,NA,NA,Big 10
+Pepperdine Waves,ncaa,#00205C,#EE7624,NA,NA,WCC
+Pittsburgh Panthers,ncaa,#1C2957,#CDB87D,NA,NA,ACC
+Portland Pilots,ncaa,#1E1656,#5E6A71,NA,NA,WCC
+Portland State Vikings,ncaa,#154734,#FFFFFF,#373A36,#2C2A29,Big Sky
+Prairie View,ncaa,#330066,#FFCC33,NA,NA,SWAC
+Presbyterian,ncaa,#0060A9,#9D2235,NA,NA,Big South
+Princeton Tigers,ncaa,#FF671F,#000000,NA,NA,Ivy
+Providence,ncaa,#000000,#8A8D8F,#FFFFFF,NA,Big East
+Purdue Boilermakers,ncaa,#CEB888,#000000,#9D968D,#373A36,Big 10
+Purdue Fort Wayne Mastodons,ncaa,#002F6C,#000000,#63666A,#97999B,Horizon
+Quinnipiac Bobcats,ncaa,#0A2240,#FFB819,NA,NA,MAAC
+Radford Highlanders,ncaa,#C2011B,#808285,NA,NA,Big South
+Rhode Island Rams,ncaa,#68ABE8,#002147,NA,NA,A-10
+Rice,ncaa,#00205B,#C1C6C8,NA,NA,C-USA
+Richmond Spiders,ncaa,#000066,#990000,NA,NA,A-10
+Rider Broncs,ncaa,#981E32,#6C6F70,NA,NA,MAAC
+Robert Morris Colonials,ncaa,#14234B,#A6192E,NA,NA,Horizon
+Rutgers,ncaa,#CC0033,#5F6A72,#000000,NA,Big 10
+Sacramento State,ncaa,#043927,#C4B581,NA,NA,Big Sky
+Sacred Heart Pioneers,ncaa,#CD1041,#FFFFFF,NA,NA,NEC
+Saint Francis (PA),ncaa,#BD1F25,#FFFFFF,NA,NA,NEC
+Saint Joseph's Hawks,ncaa,#9E1B32,#6C6F70,NA,NA,A-10
+Saint Louis Billikens,ncaa,#003DA5,#C8C9C7,NA,NA,A-10
+Saint Mary's (CA),ncaa,#D80024,#06315B,NA,NA,WCC
+Saint Peter's Peacocks,ncaa,#003C71,#0072CE,#A59C94,#000000,MAAC
+Sam Houston,ncaa,#F78E1E,#004990,NA,NA,WAC
+Samford Bulldogs,ncaa,#C4161D,#002649,NA,NA,Southern
+San Diego Toreros,ncaa,#002868,#84BCE8,#207BC1,NA,WCC
+San Diego State Aztecs,ncaa,#A6192E,#000000,#FFFFFF,NA,MWC
+San Francisco Dons,ncaa,#FDBB30,#00543C,#919194,NA,WCC
+San Jose State Spartans,ncaa,#0055A2,#E5A823,#939597,NA,MWC
+Santa Clara Broncos,ncaa,#862633,#FFFFFF,NA,NA,WCC
+Seattle U,ncaa,#AA0000,#333333,NA,NA,WAC
+Seton Hall Pirates,ncaa,#004488,#A2AAAD,NA,NA,Big East
+SFA,ncaa,#3F2A55,#FFFFFF,NA,NA,WAC
+Siena,ncaa,#FFC72C,#C8102E,#006747,#693F23,MAAC
+SIUE,ncaa,#CC0000,#FFFFFF,NA,NA,OVC
+SMU,ncaa,#CC0035,#354CA1,NA,NA,AAC
+South Alabama Jaguars,ncaa,#00205B,#BF0D3E,NA,NA,Sunbelt
+South Carolina Gamecocks,ncaa,#73000A,#000000,NA,NA,SEC
+South Carolina State Bulldogs[h],ncaa,#841A2B,#1E4692,NA,NA,MEAC
+South Dakota Coyotes,ncaa,#AD0000,#B4B4B4,#000000,NA,Summit
+South Dakota State Jackrabbits,ncaa,#0033A0,#FFD100,NA,NA,Summit
+South Florida Bulls,ncaa,#006747,#CFC493,NA,NA,AAC
+Southeast Mo. State,ncaa,#C8102E,#000000,NA,NA,OVC
+Southeastern Louisiana Lions[ap],ncaa,#006341,#EAAA00,NA,NA,Southland
+Southern California Trojans[ax],ncaa,#FFC72C,#990000,#FFC72C,NA,Pac 12
+Southern Illinois,ncaa,#720000,#000000,NA,NA,MVC
+Southern Mississippi Golden Eagles[u],ncaa,#000000,#FFAB00,NA,NA,Sunbelt
+Southern U.,ncaa,#69B3E7,#FFC72C,NA,NA,SWAC
+Southern Utah Thunderbirds,ncaa,#000000,#FFFFFF,NA,NA,WAC
+SaintBonaventure,ncaa,#54261A,#FDB726,#BDB6B0,NA,A-10
+SaintFrancis Brooklyn,ncaa,#0038A8,#CE1126,NA,NA,NEC
+SaintJohn's (NY),ncaa,#BA0C2F,#041C2C,#A7A8AA,NA,Big East
+SaintThomas (MN),ncaa,purple,white,NA,NA,Summit
+Stanford,ncaa,#8C1515,#FFFFFF,#4D4F53,#2E2D29,Pac 12
+Stetson Hatters,ncaa,#006747,#B58150,#9E652E,#000000,A-Sun
+Stony Brook,ncaa,#990000,#16243E,#828282,NA,CAA
+Syracuse Orange,ncaa,#D44500,#3E3D3C,#6F777D,#ADB3B8,ACC
+Tarleton State,ncaa,#4F2D7F,white,NA,NA,WAC
+TCU,ncaa,#4D1979,#A3A9AC,#FFFFFF,NA,Big 12
+Temple Owls,ncaa,#9D2235,#FFCD00,#8A8D8F,#C1C6C8,AAC
+Tennessee,ncaa,#FF8200,#58595B,#FFFFFF,NA,SEC
+Tennessee State Tigers[v],ncaa,#00539F,#FFFFFF,NA,NA,OVC
+Tennessee Tech,ncaa,#4F2984,#FFDD00,NA,NA,OVC
+Texas,ncaa,#BF5700,#333F48,#FFFFFF,NA,Big 12
+Texas A&M Aggies,ncaa,#500000,#FFFFFF,NA,NA,SEC
+Texas Southern Tigers[v],ncaa,#6F263D,#A2AAAD,NA,NA,SWAC
+Texas State Bobcats,ncaa,#501214,#8D734A,NA,NA,Sunbelt
+Texas Tech Red Raiders[at],ncaa,#CC0000,#000000,#FFFFFF,NA,Big 12
+The Citadel,ncaa,#3975B7,#FFFFFF,NA,NA,Southern
+Toledo Rockets,ncaa,#15397F,#005CB9,#FFDA00,#BEC6C3,MAC
+Towson Tigers,ncaa,#000000,#FFCC00,NA,NA,CAA
+Troy Trojans,ncaa,#6D0017,#B2B3B5,#000000,NA,Sunbelt
+Tulane,ncaa,#006747,#43B02A,#418FDE,#000000,AAC
+Tulsa,ncaa,#002D72,#C8102E,#C5B783,#F3D54E,AAC
+UAB,ncaa,#006341,#CC8A00,#000000,#BF0D3E,C-USA
+UC Davis,ncaa,#002855,#B3A369,NA,NA,Big West
+UC Irvine,ncaa,#0C2340,#FFC72C,NA,NA,Big West
+UC Riverside,ncaa,#2D6CC0,#003066,#F1AB00,#7A6E67,Big West
+UC San Diego,ncaa,#182B49,#C69214,NA,NA,Big West
+UC Santa Barbara,ncaa,#004D9F,#FFB814,NA,NA,Big West
+UCF,ncaa,#000000,#B7A369,NA,NA,AAC
+UCLA,ncaa,#2D68C4,#F2A900,#3284BF,#FFE800,Pac 12
+UConn,ncaa,#000E2F,#FFFFFF,NA,NA,Big East
+UIC,ncaa,#AC1E2D,#041E42,#FACC09,NA,MVC
+UIW,ncaa,#CB333B,#000000,NA,NA,Southland
+ULM,ncaa,#800029,#BD955A,#646469,#DAD86D,Sunbelt
+UMass Lowell,ncaa,#003DA5,#C8102E,NA,NA,Am. East
+UMBC,ncaa,#B18906,#FFC20E,#000000,#ED1C24,Am. East
+UMES,ncaa,#822433,#8B8D8E,NA,NA,MEAC
+UNC Asheville,ncaa,#003DA5,#FFFFFF,NA,NA,Big South
+UNC Greensboro,ncaa,#0F2044,#FFB71B,NA,NA,Southern
+UNCW,ncaa,#006666,#003366,#FFD600,NA,CAA
+UNI,ncaa,#4B116F,#FFCC00,NA,NA,MVC
+UNLV,ncaa,#B10202,#666666,#000000,NA,MWC
+USC Upstate,ncaa,#00703C,#000000,NA,NA,Big South
+UT Arlington,ncaa,#F58025,#0064B1,NA,NA,WAC
+UT Martin,ncaa,#002649,#F77F00,NA,NA,OVC
+Utah Utes[ay],ncaa,#CC0000,#808080,#000000,NA,Pac 12
+Utah State Aggies,ncaa,#0F2439,#FFFFFF,#9D968D,#000000,MWC
+Utah Valley Wolverines,ncaa,#275D38,#000000,#8E8C89,NA,WAC
+UTEP,ncaa,#FF8200,#041E42,#B1B3B3,NA,C-USA
+UTRGV,ncaa,#FFA300,#F05023,#00843D,#0C2340,WAC
+UTSA,ncaa,#F15A22,#0C2340,NA,NA,C-USA
+Valparaiso Beacons,ncaa,#381E0E,#613318,#FFCC00,NA,MVC
+Vanderbilt Commodores,ncaa,#000000,#866D4B,NA,NA,SEC
+VCU,ncaa,#FFB300,#000000,NA,NA,A-10
+Vermont,ncaa,#154734,#8B5B29,#FFC72C,#C6AA76,Am. East
+Villanova Wildcats,ncaa,#00205B,#13B5EA,#8B634B,NA,Big East
+Virginia Cavaliers,ncaa,#232D4B,#F84C1E,#FFFFFF,NA,ACC
+Virginia Tech,ncaa,#630031,#CF4420,NA,NA,ACC
+VMI,ncaa,#AE122A,#FFD619,NA,NA,Southern
+Wagner,ncaa,#004331,#FFFFFF,NA,NA,NEC
+Wake Forest Demon Deacons,ncaa,#A67F31,#000000,NA,NA,ACC
+Washington Huskies,ncaa,#4B2E83,#B7A57A,#85754D,NA,Pac 12
+Washington State Cougars,ncaa,#981E32,#5E6A71,NA,NA,Pac 12
+Weber State Wildcats,ncaa,#A1A1A4,#130C0E,NA,NA,Big Sky
+West Virginia Mountaineers,ncaa,#002855,#EAAA00,NA,NA,Big 12
+Western Carolina Catamounts,ncaa,#592C88,#B9975B,NA,NA,Southern
+Western Illinois Leathernecks,ncaa,#663399,#FFCC00,NA,NA,Summit
+Western Kentucky Hilltoppers[az],ncaa,#C60C30,#1E1E1E,#A2A4A3,NA,C-USA
+Western Michigan Broncos,ncaa,#6C4023,#B5A167,#AAA8AA,#000000,MAC
+Wichita State Shockers,ncaa,#FFCD00,#000000,NA,NA,AAC
+William & Mary,ncaa,#115740,#F0B323,#D0D3D4,NA,CAA
+Winthrop Eagles,ncaa,#872434,#FFC82E,NA,NA,Big South
+Wisconsin,ncaa,#C5050C,#FFFFFF,#9B0000,NA,Big 10
+Wofford,ncaa,#886E4C,#000000,NA,NA,Southern
+Wright State Raiders,ncaa,#026937,#CEA052,#FFE1A5,#DE6328,Horizon
+Wyoming Cowboys[ai],ncaa,#FFC425,#492F24,NA,NA,MWC
+Xavier Musketeers,ncaa,#0C2340,#9EA2A2,#0099CC,NA,Big East
+Yale Bulldogs,ncaa,#00356B,#FFFFFF,NA,NA,Ivy
+Youngstown State Penguins,ncaa,#C8102E,#F3D54E,NA,NA,Horizon
+Queens (NC),ncaa,#192C66,white,NA,NA,A-Sun
+Lindenwood,ncaa,#101820,#B5A36A,NA,NA,OVC
+Tex. A&M-Commerce,ncaa,navy,gold,NA,NA,Southland
+Southern Ind.,ncaa,#CF102D,#002D5D,NA,NA,OVC
+Stonehill,ncaa,purple,black,NA,NA,NEC

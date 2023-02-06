@@ -16,10 +16,5 @@ nwsl_data <- data.frame(
   quaternary = c("#C8C9C7", NA, NA, NA, NA, "#FFFFFF", NA, NA , NA)
 )
 
-teamcolors <- teamcolors %>%
-  bind_rows(nwsl_data) %>%
-  arrange(name) %>%
-  as_tibble()
-
-usethis::use_data(teamcolors, overwrite = TRUE)
+write_csv(nwsl_data, here::here("data-csv", "teamcolors_nwsl.csv"))
 

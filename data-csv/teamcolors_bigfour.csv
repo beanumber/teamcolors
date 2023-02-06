@@ -1,0 +1,166 @@
+name,league,primary,secondary,tertiary,quaternary
+AFC Bournemouth,epl,#e62333,#000000,NA,NA
+Arsenal,epl,#ef0107,#023474,#9c824a,NA
+Brighton & Hove Albion,epl,#0055a9,#f8bc1b,NA,NA
+Burnley,epl,#8ccce5,#53162f,#f9ec34,NA
+Chelsea,epl,#034694,#dba111,#ed1c24,NA
+Crystal Palace,epl,#1b458f,#c4122e,#a7a5a6,NA
+Everton,epl,#274488,NA,NA,NA
+Huddersfield Town,epl,#0073d2,NA,NA,NA
+Leicester City,epl,#fdbe11,#0053a0,NA,NA
+Liverpool,epl,#00a398,#d00027,#fef667,NA
+Manchester City,epl,#98c5e9,#00285e,#f4bc46,NA
+Manchester United,epl,#da020e,#ffe500,#000000,NA
+Newcastle United,epl,#241f20,#00b8f4,#c3a572,NA
+Southampton,epl,#ed1a3b,#211e1f,#ffc20e,NA
+Stoke City,epl,#e03a3e,#1b449c,NA,NA
+Swansea City,epl,#000000,NA,NA,NA
+Tottenham Hotspur,epl,#001c58,NA,NA,NA
+Watford,epl,#fbee23,#ed2127,#000000,NA
+West Bromwich Albion,epl,#091453,NA,NA,NA
+West Ham United,epl,#60223b,#f7c240,#5299c6,NA
+Arizona Diamondbacks,mlb,#a71930,#000000,#e3d4ad,NA
+Atlanta Braves,mlb,#ce1141,#13274f,NA,NA
+Baltimore Orioles,mlb,#df4601,#000000,NA,NA
+Boston Red Sox,mlb,#bd3039,#0d2b56,NA,NA
+Chicago Cubs,mlb,#cc3433,#0e3386,NA,NA
+Chicago White Sox,mlb,#000000,#c4ced4,NA,NA
+Cincinnati Reds,mlb,#c6011f,#000000,NA,NA
+Colorado Rockies,mlb,#333366,#231f20,#c4ced4,NA
+Cleveland Guardians,mlb,#e31937,#002b5c,NA,NA
+Detroit Tigers,mlb,#0c2c56,#FF6600,NA,NA
+Houston Astros,mlb,#002d62,#eb6e1f,NA,NA
+Kansas City Royals,mlb,#004687,#c09a5b,NA,NA
+Los Angeles Angels,mlb,#ba0021,#003263,NA,NA
+Los Angeles Dodgers,mlb,#005a9c,#005a9c,#ef3e42,NA
+Miami Marlins,mlb,#ff6600,#0077c8,#ffd100,#000000
+Milwaukee Brewers,mlb,#0a2351,#b6922e,NA,NA
+Minnesota Twins,mlb,#002b5c,#d31145,NA,NA
+New York Mets,mlb,#ff5910,#002d72,NA,NA
+New York Yankees,mlb,#003087,#FFFFFF,#e4002b,NA
+Oakland Athletics,mlb,#003831,#efb21e,NA,NA
+Philadelphia Phillies,mlb,#284898,#e81828,NA,NA
+Pittsburgh Pirates,mlb,#fdb827,#000000,NA,NA
+San Diego Padres,mlb,#002d62,#fec325,#7f411c,#a0aab2
+San Francisco Giants,mlb,#fd5a1e,#000000,#8b6f4e,NA
+Seattle Mariners,mlb,#0c2c56,#005c5c,#c4ced4,NA
+St. Louis Cardinals,mlb,#c41e3a,#000066,#fedb00,NA
+Tampa Bay Rays,mlb,#092c5c,#8fbce6,#f5d130,NA
+Texas Rangers,mlb,#c0111f,#003278,NA,NA
+Toronto Blue Jays,mlb,#134a8e,#1d2d5c,#e8291c,NA
+Washington Nationals,mlb,#ab0003,#11225b,NA,NA
+Atlanta United FC,mls,#a29061,#80000b,#000000,NA
+Chicago Fire,mls,#af2626,#0a174a,#8a8d8f,NA
+Colorado Rapids,mls,#91022d,#85b7ea,#8a8d8f,#313f49
+Columbus Crew,mls,#000000,#ffdb00,#8a8d8f,NA
+DC United,mls,#000000,#dd0000,NA,NA
+FC Dallas,mls,#cf0032,#07175c,#8a8d8f,NA
+Houston Dynamo,mls,#f36600,#2e2926,#85b7ea,NA
+LA Galaxy,mls,#00245d,#004689,#f1aa00,#ffd200
+Minnesota United FC,mls,#cfd4d8,#6caddf,#000000,NA
+Montreal Impact,mls,#122089,#000000,#7a878f,NA
+New England Revolution,mls,#0a2141,#d80016,#8a8d8f,NA
+New York Red Bulls,mls,#d50031,#012055,#ffc800,#8a8d8f
+New York City FC,mls,#6caddf,#00285e,#fd4f00,NA
+Orlando City SC,mls,#633492,#fde192,NA,NA
+Philadelphia Union,mls,#002d55,#5090cd,#b38707,#b49759
+Portland Timbers,mls,#004812,#ebe72b,NA,NA
+Real Salt Lake,mls,#a50531,#013474,#f2d11a,NA
+San Jose Earthquakes,mls,#0051ba,#000000,#b1b4b2,NA
+Seattle Sounders FC,mls,#4f8a10,#11568c,#212930,NA
+Sporting Kansas City,mls,#91b0d5,#002b5c,#9fa1a4,#989891
+Toronto FC,mls,#d80016,#313f49,#a1aaad,NA
+Vancouver Whitecaps FC,mls,#12264c,#85b7ea,#838383,NA
+Arizona Cardinals,nfl,#97233f,#000000,#ffb612,#a5acaf
+Atlanta Falcons,nfl,#a71930,#000000,#a5acaf,#a30d2d
+Baltimore Ravens,nfl,#241773,#000000,#9e7c0c,#c60c30
+Buffalo Bills,nfl,#00338d,#c60c30,#0c2e82,#d50a0a
+Carolina Panthers,nfl,#0085ca,#000000,#bfc0bf,NA
+Cincinnati Bengals,nfl,#000000,#fb4f14,#d32f1e,NA
+Cleveland Browns,nfl,#fb4f14,#22150c,#a5acaf,#d32f1e
+Dallas Cowboys,nfl,#002244,#b0b7bc,#acc0c6,#a5acaf
+Chicago Bears,nfl,#0b162a,#c83803,NA,NA
+Denver Broncos,nfl,#002244,#fb4f14,#00234c,#ff5200
+Detroit Lions,nfl,#005a8b,#b0b7bc,#000000,#004e89
+Green Bay Packers,nfl,#203731,#ffb612,#1c2d25,#eead1e
+Houston Texans,nfl,#03202f,#a71930,#00071c,#a30d2d
+Indianapolis Colts,nfl,#002c5f,#a5acaf,#013369,#9ba1a2
+Jacksonville Jaguars,nfl,#000000,#006778,#9f792c,#d7a22a
+Kansas City Chiefs,nfl,#e31837,#ffb612,#000000,#eead1e
+Los Angeles Rams,nfl,#002244,#b3995d,#001532,#af925d
+Miami Dolphins,nfl,#008e97,#f58220,#005778,NA
+Minnesota Vikings,nfl,#4f2683,#ffc62f,#e9bf9b,#000000
+New England Patriots,nfl,#002244,#c60c30,#b0b7bc,#001532
+New Orleans Saints,nfl,#9f8958,#000000,NA,NA
+New York Giants,nfl,#0b2265,#a71930,#a5acaf,#012352
+New York Jets,nfl,#125740,#000000,#FFFFFF,NA
+Las Vegas Raiders,nfl,#a5acaf,#000000,#a6aeb0,NA
+Philadelphia Eagles,nfl,#004953,#a5acaf,#acc0c6,#000000
+Pittsburgh Steelers,nfl,#000000,#ffb612,#c60c30,#00539b
+Los Angeles Chargers,nfl,#002244,#0073cf,#ffb612,#001532
+San Francisco 49ers,nfl,#aa0000,#b3995d,#000000,#a5acaf
+Seattle Seahawks,nfl,#002244,#69be28,#a5acaf,#001532
+Tampa Bay Buccaneers,nfl,#d50a0a,#34302b,#000000,#ff7900
+Tennessee Titans,nfl,#002244,#4b92db,#c60c30,#a5acaf
+Washington Football Team,nfl,#773141,#ffb612,#000000,#5b2b2f
+Anaheim Ducks,nhl,#010101,#a2aaad,#fc4c02,#85714d
+Arizona Coyotes,nhl,#010101,#862633,#ddcba4,NA
+Boston Bruins,nhl,#010101,#ffb81c,NA,NA
+Buffalo Sabres,nhl,#041e42,#a2aaad,#ffb81c,#c8102e
+Calgary Flames,nhl,#010101,#f1be48,#c8102e,NA
+Carolina Hurricanes,nhl,#010101,#a2aaad,#c8102e,NA
+Chicago Blackhawks,nhl,#010101,#ff671f,#ffd100,#001871
+Colorado Avalanche,nhl,#010101,#236192,#a4a9ad,#6f263d
+Columbus Blue Jackets,nhl,#041e42,#a4a9ad,#c8102e,NA
+Dallas Stars,nhl,#010101,#006341,#8a8d8f,NA
+Detroit Red Wings,nhl,#c8102e,NA,NA,NA
+Edmonton Oilers,nhl,#00205b,#cf4520,NA,NA
+Florida Panthers,nhl,#041e42,#b9975b,#c8102e,NA
+Los Angeles Kings,nhl,#010101,#a2aaad,NA,NA
+Minnesota Wild,nhl,#154734,#ddcba4,#eaaa00,#a6192e
+Montreal Canadiens,nhl,#001e62,#a6192e,NA,NA
+Nashville Predators,nhl,#041e42,#ffb81c,NA,NA
+New Jersey Devils,nhl,#010101,#c8102e,NA,NA
+New York Islanders,nhl,#003087,#fc4c02,NA,NA
+New York Rangers,nhl,#0033a0,#c8102e,NA,NA
+Ottawa Senators,nhl,#010101,#c8102e,#c69214,NA
+Philadelphia Flyers,nhl,#010101,#fa4616,NA,NA
+Pittsburgh Penguins,nhl,#010101,#ffb81c,NA,NA
+San Jose Sharks,nhl,#010101,#e57200,#006272,NA
+St. Louis Blues,nhl,#041e42,#ffb81c,#003087,NA
+Tampa Bay Lightning,nhl,#00205b,NA,NA,NA
+Toronto Maple Leafs,nhl,#00205b,NA,NA,NA
+Vancouver Canucks,nhl,#00205b,#97999b,#041c2c,NA
+Vegas Golden Knights,nhl,#010101,#b4975a,#333f42,NA
+Washington Capitals,nhl,#041e42,#a2aaad,#782f40,#a6192e
+Winnipeg Jets,nhl,#041e42,#c8102e,NA,NA
+Atlanta Hawks,nba,#e13a3e,#c4d600,#061922,NA
+Boston Celtics,nba,#008348,#bb9753,#a73832,#fab383
+Brooklyn Nets,nba,#061922,NA,NA,NA
+Charlotte Hornets,nba,#1d1160,#008ca8,#a1a1a4,NA
+Chicago Bulls,nba,#ce1141,#061922,NA,NA
+Cleveland Cavaliers,nba,#860038,#fdbb30,#002d62,NA
+Dallas Mavericks,nba,#007dc5,#c4ced3,#061922,#20385b
+Denver Nuggets,nba,#4d90cd,#fdb927,#0f586c,NA
+Detroit Pistons,nba,#ed174c,#006bb6,#0f586c,NA
+Golden State Warriors,nba,#fdb927,#006bb6,#26282a,NA
+Houston Rockets,nba,#ce1141,#c4ced3,#061922,#fdb927
+Indiana Pacers,nba,#ffc633,#00275d,#bec0c2,NA
+Los Angeles Clippers,nba,#ed174c,#006bb6,#061922,#bec0c2
+Los Angeles Lakers,nba,#fdb927,#552582,#061922,#8177b7
+Memphis Grizzlies,nba,#0f586c,#7399c6,#bed4e9,#fdb927
+Miami Heat,nba,#98002e,#f9a01b,#061922,#bcbec0
+Milwaukee Bucks,nba,#00471b,#f0ebd2,#061922,#007dc5
+Minnesota Timberwolves,nba,#005083,#00a94f,#c4ced3,#ffe600
+New Orleans Pelicans,nba,#002b5c,#e31837,#b4975a,NA
+New York Knicks,nba,#006bb6,#f58426,#bec0c2,#231f20
+Oklahoma City Thunder,nba,#007dc3,#f05133,#fdbb30,#002d62
+Orlando Magic,nba,#007dc5,#c4ced3,#061922,NA
+Philadelphia 76ers,nba,#ed174c,#006bb6,#002b5c,#c4ced3
+Phoenix Suns,nba,#e56020,#1d1160,#63717a,#f9a01b
+Portland Trail Blazers,nba,#e03a3e,#bac3c9,#061922,NA
+Sacramento Kings,nba,#724c9f,#8e9090,#061922,NA
+San Antonio Spurs,nba,#bac3c9,#061922,NA,NA
+Toronto Raptors,nba,#ce1141,#061922,#a1a1a4,#b4975a
+Utah Jazz,nba,#002b5c,#f9a01b,#00471b,#bec0c2
+Washington Wizards,nba,#002b5c,#e31837,#c4ced4,NA

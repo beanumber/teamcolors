@@ -1,6 +1,6 @@
 ### Code to update teamcolors from the ncaa_colors dataset in ncaahoopR
 library(tidyverse)
-library(teamcolors)
+# remotes::install_github("lbenz730/ncaahoopR")
 
 ncaa_colors <- ncaahoopR::ncaa_colors %>%
   mutate(
@@ -39,10 +39,17 @@ library(rvest)
 
 divI <- read_html("https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_institutions") %>%
   html_nodes("table") %>%
-  purrr::pluck(1) %>%
+  purrr::pluck(2) %>%
   html_table()
 
+names(divI) <- divI[1, ]
+
 divI <- divI %>%
+  slice(-1) |>
+  rename(
+    School = `School Name`,
+    Team = Teams
+  ) |>
   mutate(
     name = gsub("\\[[A-Z] [0-9]+\\]$", "", School),
     name = gsub("\\[[a-z]\\]$", "", name),
@@ -61,12 +68,4 @@ x <- ncaa_colors %>%
   mutate(name = ifelse(is.na(nickname), name, paste(name, nickname))) %>%
   select(-nickname)
 
-###
-
-teamcolors <- teamcolors %>%
-  filter(league != "ncaa") %>%
-  bind_rows(x) %>%
-  arrange(name) %>%
-  as_tibble()
-
-usethis::use_data(teamcolors, overwrite = TRUE)
+write_csv(x, here::here("data-csv", "teamcolors_ncaa.csv"))

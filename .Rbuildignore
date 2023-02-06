@@ -1,6 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
+^data-csv$
 ^\.travis\.yml$
 ^README\.md$
 ^README\.Rmd$
@@ -9,3 +10,4 @@
 ^CRAN-RELEASE$
 ^xaringan-themer\.css$
 ^inst/rmarkdown/templates/xaringan/skeleton/libs/*
+^\.github$
