@@ -70,4 +70,3 @@ write_csv(y, here::here("data-csv", "divisions_bigfour.csv"))
 
 
 
-
