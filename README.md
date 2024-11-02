@@ -40,16 +40,15 @@ head(teamcolors)
 ```
 
     ## # A tibble: 6 × 11
-    ##   name     league primary secon…¹ terti…² quate…³ divis…⁴ locat…⁵ mascot sport…⁶
-    ##   <chr>    <chr>  <chr>   <chr>   <chr>   <chr>   <chr>   <chr>   <chr>  <chr>  
-    ## 1 A&M-Cor… ncaa   #0067C5 #007F3E <NA>    <NA>    Southl… A&M-Co… Chris… A&M-Co…
-    ## 2 AFC Bou… epl    #e62333 #000000 <NA>    <NA>    <NA>    AFC     Bourn… AFC Bo…
-    ## 3 Abilene… ncaa   #461D7C #FFFFFF <NA>    <NA>    WAC     Abilene Chris… Abilen…
-    ## 4 Air For… ncaa   #003087 #8A8D8F #B1B3B3 #FFC72C MWC     Air Fo… <NA>   Air Fo…
-    ## 5 Akron    ncaa   #041E42 #A89968 <NA>    <NA>    MAC     Akron   <NA>   Akron  
-    ## 6 Alabama  ncaa   #9E1B32 #828A8F #FFFFFF <NA>    SEC     Alabama <NA>   Alabama
-    ## # … with 1 more variable: logo <chr>, and abbreviated variable names
-    ## #   ¹​secondary, ²​tertiary, ³​quaternary, ⁴​division, ⁵​location, ⁶​sportslogos_name
+    ##   name     league primary secondary tertiary quaternary division location mascot
+    ##   <chr>    <chr>  <chr>   <chr>     <chr>    <chr>      <chr>    <chr>    <chr> 
+    ## 1 A&M-Cor… ncaa   #0067C5 #007F3E   <NA>     <NA>       Southla… A&M-Cor… Chris…
+    ## 2 AFC Bou… epl    #e62333 #000000   <NA>     <NA>       <NA>     AFC      Bourn…
+    ## 3 Abilene… ncaa   #461D7C #FFFFFF   <NA>     <NA>       WAC      Abilene  Chris…
+    ## 4 Air For… ncaa   #003087 #8A8D8F   #B1B3B3  #FFC72C    MWC      Air For… <NA>  
+    ## 5 Akron    ncaa   #041E42 #A89968   <NA>     <NA>       MAC      Akron    <NA>  
+    ## 6 Alabama  ncaa   #9E1B32 #828A8F   #FFFFFF  <NA>       SEC      Alabama  <NA>  
+    ## # ℹ 2 more variables: sportslogos_name <chr>, logo <chr>
 
 ## Show palettes
 
@@ -125,8 +124,11 @@ ggplot(pythag, aes(x = wpct, y = exp_wpct, color = name, fill = name)) +
     ## Warning: The `guide` argument in `scale_*()` cannot be `FALSE`. This was deprecated in
     ## ggplot2 3.3.4.
     ## ℹ Please use "none" instead.
+    ## This warning is displayed once every 8 hours.
+    ## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+    ## generated.
 
-    ## Warning: ggrepel: 4 unlabeled data points (too many overlaps). Consider
+    ## Warning: ggrepel: 3 unlabeled data points (too many overlaps). Consider
     ## increasing max.overlaps
 
 ![](README_files/figure-gfm/ggplot-1.png)<!-- -->
@@ -163,7 +165,10 @@ show_team_col()
     ## Warning: The `<scale>` argument of `guides()` cannot be `FALSE`. Use "none" instead as
     ## of ggplot2 3.3.4.
     ## ℹ The deprecated feature was likely used in the teamcolors package.
-    ##   Please report the issue at <]8;;https://github.com/beanumber/teamcolors/issueshttps://github.com/beanumber/teamcolors/issues]8;;>.
+    ##   Please report the issue at <https://github.com/beanumber/teamcolors/issues>.
+    ## This warning is displayed once every 8 hours.
+    ## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+    ## generated.
 
 ![](README_files/figure-gfm/teamcolors-1.png)<!-- -->
 
@@ -187,7 +192,7 @@ teamcolors %>%
   knitr::include_graphics()
 ```
 
-![](https://content.sportslogos.net/logos/9/5119/thumbs/511960002015.gif)<!-- -->![](https://content.sportslogos.net/logos/7/166/thumbs/919.gif)<!-- -->![](https://content.sportslogos.net/logos/1/19/thumbs/1939112018.gif)<!-- -->![](https://content.sportslogos.net/logos/7/152/thumbs/15291162019.gif)<!-- -->![](https://content.sportslogos.net/logos/6/216/thumbs/2nn48xofg0hms8k326cqdmuis.gif)<!-- -->![](https://content.sportslogos.net/logos/16/309/thumbs/30978362020.gif)<!-- -->![](https://content.sportslogos.net/logos/54/67/thumbs/m01gfgeorgvbfw15fy04alujm.gif)<!-- -->![](https://content.sportslogos.net/logos/1/20/thumbs/144.gif)<!-- -->![](https://content.sportslogos.net/logos/9/1876/thumbs/i9ni847kriagxdlb7xewa6dl8.gif)<!-- -->![](https://content.sportslogos.net/logos/53/68/thumbs/1256.gif)<!-- -->
+![](https://content.sportslogos.net/logos/9/5119/thumbs/511960002015.gif)<!-- -->![](https://content.sportslogos.net/logos/7/166/thumbs/919.gif)<!-- -->![](https://content.sportslogos.net/logos/1/19/thumbs/1939112018.gif)<!-- -->![](https://content.sportslogos.net/logos/7/152/thumbs/15274172024.gif)<!-- -->![](https://content.sportslogos.net/logos/6/216/thumbs/21671702024.gif)<!-- -->![](https://content.sportslogos.net/logos/16/309/thumbs/30978362020.gif)<!-- -->![](https://content.sportslogos.net/logos/54/67/thumbs/m01gfgeorgvbfw15fy04alujm.gif)<!-- -->![](https://content.sportslogos.net/logos/1/20/thumbs/144.gif)<!-- -->![](https://content.sportslogos.net/logos/9/1876/thumbs/i9ni847kriagxdlb7xewa6dl8.gif)<!-- -->![](https://content.sportslogos.net/logos/53/68/thumbs/1256.gif)<!-- -->
 
 Note that we don’t have any coverage for the EPL.
 
@@ -209,8 +214,8 @@ teamcolors %>%
     ##  4 mls           22        21
     ##  5 nba           30        30
     ##  6 ncaa         363       235
-    ##  7 nfl           32        31
-    ##  8 nhl           31        31
+    ##  7 nfl           32        32
+    ##  8 nhl           31        30
     ##  9 nwsl           9         7
     ## 10 wnba          12        12
 
