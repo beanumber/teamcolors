@@ -99,7 +99,19 @@ teamcolors <- teamcolors %>%
   )
 # Washington Football Team
 teamcolors <- teamcolors %>%
-  mutate(name = ifelse(name == "Washington Redskins", "Washington Football Team", name))
+  mutate(name = ifelse(name == "Washington Redskins", "Washington Commanders", name)) 
+  
+
+# Buffalo Sabres
+teamcolors <- teamcolors %>%
+  mutate(
+    primary = ifelse(name == "Buffalo Sabres", '#003087', primary),
+    secondary = ifelse(name == "Buffalo Sabres", "#FFB81C", secondary),
+    tertiary = ifelse(name == "Buffalo Sabres", '#FFFFFF', tertiary),
+    quaternary = ifelse(name == "Buffalo Sabres", NA, quaternary)
+  )
+
+
 
 write_csv(
   teamcolors, 
@@ -124,17 +136,22 @@ x <- read_html("https://en.wikipedia.org/wiki/Major_League_Baseball") %>%
   filter(!grepl("Conference", Division))
 
 scrape_teams <- function(url) {
+  #Greg fixed this because the NFL table is now in a different location than it was before.  
+  id <- 1
+  if (url == "https://en.wikipedia.org/wiki/National_Football_League"){id <- 2}
+    
   x <- read_html(url) %>%
     html_nodes("table.wikitable") %>%
-    purrr::pluck(1) %>%
+    purrr::pluck(id) %>%
     html_table(fill = TRUE) %>%
     janitor::clean_names() %>%
     tibble::as_tibble()
+  x
   if (!"team" %in% names(x)) {
-    x <- rename(x, team = club_66)
+    x <- rename(x, team = team_54)
   }
   if (!"division" %in% names(x)) {
-    x <- rename(x, division = division_66)
+    x <- rename(x, division = division_54)
   }
   x %>%
     dplyr::select(division, team) %>%
@@ -149,10 +166,9 @@ locs <- tibble::tribble(
   "https://en.wikipedia.org/wiki/National_Hockey_League", "/html/body/div[3]/div[3]/div[4]/div/table[3]"
 )
 
-scrape_teams(locs$url[4])
+scrape_teams(locs$url[3])
 
-x <- locs %>%
-  mutate(divisions = map(url, scrape_teams))
+x <- locs %>% mutate(divisions = map(url, scrape_teams))
 
 # add AL/NL
 x$divisions[[2]] <- x$divisions[[2]] %>%

@@ -1,3 +1,9 @@
+# teamcolors 0.0.6
+
+* Updated Buffalo Sabres Colors (thanks `Sam Ventura`)
+* Changed name to Washington Commanders
+* Changed name to Cleveland Guardians
+
 # teamcolors 0.0.5
 
 * Added division for MLS (thanks `aldee153`)
