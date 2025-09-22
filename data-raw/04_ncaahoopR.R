@@ -42,13 +42,12 @@ divI <- read_html("https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_institu
   purrr::pluck(2) %>%
   html_table()
 
-names(divI) <- divI[1, ]
+# names(divI) <- divI[1, ]
 
 divI <- divI %>%
   slice(-1) |>
   rename(
-    School = `School Name`,
-    Team = Teams
+    Team = Nickname
   ) |>
   mutate(
     name = gsub("\\[[A-Z] [0-9]+\\]$", "", School),
