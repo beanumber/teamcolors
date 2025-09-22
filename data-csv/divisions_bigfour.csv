@@ -39,9 +39,9 @@ AL Central,Cleveland Guardians
 AL Central,Detroit Tigers
 AL Central,Kansas City Royals
 AL Central,Minnesota Twins
+AL West,Athletics
 AL West,Houston Astros
 AL West,Los Angeles Angels
-AL West,Oakland Athletics
 AL West,Seattle Mariners
 AL West,Texas Rangers
 NL East,Atlanta Braves
@@ -91,7 +91,6 @@ NFC West,Arizona Cardinals
 NFC West,Los Angeles Rams
 NFC West,San Francisco 49ers
 NFC West,Seattle Seahawks
-AFC * Club has relocated at some point in its existence† Club was a founding member of the NFL, Club has relocated at some point in its existence Club was a founding member of the NFL
 Atlantic,Boston Bruins
 Atlantic,Buffalo Sabres
 Atlantic,Detroit Red Wings
@@ -108,13 +107,13 @@ Metropolitan,New York Rangers
 Metropolitan,Philadelphia Flyers
 Metropolitan,Pittsburgh Penguins
 Metropolitan,Washington Capitals
-Central,Arizona Coyotes
 Central,Chicago Blackhawks
 Central,Colorado Avalanche
 Central,Dallas Stars
 Central,Minnesota Wild
 Central,Nashville Predators
 Central,St. Louis Blues
+Central,Utah Mammoth
 Central,Winnipeg Jets
 Pacific,Anaheim Ducks
 Pacific,Calgary Flames
