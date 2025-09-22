@@ -124,7 +124,7 @@ teamcolors <- teamcolors %>%
 # Pulled hex codes from https://teamcolorcodes.com/seattle-kraken-colors/
 teamcolors <- teamcolors %>% 
   add_row(name = "Seattle Kraken", primary = '#001628', secondary = '#99d9d9',
-          tertiary = '#355464', quaternary = '#68a2b9', league='nhl')
+          tertiary = '#355464', quaternary = '#68a2b9', league='nhl', .before=129)
 
 # Athletics
 teamcolors <- teamcolors %>%
