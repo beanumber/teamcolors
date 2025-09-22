@@ -47,7 +47,8 @@ logos <- leagues %>%
   mutate(team = gsub("  ", " ", team),
          team = ifelse(team == "D.C. United", "DC United", team), 
          team = ifelse(team == "Columbus Crew SC", "Columbus Crew", team),
-         team = ifelse(team == "Seattle Reign FC", "Reign FC", team))
+         team = ifelse(team == "Seattle Reign FC", "Reign FC", team),
+         team = ifelse(team == " Athletics", "Athletics", team))
 
 
 

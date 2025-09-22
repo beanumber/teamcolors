@@ -38,7 +38,7 @@ Milwaukee Brewers,mlb,#0a2351,#b6922e,NA,NA
 Minnesota Twins,mlb,#002b5c,#d31145,NA,NA
 New York Mets,mlb,#ff5910,#002d72,NA,NA
 New York Yankees,mlb,#003087,#FFFFFF,#e4002b,NA
-Oakland Athletics,mlb,#003831,#efb21e,NA,NA
+Athletics,mlb,#003831,#efb21e,NA,NA
 Philadelphia Phillies,mlb,#284898,#e81828,NA,NA
 Pittsburgh Pirates,mlb,#fdb827,#000000,NA,NA
 San Diego Padres,mlb,#002d62,#fec325,#7f411c,#a0aab2
@@ -104,7 +104,7 @@ Tampa Bay Buccaneers,nfl,#d50a0a,#34302b,#000000,#ff7900
 Tennessee Titans,nfl,#002244,#4b92db,#c60c30,#a5acaf
 Washington Commanders,nfl,#773141,#ffb612,#000000,#5a1414
 Anaheim Ducks,nhl,#010101,#a2aaad,#fc4c02,#85714d
-Arizona Coyotes,nhl,#010101,#862633,#ddcba4,NA
+Utah Mammoth,nhl,#010101,#6dace4,#ffffff,NA
 Boston Bruins,nhl,#010101,#ffb81c,NA,NA
 Buffalo Sabres,nhl,#003087,#FFB81C,#FFFFFF,NA
 Calgary Flames,nhl,#010101,#f1be48,#c8102e,NA
@@ -127,6 +127,7 @@ Ottawa Senators,nhl,#010101,#c8102e,#c69214,NA
 Philadelphia Flyers,nhl,#010101,#fa4616,NA,NA
 Pittsburgh Penguins,nhl,#010101,#ffb81c,NA,NA
 San Jose Sharks,nhl,#010101,#e57200,#006272,NA
+Seattle Kraken,nhl,#001628,#99d9d9,#355464,#68a2b9
 St. Louis Blues,nhl,#041e42,#ffb81c,#003087,NA
 Tampa Bay Lightning,nhl,#00205b,NA,NA,NA
 Toronto Maple Leafs,nhl,#00205b,NA,NA,NA

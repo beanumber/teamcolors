@@ -100,7 +100,6 @@ teamcolors <- teamcolors %>%
 # Washington Football Team
 teamcolors <- teamcolors %>%
   mutate(name = ifelse(name == "Washington Redskins", "Washington Commanders", name)) 
-  
 
 # Buffalo Sabres
 teamcolors <- teamcolors %>%
@@ -112,6 +111,24 @@ teamcolors <- teamcolors %>%
   )
 
 
+# Utah Mammoth - not in Jim Nielsen's site
+# Pulled hex codes directly from https://assets.nhle.com/logos/nhl/svg/UTA_dark.svg
+teamcolors <- teamcolors %>% 
+  mutate(primary = ifelse(name == "Arizona Coyotes", '#010101', primary),
+         secondary = ifelse(name == "Arizona Coyotes", '#6dace4', secondary),
+         tertiary = ifelse(name == "Arizona Coyotes", '#ffffff', tertiary),
+         quaternary = ifelse(name == "Arizona Coyotes", NA, quaternary),
+         name = ifelse(name == "Arizona Coyotes", "Utah Mammoth", name))
+
+# Seattle Kraken - not in Jim Nielsen's site
+# Pulled hex codes from https://teamcolorcodes.com/seattle-kraken-colors/
+teamcolors <- teamcolors %>% 
+  add_row(name = "Seattle Kraken", primary = '#001628', secondary = '#99d9d9',
+          tertiary = '#355464', quaternary = '#68a2b9', league='nhl')
+
+# Athletics
+teamcolors <- teamcolors %>%
+  mutate(name = if_else(name == "Oakland Athletics", "Athletics", name))
 
 write_csv(
   teamcolors, 
